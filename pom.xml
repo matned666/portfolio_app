@@ -17,8 +17,6 @@
 
     <properties>
         <java.version>11</java.version>
-        <passay.version>1.0</passay.version>
-
     </properties>
 
     <dependencies>
