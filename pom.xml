@@ -15,7 +15,9 @@
     <name>portfolio_app</name>
     <description>Portfolio application by Mateusz Niedbal</description>
     <url>http://maven.apache.org</url>
-
+    <properties>
+        <java.version>11</java.version>
+    </properties>
 
     <dependencies>
         <!--        SPRING BOOT-->
@@ -147,6 +149,7 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
