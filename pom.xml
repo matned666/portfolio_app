@@ -206,7 +206,7 @@
     <distributionManagement>
         <repository>
             <id>myrepository</id>
-            <url>file:src/main/generated-groovy-stubs</url>
+            <url>file:.mvn/generated-groovy-stubs</url>
         </repository>
     </distributionManagement>
 

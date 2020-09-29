@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>eu.mnrdesign.matned</groupId>
+  <artifactId>portfolio_app</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20200929153021</lastUpdated>
+  </versioning>
+</metadata>

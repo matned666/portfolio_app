@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>eu.mnrdesign.matned</groupId>
+  <artifactId>portfolio_app</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20200929.153020</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20200929153020</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.0-20200929.153020-1</value>
+        <updated>20200929153020</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0-20200929.153020-1</value>
+        <updated>20200929153020</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
