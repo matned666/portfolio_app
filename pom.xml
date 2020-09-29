@@ -15,9 +15,9 @@
     <name>portfolio_app</name>
     <description>Portfolio application by Mateusz Niedbal</description>
 
-    <properties>
-        <java.version>11</java.version>
-    </properties>
+<!--    <properties>-->
+<!--        <java.version>11</java.version>-->
+<!--    </properties>-->
 
     <dependencies>
         <!--        SPRING BOOT-->
