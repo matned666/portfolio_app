@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Software development - MRN Design</title>
+    <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div th:insert="fragments/nav :: header"></div>
+<div class="contenti">
+    <div class="center" style="color: #aaaaaa">
+
+
+        <br><br>
+        <div class="grid single-graphic">
+            <div>
+
+                <a th:href="@{/graphics/picture/{id} (id = ${graphic.getId()})}">
+                    <img th:if="${graphic. }" src="../static/img/mist2.jpg" style="width: 100%" alt="picture"
+                         th:src="${graphic.getImageUrl()}"
+                          th:alt="${graphic.getTitle()}"></a>
+            </div>
+            <div>
+                <h3><span th:text="${graphic.getId()}"></span><span>>> Title:</span><span style="color: white"
+                        th:text="${graphic.getTitle()}"></span></h3>
+                <div><span style="font-weight: bold">Description: </span><span
+                        th:text="${graphic.getDescription()}"></span>
+                </div>
+                <div><span style="font-weight: bold">Done: </span><span
+                        th:text="${graphic.getDateOfPublication()}"></span>
+                </div>
+                <div><span style="font-weight: bold">Series: </span><span th:text="${graphic.getSeries()}"></span></div>
+                <div><span style="font-weight: bold">Copies: </span><span
+                        th:text="${graphic.getCopiesMade()}"></span><span>/</span><span
+                        th:text="${graphic.getNumberOfCopies()}"></span></div>
+                <div><span style="font-weight: bold">Entry made: </span><span
+                        th:text="${graphic.getDateOfCreation()}"></span>
+                </div>
+                <div><span style="font-weight: bold">Entry update: </span><span
+                        th:text="${graphic.getDateOfUpdate()}"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:insert="fragments/nav :: footer"></div>
+</body>
+</html>

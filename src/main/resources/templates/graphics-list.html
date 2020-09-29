@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Software development - MRN Design</title>
+    <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div th:insert="fragments/nav :: header"></div>
+<div class="contenti">
+    <div class="center">
+        <br>
+
+        <div class="grid graphics">
+            <div>
+
+            </div>
+
+            <div class="grid list">
+                <div th:each="graphic: ${graphics}" class="grid list">
+                    <a th:href="@{/graphics/{id} (id = ${graphic.getId()})}">
+                        <div style="width: 300px; height: 300px; border-radius: 20px">
+                            <img src="../static/img/mist2.jpg" th:src="${graphic.getImageUrl()}" height="200" th:alt="${graphic.getTitle()}"><br>
+                            <span style="color: #aaaaaa; text-decoration: none;" th:text="${graphic.getTitle()}"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<div th:insert="fragments/nav :: footer"></div>
+</body>
+</html>

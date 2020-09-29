@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Software development - MRN Design</title>
+    <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+<!--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+</head>
+<body class="loginPage-background">
+<div th:insert="fragments/nav :: header"></div>
+<div class="contenti" >
+    <div class="center">
+        <div style="margin-top: 30px">
+            <br><br>
+        </div>
+        <div th:if="${param.error}">
+            <label style="color: red; font-weight: bold;">Wrong username or password</label>
+        </div>
+        <div th:if="${isTokenSent == 1}">
+            <label style="color: red; font-weight: bold;">The password token has been sent to your mail box, follow the instructions.</label>
+        </div>
+        <div th:if="${passwordSet == 1}">
+            <label style="color: red; font-weight: bold;">The password has been set, Now you can login with the new password.</label>
+        </div>
+        <form action="/login-process" method="post">
+            <input class="login-textfield" type="email" name="username"
+                   placeholder="e-mail"><br>
+            <input class="login-textfield" type="password" name="password"
+                   placeholder="password"><br>
+            <label style="font-weight: bold">Remember me
+                <input type="checkbox" name="remember-me">
+            </label>
+
+            <br>
+            <button class="button bigger-button" type="submit" >Login</button>
+            <br>
+        </form>
+        <a href="/#"><button class="button smaller-button" >Reset password</button></a>
+
+        <a href="/#">
+            <button class="button smaller-button" >Register</button>
+        </a>
+        <div style="margin-bottom: 30px">
+            <br><br>
+        </div>
+    </div>
+</div>
+<div th:insert="fragments/nav :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 95%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.loginPage-background{
+    background-position: center;
+    background-image: url('../img/mist.jpg');
+}
+
+.project-background{
+    background-position: center;
+    background-image: url('../img/bckg-project.jpg');
+}
+
+.project-background-list{
+    background-position: right;
+    background-image: url('../img/SIMG_7754.jpg');
+}
+
+.index-background{
+    background-position: center;
+    background-image: url('../img/mist2.jpg');
+}
+
+.about-background{
+    background-position: left;
+    background-image: url('../img/psylocybe-cubensis.jpg');
+}
+
+.contact-background{
+    background-position: center;
+    background-image: url('../img/hermes trismegistos - B-W.jpg');
+}
+
+.contenti {
+    height: 100%;
+    flex: 1;
+    padding: 40px;
+}
+
+#contented {
+    margin-bottom: 40px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.center{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.button{
+    margin: 5px;
+    border-radius: 5px;
+    height: 30px;
+    background-color: #888888;
+    color: #000000;
+    transition: 0.3s;
+}
+
+.smaller-button{
+    width: 200px;
+}
+
+.bigger-button{
+    width: 410px;
+}
+
+.button:hover{
+    background-color: #cecece;
+    color: #202020;
+    height: 34px;
+    margin: 3px;
+}
+
+.smaller-button:hover{
+    width: 204px;
+}
+
+.bigger-button:hover{
+    width: 414px;
+}
+
+.login-textfield{
+    width: 410px;
+    border-radius: 5px;
+}
+
+.grid{
+    display: grid;
+    alignment: center;
+}
+
+.grid.graphics{
+    grid-template-columns: 20% 60% 20%;
+}
+
+.grid.list{
+    grid-template-columns: 33% 33% 34%;
+}
+
+.grid.single-graphic{
+    grid-template-columns: 66% 34%;
+}
+
+.frameRound{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #202020;
+    border-width: 3px;
+}
+
+
+
