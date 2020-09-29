@@ -11,8 +11,4 @@ public class OtherPagesController {
         return "about";
     }
 
-    @GetMapping("/contact")
-    public String getContact(){
-        return "contact";
-    }
 }

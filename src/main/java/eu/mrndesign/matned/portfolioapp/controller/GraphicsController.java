@@ -21,6 +21,13 @@ public class GraphicsController {
         return "graphics-list";
     }
 
+    @GetMapping("/search-graphic")
+    public String searchGraphics(Model model){
+        model.addAttribute("graphics", graphicService.findAll());
+        model.addAttribute("search", 1);
+        return "graphics-list";
+    }
+
     @GetMapping("/graphics/{id}")
     public String getSingleGraphic(@PathVariable Long id, Model model){
         model.addAttribute("graphic", graphicService.findById(id));

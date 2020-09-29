@@ -22,6 +22,13 @@ public class ProjectsController {
         return "projects-list";
     }
 
+    @GetMapping("/search-project")
+    public String searchProjects(Model model){
+        model.addAttribute("projects", projectService.findAll());
+        model.addAttribute("search", 1);
+        return "projects-list";
+    }
+
     @GetMapping("/projects/{id}")
     public String getSingleGraphic(@PathVariable Long id, Model model){
         model.addAttribute("project", projectService.findById(id));

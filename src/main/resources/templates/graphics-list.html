@@ -10,6 +10,7 @@
     <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/flying-object.css" th:href="@{/css/flying-object.css}" rel="stylesheet" type="text/css">
 
 </head>
 <body class="background-main">
@@ -35,7 +36,7 @@
             </div>
             <div>
                 <div style="position: fixed">
-                    <form action="#">
+                    <form action="/search-graphic">
                         <label for="searchinput">
                             Search: </label>
                         <input id="searchinput" type="text">
@@ -45,6 +46,7 @@
             </div>
         </div>
     </div>
+    <div th:if="${search == 1}" class="flier "><img th:src="@{/img/ufo.png}" src="../static/img/ufo.png" class="layer10" width="170" height="51" alt="Flying ufo"/></div>
 </div>
 <div th:insert="fragments/nav :: footer"></div>
 </body>
