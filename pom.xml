@@ -172,7 +172,7 @@
     <distributionManagement>
         <repository>
             <id>myrepository</id>
-            <url>file:C:/repository/</url>
+            <url>file:target/</url>
         </repository>
     </distributionManagement>
 
