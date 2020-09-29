@@ -16,7 +16,9 @@
     <description>Portfolio application by Mateusz Niedbal</description>
     <url>http://maven.apache.org</url>
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
     <dependencies>
