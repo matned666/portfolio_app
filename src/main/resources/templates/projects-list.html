@@ -12,19 +12,40 @@
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
 
 </head>
-<body class="project-background-list">
+<body class="background-main">
 <div th:insert="fragments/nav :: header"></div>
 <div class="contenti">
     <br>
     <br>
-    <div th:each="project: ${projects}" class="center frameRound" style="width: 40%">
-        <a class="center" style="color: #aaaaaa" th:href="@{/projects/{id} (id = ${project.getId()})}">
-            <div><span>Project id: </span><span th:text="${project.getId()}"></span></div>
-            <h3  th:text="${project.getProjectTitle()}"> </h3>
-            <div><span style="font-weight: bold">Release date: </span><span th:text="${project.getProjectReleaseDate()}"></span></div>
-            <a th:href="@{${project.getProjectUrl()}}" target="_blank"><span th:text="${project.getProjectUrl()}"></span></a>
-        </a>
-        <br>
+    <div class="grid grid50-50">
+        <div style="width: 100%">
+            <div th:each="project: ${projects}" class="center frameRound">
+                <a class="center" style="color: #aaaaaa" th:href="@{/projects/{id} (id = ${project.getId()})}">
+                    <div><span>Project id: </span><span th:text="${project.getId()}"></span></div>
+                    <h3 th:text="${project.getProjectTitle()}"></h3>
+                    <div><span style="font-weight: bold">Release date: </span><span
+                            th:text="${project.getProjectReleaseDate()}"></span></div>
+                    <a th:href="@{${project.getProjectUrl()}}" target="_blank"><span
+                            th:text="${project.getProjectUrl()}"></span></a>
+                </a>
+                <br>
+            </div>
+        </div>
+        <div>
+            <form action="#" style="position: fixed">
+                <label for="searchinput">
+                    Search: </label>
+                <input id="searchinput" type="text">
+                <button type="submit" class="button">GO</button>
+            </form>
+            <!--                    <div>-->
+            <!--                        <br>-->
+            <!--                        <br>-->
+            <!--                        <button class="button smaller-button">Add new picture</button>-->
+            <!--                        <br>-->
+            <!--                        <button class="button smaller-button">Order custom graphic</button>-->
+            <!--                    </div>-->
+        </div>
     </div>
 </div>
 <div th:insert="fragments/nav :: footer"></div>

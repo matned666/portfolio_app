@@ -41,9 +41,9 @@ body {
     background-image: url('../img/hermes trismegistos - B-W.jpg');
 }
 
-.graphics-list-background{
+.background-main{
     background-position: center;
-    background-image: url('../img/2.jpg');
+    background-image: url('../img/background.jpg');
 }
 
 .contenti {
@@ -121,6 +121,10 @@ body {
     grid-template-columns: 80% 20%;
 }
 
+.grid50-50{
+    grid-template-columns: 50% 50%;
+}
+
 .grid.list{
     grid-template-columns: 33% 33% 34%;
 }
@@ -134,6 +138,11 @@ body {
     border-radius: 10px;
     border-color: #202020;
     border-width: 3px;
+    width: 90%;
+}
+
+.frameRound:hover{
+    border-color: #6f6f6f;
 }
 
 .image-graphic{
