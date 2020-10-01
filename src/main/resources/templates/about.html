@@ -17,11 +17,11 @@
 <div class="contenti">
     <div class="center">
         <h3>Mateusz Niedbał</h3>
-        <img th:src="@{/img/log.jpg}" alt="Mateusz Niedbał">
+        <img style="max-height: 30%" th:src="@{/img/log.jpg}" alt="Mateusz Niedbał">
         <p>Junior java developer</p>
         <p>Graphic designer</p>
         <p>Looking for a job :)</p>
-        <a href="../static/file/cv.pdf">HERE IS MY CV</a>
+        <a th:href="@{/cv_pdf}">HERE IS MY CV</a>
     </div>
 </div>
 <div th:insert="fragments/nav :: footer"></div>
