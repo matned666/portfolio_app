@@ -126,7 +126,7 @@ body {
 }
 
 .grid.list{
-    grid-template-columns: 33% 33% 34%;
+    grid-template-columns: 33% 34% 33%;
 }
 
 .grid.single-graphic{
@@ -158,5 +158,98 @@ body {
     border-color: #656e66;
 }
 
+.captcha{
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    transition: 0.3s;
+    display: grid;
+    alignment: center;
+    grid-template-columns: 10% 10% 10% 10% 10%;
+}
+
+.captcha-field{
+    width: 100%;
+    height: fit-content;
+    background-color: #000000;
+    transition: 0.3s;
+    margin: 0;
+}
 
 
+
+.fill-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+
+#top_bottom_right_left{
+    background-image: url("../static/img/maze/TRLB.jpg");
+}
+#top_bottom_right{
+    background-image: url("../static/img/maze/TRB.jpg");
+}
+#top_bottom_left{
+    background-image: url("../static/img/maze/TLB.jpg");
+}
+#top_right_left{
+    background-image: url("../static/img/maze/TLR.jpg");
+}
+#bottom_right_left{
+    background-image: url("../static/img/maze/RLB.jpg");
+}
+#top_bottom{
+    background-image: url("../static/img/maze/TB.jpg");
+}
+#top_left{
+    background-image: url("../static/img/maze/TL.jpg");
+}
+#top_right{
+    background-image: url("../static/img/maze/TR.jpg");
+}
+#bottom_right{
+    background-image: url("../static/img/maze/RB.jpg");
+}
+#bottom_left{
+    background-image: url("../static/img/maze/LB.jpg");
+}
+#left_right{
+    background-image: url("../static/img/maze/RL.jpg");
+}
+#top{
+    background-image: url("../static/img/maze/T.jpg");
+}
+#bottom{
+    background-image: url("../static/img/maze/B.jpg");
+}
+#right{
+    background-image: url("../static/img/maze/R.jpg");
+}
+#left{
+    background-image: url("../static/img/maze/L.jpg");
+}
+#no_entries{
+    background-image: url("../static/img/maze/EMPTY.jpg");
+}
+
+.centered-margin{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+.topdata {
+    position: fixed;
+    max-width: 100%;
+    max-height: 70%;
+    margin: auto auto 50%;
+    left: 50%;
+    top: 30%;
+    /*bottom: -30%;*/
+    transform: translate(-50%, -30%);
+    display: block;
+    z-index: 8;
+}

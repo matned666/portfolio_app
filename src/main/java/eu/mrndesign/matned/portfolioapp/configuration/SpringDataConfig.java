@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.client.RestTemplate;
 import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
 
 @Configuration
@@ -14,6 +15,12 @@ public class SpringDataConfig {
 
     @Value("${spring.mail.username}")
     private String incomingMailBox;
+
+    @Value("${google.recaptcha.key.secret}")
+    private String captchaSecretKey;
+
+    @Value("${google.recaptcha.key.site}")
+    private String captchaSiteKey;
 
     @Value("${secret.key.for.session.token}")
     private String secretKey;
@@ -33,6 +40,9 @@ public class SpringDataConfig {
     @Value("${default.admin.password}")
     private String defaultAdminPassword;
 
+    @Value("${captcha.size}")
+    private Integer captchaSize;
+
 
 
     @Bean
@@ -48,6 +58,16 @@ public class SpringDataConfig {
     @Bean
     public Integer tokenLength() {
         return this.tokenLength;
+    }
+
+    @Bean
+    public String captchaSecretKey() {
+        return this.captchaSecretKey;
+    }
+
+    @Bean
+    public String captchaSiteKey() {
+        return this.captchaSiteKey;
     }
 
     @Bean
@@ -74,6 +94,13 @@ public class SpringDataConfig {
     @Bean
     public String defaultAdminPassword() { return this.defaultAdminPassword; }
 
+    @Bean
+    public Integer captchaSize() { return this.captchaSize; }
+
+    @Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
 
 
 }

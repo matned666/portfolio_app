@@ -8,6 +8,7 @@ import eu.mrndesign.matned.portfolioapp.repository.ProjectRepository;
 import eu.mrndesign.matned.portfolioapp.repository.UserRepository;
 import eu.mrndesign.matned.portfolioapp.repository.UserRoleRepository;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
@@ -25,6 +26,12 @@ public class DataSeed implements InitializingBean {
     private final String defaultAdminPassword;
     private final GraphicRepository graphicRepository;
     private final ProjectRepository projectRepository;
+
+    @Value("${default.user.username}")
+    private String defaultUserName;
+
+    @Value("${default.user.password}")
+    private String defaultUserPassword;
 
 
 
@@ -112,16 +119,28 @@ public class DataSeed implements InitializingBean {
 
 
     private void createDefaultUser() {
-        String login = defaultAdminLogin;
-        if (userRepository.findByLogin(login).isEmpty()) {
+        if (userRepository.findByLogin(defaultAdminLogin).isEmpty()) {
             UserDTO defaultUserDTO = new UserDTO.RTDOBuilder()
-                    .login(login)
+                    .login(defaultAdminLogin)
                     .country(Countries.POLAND.getSymbol())
                     .preferEmails(true)
                     .build();
             String hashedPassword = passwordEncoder.encode(defaultAdminPassword);
             User defaultUser = User.apply(defaultUserDTO, hashedPassword);
             UserRole role = roleRepository.findByRoleName(UserRole.Role.ADMIN.roleName());
+            defaultUser.getRoles().add(role);
+            userRepository.save(defaultUser);
+        }
+
+        if (userRepository.findByLogin(defaultUserName).isEmpty()) {
+            UserDTO defaultUserDTO = new UserDTO.RTDOBuilder()
+                    .login(defaultUserName)
+                    .country(Countries.POLAND.getSymbol())
+                    .preferEmails(true)
+                    .build();
+            String hashedPassword = passwordEncoder.encode(defaultUserPassword);
+            User defaultUser = User.apply(defaultUserDTO, hashedPassword);
+            UserRole role = roleRepository.findByRoleName(UserRole.Role.USER.roleName());
             defaultUser.getRoles().add(role);
             userRepository.save(defaultUser);
         }
