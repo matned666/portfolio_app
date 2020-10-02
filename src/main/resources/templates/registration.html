@@ -10,6 +10,15 @@
     <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $('#date_birth2').datepicker({ dateFormat: 'yy-mm-dd' }).val();
+        } );
+    </script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 <body class="background-main">
@@ -18,17 +27,121 @@
     <div class="center">
         <br>
         <br>
-        <h2 style="color: red">Registration temporary unavailable</h2>
-        <p>I am very sory, but due the RODO rules </p>
-        <p>it is not possible for me to safely keep your </p>
-        <p>confidential data. </p>
-        <p>Contact ADMIN if you'd like to see data for authorized members</p>
-        <p>Default user is guest@guest.pl, password: guest123</p>
-        <p>click here:</p>
-        <br>
-        <a href="/contact">
-            <button class="button bigger-button">Contact me</button>
-        </a>
+        <div id="errorRedirectView" class="center">
+            <br>
+            <form action="/register" method="post" th:object="${registrationObject}">
+                <div>
+                    <div th:if="${error != null}">
+                        <div th:each="err : ${binding.getFieldErrors('login')}">
+                            <label style="color: red; font-weight: bold" th:text="${err.getDefaultMessage()}"></label>
+                            <br>
+                        </div>
+                    </div>
+                    <input class="login-textfield" type="text" th:field="*{login}"
+                           placeholder="e-mail"><br>
+                    <div th:if="${error != null}">
+                        <div th:each="err : ${binding.getGlobalErrors()}">
+                            <label style="color: red; font-weight: bold" th:text="${err.getDefaultMessage()}"></label>
+                            <br>
+                        </div>
+                    </div>
+                    <div th:if="${error != null}">
+                        <div th:each="err : ${binding.getFieldErrors('password')}">
+                            <label style="color: red; font-weight: bold" th:text="${err.getDefaultMessage()}"></label>
+                            <br>
+                        </div>
+                    </div>
+                    <input class="login-textfield" type="password" id="pass2" th:field="*{password}"
+                           placeholder="password"><br>
+                    <div th:if="${error != null}">
+                        <div th:each="err : ${binding.getFieldErrors('passwordConfirm')}">
+                            <label style="color: red; font-weight: bold" th:text="${err.getDefaultMessage()}"></label>
+                            <br>
+                        </div>
+                    </div>
+                    <input class="login-textfield" type="password" id="conf_pass2"
+                           th:field="*{passwordConfirm}"
+                           placeholder="password"><br>
+                    <div th:if="${error != null}">
+                        <div th:each="err : ${binding.getFieldErrors('firstName')}">
+                            <label style="color: red; font-weight: bold" th:text="${err.getDefaultMessage()}"></label>
+                            <br>
+                        </div>
+                    </div>
+                    <input class="login-textfield" type="text" id="user_first_name2"
+                           th:field="*{firstName}"
+                           placeholder="First name"><br>
+                    <div th:if="${error != null}">
+                        <div th:each="err : ${binding.getFieldErrors('lastName')}">
+                            <label style="color: red; font-weight: bold" th:text="${err.getDefaultMessage()}"></label>
+                            <br>
+                        </div>
+                    </div>
+                    <input class="login-textfield" type="text" id="user_last_name2"
+                           th:field="*{lastName}"
+                           placeholder="Last name"><br>
+                    <input class="login-textfield" type="text" id="user_street2"
+                           th:field="*{street}"
+                           placeholder="Street and number"><br>
+                    <input class="login-textfield" type="text" id="zip2"
+                           th:field="*{zipCode}"
+                           placeholder="Zip-code"><br>
+                    <input class="login-textfield" type="text" id="city2" th:field="*{city}"
+                           placeholder="City"><br>
+                    <label id="countryLabel" style="font-weight: bold;" for="country2">Country: </label>
+                    <br><select class="login-textfield"
+                                type="text" id="country2"
+                                th:field="*{country}">
+                    <option class="login-textfield" th:each="c : ${countries}"
+                            th:text="${c.getPlName()}"
+                            th:value="${c.getSymbol()}"></option>
+                </select><br>
+                    <div th:if="${error != null}">
+                        <div th:each="err : ${binding.getFieldErrors('birthDate')}">
+                            <label style="color: red; font-weight: bold" th:text="${err.getDefaultMessage()}"></label>
+                            <br>
+                        </div>
+                    </div>
+                    <input class="login-textfield" type="text" id="date_birth2"
+                           th:field="*{birthDate}"
+                           placeholder="Date of birth: yyyy-MM-dd"><br>
+                    <div th:if="${error != null}">
+                        <div th:each="err : ${binding.getFieldErrors('phoneNumber')}">
+                            <label style="color: red; font-weight: bold" th:text="${err.getDefaultMessage()}"></label>
+                            <br>
+                        </div>
+                    </div>
+                    <input class="login-textfield" type="text" id="phone2"
+                           th:field="*{phoneNumber}"
+                           placeholder="Phone number"><br>
+                    <label id="mailsFromUsLabel" style="font-weight: bold;" class="paintWhite"
+                           for="prefer2">Would you like
+                        to receive emails from
+                        us?</label>
+                    <input id="prefer2" type="checkbox" th:field="*{preferEmails}"/><br>
+
+                    <div class="grid list">
+                        <br>
+                        <div class="center">
+                            <div th:if="${wrong_recaptcha == 1}">
+                                <label style="color: red; font-weight: bold"
+                                       for="recaptcha">You're a robot?</label>
+                            </div>
+                            <div id="recaptcha" th:value="${captchaResponse}" class="g-recaptcha centered-margin"
+                                 data-sitekey="6Ldyc9IZAAAAAL9YPNskEHdUxIhElSJnoqjyaIfq"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="button bigger-button" type="submit">Register</button>
+                    <br><br>
+                    <button class="button bigger-button" type="reset">Reset</button>
+                    <br>
+
+                </div>
+            </form>
+
+            <br>
+        </div>
     </div>
 </div>
 <div th:insert="fragments/nav :: footer"></div>

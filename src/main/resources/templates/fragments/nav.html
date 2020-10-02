@@ -7,18 +7,18 @@
 <div id="header" class="header" th:fragment="header">
     <div class="header-right">
         <a href="/">Home</a>
-        <a th:if="${#request.isUserInRole('ROLE_ADMIN')}" href="/#">Users</a>
+        <a th:if="${#request.isUserInRole('ROLE_ADMIN')}" href="/users-list">Users</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
         <a href="/projects">Projects</a>
         <a href="/graphics">Graphics</a>
-        <a sec:authorize="isAuthenticated()"  href="/#">Shop</a>
+        <a sec:authorize="isAuthenticated()"  href="/shop">Shop</a>
     </div>
     <div class="header-left">
-        <a sec:authorize="isAuthenticated()" href="/#">
+        <a sec:authorize="isAuthenticated()" href="/basket">
             <img th:src="@{/img/ic_shopping_cart.png}" src="../static/img/ic_shopping_cart.png" width="30" height="30" alt="Shopping cart"/>
         </a>
-        <a class="basket" style="color: #499fe2; vertical-align: center;" th:if="${#request.isUserInRole('ROLE_USER')}" href="/#" sec:authentication="name"></a>
+        <a class="basket" style="color: #499fe2; vertical-align: center;" th:if="${#request.isUserInRole('ROLE_USER')}" href="/account" sec:authentication="name"></a>
         <a class="basket" sec:authorize="isAuthenticated()" href="/logout">Log out</a>
         <a class="basket" sec:authorize="!isAuthenticated()" href="/register">Register</a>
         <a class="basket" sec:authorize="!isAuthenticated()" href="/login">Log in</a>

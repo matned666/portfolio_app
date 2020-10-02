@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Software development - MRN Design</title>
+    <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body class="background-main">
+<div th:insert="fragments/nav :: header"></div>
+<div class="contenti">
+    <h3 style="font-weight: bold; color: red;">ACCESS DENIED</h3>
+    <div>
+        <p style="color: red">Please contact administrator for more information.</p>
+        <a th:href="@{/contact}">
+            <button type="button" class="button bigger-button">
+                Contact me
+            </button>
+        </a>
+    </div>
+</div>
+<div th:insert="fragments/nav :: footer"></div>
+</body>
+</html>

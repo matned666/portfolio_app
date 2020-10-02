@@ -17,9 +17,9 @@ public class OtherPagesController {
         return "about";
     }
 
-    @GetMapping("/register")
-    public String getRegisterPage(){
-        return "registration";
+    @GetMapping("/accessDenied")
+    public String getAccessDenied(){
+        return "accessDenied";
     }
 
     @GetMapping("/cv_pdf")

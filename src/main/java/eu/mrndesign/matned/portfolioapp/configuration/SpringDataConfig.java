@@ -45,10 +45,6 @@ public class SpringDataConfig {
 
 
 
-    @Bean
-    public SpringSecurityDialect springSecurityDialect(){
-        return new SpringSecurityDialect();
-    }
 
     @Bean
     public PasswordEncoder passwordEncoder(){

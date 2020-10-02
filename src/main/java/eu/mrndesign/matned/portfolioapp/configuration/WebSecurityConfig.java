@@ -1,5 +1,6 @@
 package eu.mrndesign.matned.portfolioapp.configuration;
 
+import eu.mrndesign.matned.portfolioapp.model.UserRole;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -45,6 +46,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/graphics", "/graphics/**").permitAll()
                 .antMatchers("/projects", "/projects/**").permitAll()
                 .antMatchers("/contact").permitAll()
+                .antMatchers("/register/**").permitAll()
+
+//                Front elements
                 .antMatchers("/nav").permitAll()
                 .antMatchers("/static/**").permitAll()
                 .antMatchers("/sound/**").permitAll()
@@ -54,6 +58,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/css/**").permitAll()
                 .antMatchers("/img/**").permitAll()
                 .antMatchers("/").permitAll()
+
+//                Restricted areas
+                .antMatchers("/actuator/**").hasRole(UserRole.Role.ADMIN.name())
+                .antMatchers("/account").authenticated()
+                .antMatchers("/account/**").hasRole(UserRole.Role.ADMIN.name())
+
+//                all other requests are for authenticated users only
                 .anyRequest().authenticated()
 
                 .and()

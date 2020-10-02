@@ -8,7 +8,7 @@ import javax.validation.constraints.Pattern;
 
 import static eu.mrndesign.matned.portfolioapp.statics.Patterns.DATE_TIME_FORMATTER_ONLY_DATE;
 
-public class RestrictedRegistrationDTO implements UserDTOInterface<RestrictedRegistrationDTO> {
+public class RestrictedUserDTO implements UserDTOInterface<RestrictedUserDTO> {
 
     private Long id;
 
@@ -39,10 +39,10 @@ public class RestrictedRegistrationDTO implements UserDTOInterface<RestrictedReg
     @NoValidation
     private boolean preferEmails;
 
-    public RestrictedRegistrationDTO() {
+    public RestrictedUserDTO() {
     }
 
-    private RestrictedRegistrationDTO(RTDOBuilder builder){
+    private RestrictedUserDTO(RTDOBuilder builder){
         id = builder.id;
         firstName = builder.firstName;
         lastName = builder.lastName;
@@ -55,8 +55,8 @@ public class RestrictedRegistrationDTO implements UserDTOInterface<RestrictedReg
         preferEmails = builder.preferEmails;
     }
 
-    public static RestrictedRegistrationDTO apply(User user) {
-        RestrictedRegistrationDTO registrationDTO = new RTDOBuilder()
+    public static RestrictedUserDTO apply(User user) {
+        RestrictedUserDTO restrictedUserDTO = new RTDOBuilder()
                 .id(user.getId())
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())
@@ -67,8 +67,23 @@ public class RestrictedRegistrationDTO implements UserDTOInterface<RestrictedReg
                 .phoneNumber(user.getPhoneNumber())
                 .preferEmails(user.isPreferEmails())
                 .build();
-        if (user.getBirthDate() != null) registrationDTO.setBirthDate(user.getBirthDate().format(DATE_TIME_FORMATTER_ONLY_DATE));
-        return registrationDTO;
+        if (user.getBirthDate() != null) restrictedUserDTO.setBirthDate(user.getBirthDate().format(DATE_TIME_FORMATTER_ONLY_DATE));
+        return restrictedUserDTO;
+    }
+
+    public static RestrictedUserDTO apply(UserDTO user){
+        return new RTDOBuilder()
+                .id(user.getId())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .street(user.getStreet())
+                .zipCode(user.getZipCode())
+                .city(user.getCity())
+                .country(user.getCountry())
+                .phoneNumber(user.getPhoneNumber())
+                .preferEmails(user.isPreferEmails())
+                .birthDate(user.getBirthDate())
+                .build();
     }
 
     public Long getId() {
@@ -217,8 +232,8 @@ public class RestrictedRegistrationDTO implements UserDTOInterface<RestrictedReg
             return this;
         }
 
-        public RestrictedRegistrationDTO build() {
-            return new RestrictedRegistrationDTO(this);
+        public RestrictedUserDTO build() {
+            return new RestrictedUserDTO(this);
         }
     }
 

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Software development - MRN Design</title>
+    <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body class="background-main">
+<div th:insert="fragments/nav :: header"></div>
+<div class="contenti">
+    <div class="center" th:if="${#request.isUserInRole('ROLE_USER')}" th:object="${userToSee}">
+        <br>
+        <h1>User data:</h1>
+        <span class="bolded">Name: </span><span th:text="*{firstName}"></span><br>
+        <span class="bolded">Surname: </span><span th:text="*{lastName}"></span><br>
+        <span class="bolded">Birth date: </span><span th:if="*{birthDate != null}" th:text="*{birthDate.toString()}"></span><br><br>
+        <span class="bolded">Address:</span><br>
+        <span class="bolded">Street: </span><span th:text="*{street}"></span><br>
+        <span class="bolded">Zip code: </span><span th:text="*{zipCode}"></span><br>
+        <span class="bolded">City: </span><span th:text="*{city}"></span><br>
+        <span class="bolded">Country: </span><span th:text="*{country}"></span><br><br>
+        <span class="bolded">Contact:</span><br>
+        <span class="bolded">Email: </span><span sec:authentication="name"></span><br>
+        <span class="bolded">Phone number: </span><span th:text="*{phoneNumber}"></span><br>
+        <a th:href="@{/user/edit-user}">
+            <button type="button" class="button bigger-button">Edit your data</button>
+        </a>
+        <br>
+        <a th:href="@{/user/edit-user}">
+            <button type="button" class="button bigger-button">Edit your data</button>
+        </a>
+    </div>
+
+    <div th:if="${#request.isUserInRole('ROLE_ADMIN')}">
+
+        <h1>WELCOME ADMIN</h1>
+        <div th:if="${userToSee != null}">
+            <div th:object="${userToSee}">
+                <br>
+                <h1>User data:</h1>
+                <span class="bolded">Name: </span><span th:text="*{firstName}"></span><br>
+                <span class="bolded">Surname: </span><span th:text="*{lastName}"></span><br>
+                <span class="bolded">Birth date: </span><span th:if="*{birthDate != null}" th:text="*{birthDate.toString()}"></span><br><br>
+                <span class="bolded">Address:</span><br>
+                <span class="bolded">Street: </span><span th:text="*{street}"></span><br>
+                <span class="bolded">Zip code: </span><span th:text="*{zipCode}"></span><br>
+                <span class="bolded">City: </span><span th:text="*{city}"></span><br>
+                <span class="bolded">Country: </span><span th:text="*{country}"></span><br><br>
+                <span class="bolded">Contact:</span><br>
+                <span class="bolded">Email: </span><span th:text="*{login}"></span><br>
+                <span class="bolded">Phone number: </span><span th:text="*{phoneNumber}"></span><br><br>
+                <span class="bolded">Password hash: </span><span th:text="*{password}"></span><br>
+                <span class="bolded">Registration date: </span><span th:text="*{creationDateTime}"></span><br>
+                <span class="bolded">Update date: </span><span th:text="*{updateDateTime}"></span><br>
+            </div>
+            <a th:href="@{/user/edit/{id}(id = ${userToSee.getId()})}">
+                <button type="button" class="button bigger-button">
+                    Edit user data
+                </button>
+            </a>
+            <br>
+            <a  th:href="@{/user/delete/{id}(id = ${userToSee.getId()})}" onclick="return confirm('Are you sure you want to delete this user?');">
+                <button type="button" class="button bigger-button">
+                    Delete user data
+                </button>
+            </a>
+            <br>
+                        <a th:href="@{/contact}" >
+                            <button type="button" class="button bigger-button">
+                                Edit login
+                            </button>
+                        </a>
+            <br>
+            <a th:href="@{/contact}" >
+                <button type="button" class="button bigger-button">
+                    New password
+                </button>
+            </a>
+
+        </div>
+        <div th:unless="${userToSee != null}">
+            <span>no such user</span>
+        </div>
+    </div>
+</div>
+<div th:insert="fragments/nav :: footer"></div>
+</body>
+</html>
