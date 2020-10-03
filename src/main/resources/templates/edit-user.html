@@ -29,7 +29,7 @@
         <br>
         <div id="errorRedirectView" class="center">
 
-            <div th:if="${#request.isUserInRole('ROLE_ADMIN')}" id="errorRedirectView2" class="center">
+            <div sec:authorize="isAuthenticated()" id="errorRedirectView2" class="center">
                 <br>
                 <form th:action="@{${actionURL} (id = ${editedUser.id})}" method="post" th:object="${editedUser}">
                     <div>
@@ -118,9 +118,7 @@
                 <br>
             </div>
         </div>
-        <a href="/contact">
-            <button class="button bigger-button">Contact me</button>
-        </a>
+
     </div>
 </div>
 <div th:insert="fragments/nav :: footer"></div>
