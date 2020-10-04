@@ -6,6 +6,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Software development - MRN Design</title>
     <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
@@ -19,34 +20,45 @@
     <div class="center">
         <h2>Artistic graphics by Mateusz Niedbał</h2>
     </div>
-    <div class="center">
-        <br>
+    <div class="center" style="padding: 50px">
 
-        <div class="grid graphics">
-            <div class="grid list">
-                <div th:each="graphic: ${graphics}" class="grid list">
-                    <a th:href="@{/graphics/{id} (id = ${graphic.getId()})}">
-                        <div style="width: 300px; height: 300px; border-radius: 20px">
-                            <img class="image-graphic" src="../static/img/mist2.jpg" th:src="${graphic.getImageUrl()}"
-                                 style="height: 80%" th:alt="${graphic.getTitle()}"><br>
-                            <span style="color: #aaaaaa; text-decoration: none;" th:text="${graphic.getTitle()}"></span>
-                        </div>
-                    </a>
-                </div>
-            </div>
+
+        <div>
             <div>
-                <div style="position: fixed">
-                    <form action="/search-graphic">
-                        <label for="searchinput">
-                            Search: </label>
-                        <input id="searchinput" type="text">
-                        <button type="submit" class="button">GO</button>
+                <div>
+                    <form action="/graphics" method="post" th:object="${str}">
+                        <input class="login-textfield" id="searchinput" type="text" th:field="*{searched}" placeholder="Search"><br>
+                        <button type="submit" class="button smaller-button">GO</button>
                     </form>
                 </div>
             </div>
+            <br>
+            <div th:if="${noItemsFound == 1}" class="flier ">
+            </div>
+            <span th:if="${noItemsFound == 1}" class="warning">
+                             No items found
+                        </span><br>
+            <div class="grid list">
+                <div th:each="graphic: ${graphics}" style="padding: 0 5%;">
+
+
+                    <div class="image-graphic-graph">
+                        <a th:href="@{/graphics/{id} (id = ${graphic.getId()})}">
+                            <img class="image-graphic" src="../static/img/mist2.jpg" th:src="${graphic.getImageUrl()}"
+                                 style="height: 80%" th:alt="${graphic.getTitle()}"><br>
+                            <span style="color: #aaaaaa; text-decoration: none;" th:text="${graphic.getTitle()}"></span><br>
+                            <span style="color: #aaaaaa; text-decoration: none;"
+                                  th:text="${graphic.getDateOfPublication()}"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-    <div th:if="${search == 1}" class="flier "><img th:src="@{/img/ufo.png}" src="../static/img/ufo.png" class="layer10" width="170" height="51" alt="Flying ufo"/></div>
+    <div th:if="${noItemsFound == 1}" class="flier "><img th:src="@{/img/ufo.png}" src="../static/img/ufo.png"
+                                                          class="layer10" width="170" height="51" alt="Flying ufo"/>
+    </div>
 </div>
 <div th:insert="fragments/nav :: footer"></div>
 </body>

@@ -24,28 +24,30 @@
         <a class="basket" sec:authorize="!isAuthenticated()" href="/login">Log in</a>
         <span class="basket" sec:authorize="hasRole('ADMIN')" style="color: #499fe2; font-weight: bold"> ADMIN USER </span>
         <span class="basket" sec:authorize="hasRole('ADMIN')" style="color: #499fe2; font-weight: bold"> DEFAULT USER </span>
-        <audio id = "player" src = "../../sound/music1.mp3" th:src="@{../sound/music1.mp3}" th:autoplay autoplay></audio>
-            <a onclick = "document.getElementById('player').play()">
-                <img th:src="@{/img/ic_play_arrow.png}" src="../img/ic_play_arrow.png" width="10" height="10" alt="play music"></a>
-            <a onclick = "document.getElementById('player').pause()">
-                <img th:src="@{/img/ic_pause.png}" src="../img/ic_pause.png" width="10" height="10" alt="pause music"></a>
-            <a onclick = "document.getElementById('player').volume += 0.1">
-                <img th:src="@{/img/ic_volume_up.png}" src="../img/ic_volume_up.png" width="10" height="10" alt="volume up music"></a>
-            <a onclick = "document.getElementById('player').volume -= 0.1">
-                <img th:src="@{/img/ic_volume_down.png}" src="../img/ic_volume_down.png" width="10" height="10" alt="volume down music"></a>
-
-        <span style="color: black"> ...  </span>
-<!--        <audio style="background-color: black; color: black;" th:src = "@{/sound/music1.mp3}" controls="controls" src="../../sound/music1.mp3" autoplay>-->
-        </audio>
     </div>
 </div>
 
 <div th:fragment="footer">
     <footer id="footer">
+        <audio id = "player" src = "../../sound/music1.mp3" th:src="@{../sound/music1.mp3}" th:autoplay autoplay></audio>
+        <a onclick = "document.getElementById('player').play()">
+            <img th:src="@{/img/ic_play_arrow.png}" src="../img/ic_play_arrow.png" width="10" height="10" alt="play music"></a>
+        <a onclick = "document.getElementById('player').pause()">
+            <img th:src="@{/img/ic_pause.png}" src="../img/ic_pause.png" width="10" height="10" alt="pause music"></a>
+        <a onclick = "document.getElementById('player').volume += 0.1">
+            <img th:src="@{/img/ic_volume_up.png}" src="../img/ic_volume_up.png" width="10" height="10" alt="volume up music"></a>
+        <a onclick = "document.getElementById('player').volume -= 0.1">
+            <img th:src="@{/img/ic_volume_down.png}" src="../img/ic_volume_down.png" width="10" height="10" alt="volume down music"></a>
+
+
+        <!--        <audio style="background-color: black; color: black;" th:src = "@{/sound/music1.mp3}" controls="controls" src="../../sound/music1.mp3" autoplay>-->
+        </audio>
         <div class="center">
             <span id="copyright">Copyright © 2020 MRN-Design, Mateusz Niedbał, </span>
             <a href="http://mrndesign.eu" target="_blank">www.mrndesign.eu</a>
+
         </div>
+
     </footer>
 </div>
 

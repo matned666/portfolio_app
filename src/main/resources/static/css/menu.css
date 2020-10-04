@@ -12,7 +12,6 @@
     color: #aaaaaa;
 }
 
-/* Style the header links */
 .header a {
     float: left;
     color: #aaaaaa;
@@ -41,7 +40,6 @@
 
 
 
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
     font-size: 25px;
     font-weight: bold;
@@ -49,7 +47,6 @@
 
 }
 
-/* Change the background color on mouse-over */
 .header a:hover {
     background-color: #656e66;
     color: white;
@@ -57,7 +54,6 @@
 
 }
 
-/* Style the active/current link*/
 .header a.active {
     background-color: #858872;
     color: #000000;
@@ -65,7 +61,6 @@
 
 }
 
-/* Float the link section to the right */
 .header-right {
     float: left;
 }
@@ -73,25 +68,62 @@
 .header-left {
     float: right;
 }
+.footer-down{
+    margin-top: 95%;
+}
+
+#player{
+    margin-left: 10%;
+}
+
+#player a:hover{
+    background-color: #888888;
+}
+
+
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
     .header a {
-        float: none;
+        float: left;
         display: block;
         text-align: left;
-        height: 40px;
+        height: fit-content;
+        width: fit-content;
+        transition: 0.3s;
+    }
+
+    .basket, #user-name, #admin-name{
+        float: right;
+        color: #aaaaaa;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
         transition: 0.3s;
 
     }
+
     .header-right {
-        float: none;
+        float: left;
     }
+
     .header-left {
-        float: none;
+        float: left;
+    }
+
+    .footer-down{
+        margin-top: 95%;
+    }
+
+    .move-to-next-line{
+        clear: both;
+    }
+
+    #footer{
+        font-size: xx-small;
     }
 }
 
-.footer-down{
-    margin-top: 95%;
-}

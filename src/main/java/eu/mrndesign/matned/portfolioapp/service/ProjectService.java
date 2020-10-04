@@ -1,5 +1,6 @@
 package eu.mrndesign.matned.portfolioapp.service;
 
+import eu.mrndesign.matned.portfolioapp.dto.GraphicDTO;
 import eu.mrndesign.matned.portfolioapp.dto.ProjectDTO;
 import eu.mrndesign.matned.portfolioapp.repository.ProjectRepository;
 import org.springframework.stereotype.Service;
@@ -25,5 +26,11 @@ public class ProjectService {
     public ProjectDTO findById(Long id){
         return ProjectDTO.apply(projectRepository.findById(id)
                 .orElseThrow(()->new RuntimeException("No project found")));
+    }
+
+    public List<ProjectDTO> findAll(String searched) {
+        return projectRepository.findAll(searched).stream()
+                .map(ProjectDTO::apply)
+                .collect(Collectors.toList());
     }
 }

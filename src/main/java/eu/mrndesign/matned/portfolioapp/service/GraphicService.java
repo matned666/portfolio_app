@@ -26,4 +26,10 @@ public class GraphicService {
     public GraphicDTO findById(Long id) {
         return GraphicDTO.apply(graphicRepository.findById(id).orElseThrow(()->new RuntimeException("No graphic found")));
     }
+
+    public List<GraphicDTO> findAll(String str) {
+        return graphicRepository.findAll("%"+str+"%").stream()
+                .map(GraphicDTO::apply)
+                .collect(Collectors.toList());
+    }
 }
