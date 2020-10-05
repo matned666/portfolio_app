@@ -24,13 +24,13 @@
             <br><br>
         </div>
         <div th:if="${param.error}">
-            <label style="color: red; font-weight: bold;">Wrong username or password</label>
+            <label class="warning">Wrong username or password</label>
         </div>
-        <div th:if="${isTokenSent == 1}">
-            <label style="color: red; font-weight: bold;">The password token has been sent to your mail box, follow the instructions.</label>
+        <div  th:if="${isTokenSent == 1}">
+            <label class="aproved">The password token has been sent to your mail box, follow the instructions.</label>
         </div>
         <div th:if="${passwordSet == 1}">
-            <label style="color: red; font-weight: bold;">The password has been set, Now you can login with the new password.</label>
+            <label class="aproved">The password has been set, Now you can login with the new password.</label>
         </div>
         <form action="/login-process" method="post">
             <input class="login-textfield" type="email" name="username"
@@ -45,9 +45,9 @@
             <button class="button bigger-button" type="submit" >Login</button>
             <br>
         </form>
-        <a href="/#"><button class="button smaller-button" >Reset password</button></a>
+        <a href="/resetPassword"><button class="button smaller-button" >Reset password</button></a>
 
-        <a href="/#">
+        <a href="/register">
             <button class="button smaller-button" >Register</button>
         </a>
         <div style="margin-bottom: 30px">
