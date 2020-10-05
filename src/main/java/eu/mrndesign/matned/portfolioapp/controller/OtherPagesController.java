@@ -1,5 +1,6 @@
 package eu.mrndesign.matned.portfolioapp.controller;
 
+import com.vaadin.flow.component.cookieconsent.CookieConsent;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -9,8 +10,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+
 @Controller
 public class OtherPagesController {
+
+
+
 
     @GetMapping("/about")
     public String getAbout(){
