@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Software development - MRN Design</title>
+    <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/buttons.css" th:href="@{/css/buttons.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/textfield.css" th:href="@{/css/textfield.css}" rel="stylesheet" type="text/css">
+
+    <script>
+        function addOption() {
+            const textValue = document.getElementById("newSeries").value;
+            const select = document.getElementById("series");
+            const opt = document.createElement('option');
+            opt.appendChild(document.createTextNode(textValue));
+            opt.value = textValue;
+            select.appendChild(opt);
+        }
+    </script>
+
+
+</head>
+<body class="background-main">
+<div th:insert="fragments/nav :: header"></div>
+<div class="contenti">
+    <div class="center">
+        <form id="sendForm" method="POST" th:action="@{/add-graphic}" enctype="multipart/form-data" >
+<!--              th:object="${newGraphic}"-->
+
+<!--            <br><br>-->
+<!--            <table>-->
+<!--                <div>-->
+<!--&lt;!&ndash;                <tr>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div th:if="${error != null}">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div th:each="err : ${binding.getFieldErrors('title')}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <label class="warning" th:text="${err.getDefaultMessage()}"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <input form="sendForm" class="login-textfield" type="text" th:field="*{title}"&ndash;&gt;-->
+<!--&lt;!&ndash;                               placeholder="Title"><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div th:if="${error != null}">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div th:each="err : ${binding.getFieldErrors('description')}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <label class="warning" th:text="${err.getDefaultMessage()}"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <textarea form="sendForm" class="login-textarea" type="text" id="description"&ndash;&gt;-->
+<!--&lt;!&ndash;                                  th:field="*{description}"&ndash;&gt;-->
+<!--&lt;!&ndash;                                  placeholder="Description"></textarea><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div th:if="${error != null}">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div th:each="err : ${binding.getFieldErrors('dateOfPublication')}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <label style="color: red; font-weight: bold"&ndash;&gt;-->
+<!--&lt;!&ndash;                                       th:text="${err.getDefaultMessage()}"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <input form="sendForm" class="login-textfield" type="text" id="dateOfPublication"&ndash;&gt;-->
+<!--&lt;!&ndash;                               th:field="*{dateOfPublication}"&ndash;&gt;-->
+<!--&lt;!&ndash;                               placeholder="Publish: yyyy-MM-dd"><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div th:if="${error != null}">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div th:each="err : ${binding.getFieldErrors('numberOfCopies')}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <label style="color: red; font-weight: bold"&ndash;&gt;-->
+<!--&lt;!&ndash;                                       th:text="${err.getDefaultMessage()}"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <input form="sendForm" class="login-textfield" type="text" id="numberOfCopies"&ndash;&gt;-->
+<!--&lt;!&ndash;                               th:field="*{numberOfCopies}"&ndash;&gt;-->
+<!--&lt;!&ndash;                               placeholder="Number of copies"><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <div th:if="${error != null}">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div th:each="err : ${binding.getFieldErrors('copiesMade')}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                <label style="color: red; font-weight: bold"&ndash;&gt;-->
+<!--&lt;!&ndash;                                       th:text="${err.getDefaultMessage()}"></label>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <input form="sendForm" class="login-textfield" type="text" id="copiesMade"&ndash;&gt;-->
+<!--&lt;!&ndash;                               th:field="*{copiesMade}"&ndash;&gt;-->
+<!--&lt;!&ndash;                               placeholder="Copies done"><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <label for="series">Series:</label><br>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <select form="sendForm" class="login-textfield" id="series" type="text"&ndash;&gt;-->
+<!--&lt;!&ndash;                                th:field="${chosenSeries}">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <option class="login-textfield" th:each="set: ${series}"&ndash;&gt;-->
+<!--&lt;!&ndash;                                    th:text="${set.getSetName()}" th:value="${set.getSetName}">&ndash;&gt;-->
+<!--&lt;!&ndash;                            </option>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </select>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <input class="login-textfield-small" type="text" id="newSeries"&ndash;&gt;-->
+<!--&lt;!&ndash;                               placeholder="Add a new set">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                        <button type="button" id="addSet" onclick="addOption()" class="button round-button">Add</button>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div>&ndash;&gt;-->
+<!--                </div>-->
+<!--                <tr>-->
+                     <div>
+                        <label path="file">Select a graphic to upload</label>
+                        <br>
+                        <input class="smaller-button" type="file" name="file"/>
+                    </div>
+<!--                </tr>-->
+<!--                <br>-->
+<!--                <br>-->
+
+<!--                <tr>-->
+<!--                    <div>-->
+                        <input class="button bigger-button" type="submit" value="Submit"/>
+<!--                    </div>-->
+
+<!--                </tr>-->
+<!--            </table>-->
+        </form>
+    </div>
+</div>
+<div th:insert="fragments/nav :: footer"></div>
+</body>
+</html>

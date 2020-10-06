@@ -12,6 +12,8 @@
     <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/flying-object.css" th:href="@{/css/flying-object.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/buttons.css" th:href="@{/css/buttons.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/textfield.css" th:href="@{/css/textfield.css}" rel="stylesheet" type="text/css">
 
 </head>
 <body class="background-main">
@@ -32,6 +34,8 @@
                     </form>
                 </div>
             </div>
+            <a th:if="${#request.isUserInRole('ROLE_ADMIN')}" href="/add-graphic"><button class="button smaller-button">Add new graphic</button></a>
+
             <br>
             <div th:if="${noItemsFound == 1}" class="flier ">
             </div>

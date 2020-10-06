@@ -6,18 +6,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Software development - MRN Design</title>
     <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="../static/css/buttons.css" th:href="@{/css/buttons.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/textfield.css" th:href="@{/css/textfield.css}" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $( function() {
-            $('#date_birth2').datepicker({ dateFormat: 'yy-mm-dd' }).val();
-        } );
+        $(function () {
+            $('#date_birth2').datepicker({dateFormat: 'yy-mm-dd'}).val();
+        });
     </script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
@@ -90,13 +92,15 @@
                     <input class="login-textfield" type="text" id="city2" th:field="*{city}"
                            placeholder="City"><br>
                     <label id="countryLabel" style="font-weight: bold;" for="country2">Country: </label>
-                    <br><select class="login-textfield"
-                                type="text" id="country2"
-                                th:field="*{country}">
-                    <option class="login-textfield" th:each="c : ${countries}"
-                            th:text="${c.getPlName()}"
-                            th:value="${c.getSymbol()}"></option>
-                </select><br>
+                    <br>
+                    <select class="login-textfield"
+                            type="text" id="country2"
+                            th:field="*{country}">
+                        <option class="login-textfield" th:each="c : ${countries}"
+                                th:text="${c.getPlName()}"
+                                th:value="${c.getSymbol()}"></option>
+                    </select>
+                    <br>
                     <div th:if="${error != null}">
                         <div th:each="err : ${binding.getFieldErrors('birthDate')}">
                             <label style="color: red; font-weight: bold" th:text="${err.getDefaultMessage()}"></label>

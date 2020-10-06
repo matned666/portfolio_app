@@ -1,6 +1,14 @@
 package eu.mrndesign.matned.portfolioapp.dto;
 
 import eu.mrndesign.matned.portfolioapp.model.Graphic;
+import eu.mrndesign.matned.portfolioapp.validation.DateMatchesPattern;
+import eu.mrndesign.matned.portfolioapp.validation.IsNumericBigDecimal;
+import eu.mrndesign.matned.portfolioapp.validation.IsNumericInteger;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import static eu.mrndesign.matned.portfolioapp.statics.Patterns.DATE_TIME_FORMATTER_ONLY_DATE;
 import static eu.mrndesign.matned.portfolioapp.statics.Patterns.DATE_TIME_FORMATTER_TASK;
@@ -9,14 +17,26 @@ public class GraphicDTO {
 
     private Long id;
     private String imageUrl;
+    @NotEmpty(message = "This field cannot be empty")
+    @NotBlank(message = "This field cannot be empty")
+    @NotNull(message = "This field cannot be empty")
     private String title;
+    @NotEmpty(message = "This field cannot be empty")
+    @NotBlank(message = "This field cannot be empty")
+    @NotNull(message = "This field cannot be empty")
+    @Size(min = 10, max = 5000, message = "The description should be between {min} and {max} signs.")
     private String description;
+    @DateMatchesPattern
     private String dateOfPublication;
+    @IsNumericInteger
     private Integer numberOfCopies;
     private Integer copiesMade;
     private String series;
     private String dateOfCreation;
     private String dateOfUpdate;
+
+    public GraphicDTO() {
+    }
 
     private GraphicDTO(GraphicDTOBuilder builder) {
         this.id = builder.id;

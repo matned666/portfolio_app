@@ -70,10 +70,15 @@ public class UserController {
     }
 
     @GetMapping("/account")
-    public String accountShow(Model model, Principal principal) {
-        RestrictedUserDTO actualUser = service.findByLoginRestricted(principal.getName());
-        model.addAttribute("userToSee", actualUser);
-        return "user";
+    public String accountShow(Model model, Principal principal, HttpServletRequest request) {
+        if (!request.isUserInRole(UserRole.Role.ADMIN.roleName())) {
+            RestrictedUserDTO actualUser = service.findByLoginRestricted(principal.getName());
+            model.addAttribute("userToSee", actualUser);
+            return "user";
+        }else{
+            UserDTO user = service.findByLogin(principal.getName());
+            return "redirect:/account/"+user.getId();
+        }
 
     }
 

@@ -7,7 +7,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.multipart.MultipartResolver;
 import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
+
+import javax.servlet.MultipartConfigElement;
 
 @Configuration
 @PropertySource("classpath:application.properties")
@@ -43,8 +46,21 @@ public class SpringDataConfig {
     @Value("${captcha.size}")
     private Integer captchaSize;
 
+//    @Value("files.path")
+//    private String filesPath;
 
 
+//    @Bean
+//    public MultipartConfigElement multipartConfigElement() {
+//        return new MultipartConfigElement(filesPath);
+//    }
+//
+//    @Bean
+//    public MultipartResolver multipartResolver() {
+//        org.springframework.web.multipart.commons.CommonsMultipartResolver multipartResolver = new org.springframework.web.multipart.commons.CommonsMultipartResolver();
+//        multipartResolver.setMaxUploadSize(1000000);
+//        return multipartResolver;
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder(){

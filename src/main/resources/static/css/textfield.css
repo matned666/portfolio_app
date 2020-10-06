@@ -1,0 +1,35 @@
+.login-textfield {
+    width: 410px;
+    border-radius: 5px;
+}
+
+.login-textfield-small {
+    width: 300px;
+    border-radius: 5px;
+}
+
+.login-textarea {
+    width: 410px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width: 500px) {
+    .login-textfield {
+        width: 80%;
+        border-radius: 5px;
+    }
+
+    .login-textfield-small {
+        width: 50%;
+        border-radius: 5px;
+    }
+
+
+    .login-textarea {
+        width: 80%;
+        height: 200px;
+        border-radius: 5px;
+    }
+}

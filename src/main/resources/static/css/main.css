@@ -70,42 +70,6 @@ body {
     border-radius: 10px;
 }
 
-.button {
-    margin: 5px;
-    border-radius: 5px;
-    height: 30px;
-    background-color: #888888;
-    color: #000000;
-    transition: 0.3s;
-}
-
-.smaller-button {
-    width: 200px;
-}
-
-.bigger-button {
-    width: 410px;
-}
-
-.button:hover {
-    background-color: #cecece;
-    color: #202020;
-    height: 34px;
-    margin: 3px;
-}
-
-.smaller-button:hover {
-    width: 204px;
-}
-
-.bigger-button:hover {
-    width: 414px;
-}
-
-.login-textfield {
-    width: 410px;
-    border-radius: 5px;
-}
 
 .grid {
     display: grid;
@@ -165,70 +129,6 @@ body {
     background-size: cover;
     height: 30px;
     width: 30px;
-}
-
-#top_bottom_right_left {
-    background-image: url("../static/img/maze/TRLB.jpg");
-}
-
-#top_bottom_right {
-    background-image: url("../static/img/maze/TRB.jpg");
-}
-
-#top_bottom_left {
-    background-image: url("../static/img/maze/TLB.jpg");
-}
-
-#top_right_left {
-    background-image: url("../static/img/maze/TLR.jpg");
-}
-
-#bottom_right_left {
-    background-image: url("../static/img/maze/RLB.jpg");
-}
-
-#top_bottom {
-    background-image: url("../static/img/maze/TB.jpg");
-}
-
-#top_left {
-    background-image: url("../static/img/maze/TL.jpg");
-}
-
-#top_right {
-    background-image: url("../static/img/maze/TR.jpg");
-}
-
-#bottom_right {
-    background-image: url("../static/img/maze/RB.jpg");
-}
-
-#bottom_left {
-    background-image: url("../static/img/maze/LB.jpg");
-}
-
-#left_right {
-    background-image: url("../static/img/maze/RL.jpg");
-}
-
-#top {
-    background-image: url("../static/img/maze/T.jpg");
-}
-
-#bottom {
-    background-image: url("../static/img/maze/B.jpg");
-}
-
-#right {
-    background-image: url("../static/img/maze/R.jpg");
-}
-
-#left {
-    background-image: url("../static/img/maze/L.jpg");
-}
-
-#no_entries {
-    background-image: url("../static/img/maze/EMPTY.jpg");
 }
 
 .centered-margin {
@@ -354,40 +254,5 @@ a:active {
 
     }
 
-    .button {
-        margin: 5px;
-        border-radius: 5px;
-        height: fit-content;
-        background-color: #888888;
-        color: #000000;
-        transition: 0.3s;
-    }
 
-    .smaller-button {
-        width: 80%
-    }
-
-    .bigger-button {
-        width: 80%
-    }
-
-    .button:hover {
-        background-color: #cecece;
-        color: #202020;
-        height: fit-content;
-        margin: 3px;
-    }
-
-    .smaller-button:hover {
-        width: 80%
-    }
-
-    .bigger-button:hover {
-        width: 80%
-    }
-
-    .login-textfield {
-        width: 80%;
-        border-radius: 5px;
-    }
 }
