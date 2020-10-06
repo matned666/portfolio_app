@@ -1,6 +1,7 @@
 package eu.mrndesign.matned.portfolioapp.ftp;
 
 import org.apache.commons.net.PrintCommandListener;
+import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
 import org.apache.commons.net.ftp.FTPReply;
@@ -10,7 +11,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-class FtpClient {
+public class FtpClient {
 
     private String server;
     private int port;
@@ -25,11 +26,10 @@ class FtpClient {
         this.password = password;
     }
 
-    void open() throws IOException {
+    public void open() throws IOException {
         ftp = new FTPClient();
 
         ftp.addProtocolCommandListener(new PrintCommandListener(new PrintWriter(System.out)));
-
         ftp.connect(server, port);
         int reply = ftp.getReplyCode();
         if (!FTPReply.isPositiveCompletion(reply)) {
@@ -38,10 +38,18 @@ class FtpClient {
         }
 
         ftp.login(user, password);
+
+        //      IT WAS THE PROBLEM - I didn't have it:
+        ftp.setFileType(FTP.BINARY_FILE_TYPE);
+
     }
 
-    void close() throws IOException {
+    public void close() throws IOException {
         ftp.disconnect();
+    }
+
+    public void putFileToPath(File file, String path) throws IOException {
+        ftp.storeFile(path, new FileInputStream(file));
     }
 
 
@@ -52,12 +60,8 @@ class FtpClient {
                 .collect(Collectors.toList());
     }
 
-    void downloadFile(String source, String destination) throws IOException {
+    public void downloadFile(String source, String destination) throws IOException {
         FileOutputStream out = new FileOutputStream(destination);
         ftp.retrieveFile(source, out);
-    }
-
-    void putFileToPath(File file, String path) throws IOException {
-        ftp.storeFile(path, new FileInputStream(file));
     }
 }

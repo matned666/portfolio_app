@@ -37,14 +37,14 @@ public class GraphicsController {
     }
 
     @GetMapping("/graphics")
-    public String getGraphics(Model model){
+    public String getGraphics(Model model) {
         model.addAttribute("str", new SearchDTO());
         model.addAttribute("graphics", graphicService.findAll());
         return "graphics-list";
     }
 
     @PostMapping("/graphics")
-    public String searchGraphics(SearchDTO str, Model model){
+    public String searchGraphics(SearchDTO str, Model model) {
         List<GraphicDTO> foundItems = graphicService.findAll(str.getSearched());
         if (foundItems.size() == 0) model.addAttribute("noItemsFound", 1);
         model.addAttribute("str", str);
@@ -53,63 +53,69 @@ public class GraphicsController {
     }
 
     @GetMapping("/graphics/{id}")
-    public String getSingleGraphic(@PathVariable Long id, Model model){
+    public String getSingleGraphic(@PathVariable Long id, Model model) {
         model.addAttribute("graphic", graphicService.findById(id));
         return "graphic";
     }
 
     @GetMapping("/graphics/picture/{id}")
-    public String getSinglePicture(@PathVariable Long id, Model model){
+    public String getSinglePicture(@PathVariable Long id, Model model) {
         model.addAttribute("graphic", graphicService.findById(id));
         return "picture";
     }
 
     @GetMapping("/add-graphic")
     public String getAddNewGraphicForm(Model model,
-                                       HttpServletRequest request){
-            model.addAttribute("newGraphic", new GraphicDTO());
-            model.addAttribute("newSeries", new GraphicSetDTO());
-            model.addAttribute("chosenSeries", new GraphicSetDTO());
-            model.addAttribute("series", graphicService.getAllSeriesMade());
-            return "new-picture-add";
+                                       HttpServletRequest request) {
+        model.addAttribute("newGraphic", new GraphicDTO());
+        model.addAttribute("chosenSeries", new GraphicSetDTO());
+        model.addAttribute("series", graphicService.getAllSeriesMade());
+        return "new-picture-add";
     }
 
     @PostMapping("/add-graphic")
-    public String postNewGraphic(
-//            @Validated GraphicDTO graphicDTO,
-                                 @RequestParam("file") MultipartFile file
-//                                 BindingResult bindingResult,
-//                                 Model model
-//                                 HttpServletRequest request
-    )
-    {
-//        if (!file.isEmpty())
-            graphicService.fileUpload(file);
-//        if (!request.isUserInRole(UserRole.Role.ADMIN.roleName())) {
-//            if(file != null){
-//                Path fileNameWithPath = Paths.get(filePath, file.getOriginalFilename());
-//                try {
-//                    Files.write(fileNameWithPath, file.getBytes());
-////                    graphicDTO.setImageUrl("/img/content/"+file.getOriginalFilename());
-//
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            } else {
-//                model.addAttribute("noFile", 1);
-//            }
+    public String postNewGraphic(@Validated GraphicDTO graphicDTO,
+                                 GraphicSetDTO chosenSeries,
+                                 @RequestParam("file") MultipartFile file,
+                                 BindingResult bindingResult,
+                                 Model model,
+                                 HttpServletRequest request) {
 
-//            if (bindingResult.hasErrors() || file == null) {
-//                model.addAttribute("error", 1);
-//                model.addAttribute("binding", bindingResult);
-//                model.addAttribute("newGraphic", graphicDTO);
-//                return "new-picture-add";
-//            }
-//            graphicService.add(graphicDTO);
+        boolean wasFileUploaded = false;
+        if (request.isUserInRole(UserRole.Role.ADMIN.roleName())) {
+            if (file != null) {
+                wasFileUploaded = graphicService.fileUpload(file);
+                if (wasFileUploaded)
+                    graphicService.setGraphicUrl(graphicDTO, file);
+                else
+                    model.addAttribute("fileUploadError", 1);
+            } else {
+                model.addAttribute("noFile", 1);
+            }
+
+            if (bindingResult.hasErrors() || file == null || !wasFileUploaded) {
+                model.addAttribute("error", 1);
+                model.addAttribute("binding", bindingResult);
+                model.addAttribute("newGraphic", graphicDTO);
+                return "new-picture-add";
+            }
+            graphicService.add(graphicDTO, chosenSeries);
             return "redirect:/graphics";
-//        }else {
-//            return "accessDenied";
-//        }
+        } else {
+            return "accessDenied";
+        }
 
+    }
+
+
+    @GetMapping("/graphics/delete/{id}")
+    public String deletePicture(@PathVariable Long id,
+                                HttpServletRequest request){
+        if (request.isUserInRole(UserRole.Role.ADMIN.roleName())){
+            graphicService.delete(id);
+            return "redirect:/graphics";
+        }else {
+            return "accessDenied";
+        }
     }
 }

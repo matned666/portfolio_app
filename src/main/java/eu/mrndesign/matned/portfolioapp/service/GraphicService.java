@@ -2,6 +2,7 @@ package eu.mrndesign.matned.portfolioapp.service;
 
 import eu.mrndesign.matned.portfolioapp.dto.GraphicDTO;
 import eu.mrndesign.matned.portfolioapp.dto.GraphicSetDTO;
+import eu.mrndesign.matned.portfolioapp.ftp.FtpClient;
 import eu.mrndesign.matned.portfolioapp.model.Graphic;
 import eu.mrndesign.matned.portfolioapp.model.GraphicSet;
 import eu.mrndesign.matned.portfolioapp.repository.GraphicRepository;
@@ -12,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -22,8 +24,24 @@ import java.util.stream.Collectors;
 
 public class GraphicService {
 
+
     @Value("${files.path}")
     private String filesPath;
+
+    @Value("${ftp.server.host}")
+    private String ftpHost;
+
+    @Value("${ftp.server.port}")
+    private Integer ftpPort;
+
+    @Value("${ftp.server.user}")
+    private String ftpUser;
+
+    @Value("${ftp.server.password}")
+    private String ftpPassword;
+
+    @Value("${ftp.server.path}")
+    private String ftpPath;
 
     private final GraphicRepository graphicRepository;
     private final GraphicSetRepository graphicSetRepository;
@@ -34,7 +52,7 @@ public class GraphicService {
         this.graphicSetRepository = graphicSetRepository;
     }
 
-    public List<GraphicDTO> findAll(){
+    public List<GraphicDTO> findAll() {
         return graphicRepository.findAll().stream()
                 .map(GraphicDTO::apply)
                 .collect(Collectors.toList());
@@ -42,22 +60,17 @@ public class GraphicService {
     }
 
     public GraphicDTO findById(Long id) {
-        return GraphicDTO.apply(graphicRepository.findById(id).orElseThrow(()->new RuntimeException("No graphic found")));
+        return GraphicDTO.apply(graphicRepository.findById(id).orElseThrow(() -> new RuntimeException("No graphic found")));
     }
 
     public List<GraphicDTO> findAll(String str) {
-        return graphicRepository.findAll("%"+str+"%").stream()
+        return graphicRepository.findAll("%" + str + "%").stream()
                 .map(GraphicDTO::apply)
                 .collect(Collectors.toList());
     }
 
-    public void add(GraphicDTO graphicDTO) {
-        GraphicSet set = new GraphicSet(graphicDTO.getSeries());
-        if (graphicDTO.getSeries() != null) {
-            if (!graphicDTO.getSeries().trim().equals("")) {
-                graphicSetRepository.save(set);
-            }
-        }
+    public void add(GraphicDTO graphicDTO, GraphicSetDTO chosenSeries) {
+        GraphicSet set = addSeries(chosenSeries);
         graphicRepository.save(Graphic.apply(graphicDTO, set));
     }
 
@@ -67,12 +80,38 @@ public class GraphicService {
                 .collect(Collectors.toList());
     }
 
-    public void fileUpload(MultipartFile file) {
-            try {
-                file.transferTo(new File("resources/img/content/upload/"+file.getOriginalFilename()));
+    public boolean fileUpload(MultipartFile file) {
+        try {
+            FtpClient ftp = new FtpClient(ftpHost, ftpPort, ftpUser, ftpPassword);
+            ftp.open();
+            String tmpdir = System.getProperty("java.io.tmpdir");
+            File physicalFile = new File(tmpdir + file.getOriginalFilename());
+            file.transferTo(physicalFile);
+            ftp.putFileToPath(physicalFile, file.getOriginalFilename());
+            ftp.close();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+    public void setGraphicUrl(GraphicDTO graphicDTO, MultipartFile file) {
+        graphicDTO.setImageUrl("http://"+ftpHost + ftpPath + "/" + file.getOriginalFilename());
+    }
+
+    public GraphicSet addSeries(GraphicSetDTO chosenSeries) {
+        GraphicSet set = new GraphicSet();
+        if (!graphicSetRepository.existsBySetName(chosenSeries.getSetName())) {
+            set.setSetName(chosenSeries.getSetName());
+            graphicSetRepository.save(set);
+            return set;
+        } else
+            return graphicSetRepository.findBySetName(chosenSeries.getSetName())
+                    .orElseThrow(() -> new RuntimeException("Series repository problem"));
+    }
+
+    public void delete(Long id) {
+        graphicRepository.deleteById(id);
     }
 }

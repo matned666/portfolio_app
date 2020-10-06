@@ -41,9 +41,9 @@ public class Graphic extends BaseEntity{
         graphic.setNumberOfCopies(dto.getNumberOfCopies());
         graphic.setDescription(dto.getDescription());
         graphic.setCopiesMade(dto.getCopiesMade());
-        graphic.setDateOfPublication(LocalDate.parse(dto.getDateOfPublication(), DATE_TIME_FORMATTER_ONLY_DATE));
-        graphic.setCreationDate(LocalDateTime.parse(dto.getDateOfCreation(), DATE_TIME_FORMATTER_TASK));
-        graphic.setUpdateDate(LocalDateTime.parse(dto.getDateOfUpdate(), DATE_TIME_FORMATTER_TASK));
+        if (dto.getDateOfPublication() != null ) graphic.setDateOfPublication(LocalDate.parse(dto.getDateOfPublication(), DATE_TIME_FORMATTER_ONLY_DATE));
+        if (dto.getDateOfCreation() != null ) graphic.setCreationDate(LocalDateTime.parse(dto.getDateOfCreation(), DATE_TIME_FORMATTER_TASK));
+        if (dto.getDateOfUpdate() != null ) graphic.setUpdateDate(LocalDateTime.parse(dto.getDateOfUpdate(), DATE_TIME_FORMATTER_TASK));
         graphic.setId(dto.getId());
         return graphic;
     }
