@@ -7,6 +7,7 @@ import eu.mrndesign.matned.portfolioapp.model.Graphic;
 import eu.mrndesign.matned.portfolioapp.model.GraphicSet;
 import eu.mrndesign.matned.portfolioapp.repository.GraphicRepository;
 import eu.mrndesign.matned.portfolioapp.repository.GraphicSetRepository;
+import org.apache.commons.net.ntp.TimeStamp;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -80,14 +81,16 @@ public class GraphicService {
                 .collect(Collectors.toList());
     }
 
-    public boolean fileUpload(MultipartFile file) {
+    public boolean fileUpload(MultipartFile file, String fileName) {
         try {
             FtpClient ftp = new FtpClient(ftpHost, ftpPort, ftpUser, ftpPassword);
             ftp.open();
-            String tmpdir = System.getProperty("java.io.tmpdir");
-            File physicalFile = new File(tmpdir + file.getOriginalFilename());
-            file.transferTo(physicalFile);
-            ftp.putFileToPath(physicalFile, file.getOriginalFilename());
+            if (!ftp.fileExistByName("http://"+ftpHost + ftpPath + "/" ,fileName)) {
+                String tmpdir = System.getProperty("java.io.tmpdir");
+                File physicalFile = new File(tmpdir + fileName);
+                file.transferTo(physicalFile);
+                ftp.putFileToPath(physicalFile, fileName);
+            }
             ftp.close();
             return true;
         } catch (IOException e) {
@@ -96,8 +99,9 @@ public class GraphicService {
         }
     }
 
-    public void setGraphicUrl(GraphicDTO graphicDTO, MultipartFile file) {
-        graphicDTO.setImageUrl("http://"+ftpHost + ftpPath + "/" + file.getOriginalFilename());
+    public void setGraphicUrl(GraphicDTO graphicDTO, String fileName) {
+        TimeStamp stamp = TimeStamp.getCurrentTime();
+        graphicDTO.setImageUrl("http://"+ftpHost + ftpPath + "/" +fileName);
     }
 
     public GraphicSet addSeries(GraphicSetDTO chosenSeries) {
@@ -112,6 +116,27 @@ public class GraphicService {
     }
 
     public void delete(Long id) {
+        deleteFileByPath(id);
         graphicRepository.deleteById(id);
+    }
+
+
+
+    private void deleteFileByPath(Long id) {
+        String path = getFileNameFromPath(
+                graphicRepository.findById(id).orElseThrow(()->new RuntimeException("No file found")).getImageUrl());
+        FtpClient ftp = new FtpClient(ftpHost, ftpPort, ftpUser, ftpPassword);
+        try {
+            ftp.open();
+            ftp.deleteFile(path);
+            ftp.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException("FTP exception found");
+        }
+    }
+
+    private String getFileNameFromPath(String path){
+        return path.split("/")[path.split("/").length-1];
     }
 }

@@ -64,4 +64,14 @@ public class FtpClient {
         FileOutputStream out = new FileOutputStream(destination);
         ftp.retrieveFile(source, out);
     }
+
+    public boolean fileExistByName(String path, String name) throws IOException {
+        return Arrays. stream(ftp.listFiles(path))
+                .map(FTPFile::getName)
+                .anyMatch(x->x.equals(name));
+    }
+
+    public boolean deleteFile(String path) throws IOException {
+        return ftp.deleteFile(path);
+    }
 }

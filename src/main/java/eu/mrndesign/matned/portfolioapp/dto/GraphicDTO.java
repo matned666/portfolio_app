@@ -18,16 +18,19 @@ public class GraphicDTO {
     private Long id;
     private String imageUrl;
     @NotEmpty(message = "This field cannot be empty")
-    @NotBlank(message = "This field cannot be empty")
+//    @NotBlank(message = "This field cannot be empty")
     @NotNull(message = "This field cannot be empty")
     private String title;
+
     @NotEmpty(message = "This field cannot be empty")
-    @NotBlank(message = "This field cannot be empty")
+//    @NotBlank(message = "This field cannot be empty")
     @NotNull(message = "This field cannot be empty")
     @Size(min = 10, max = 5000, message = "The description should be between {min} and {max} signs.")
     private String description;
+
     @DateMatchesPattern
     private String dateOfPublication;
+
     @IsNumericInteger
     private Integer numberOfCopies;
     private Integer copiesMade;

@@ -50,6 +50,7 @@ body {
 }
 
 .contenti {
+    margin-top: 50px;
     height: 100%;
     flex: 1;
     padding: 40px;
@@ -211,7 +212,13 @@ a:active {
     font-weight: bold;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1060px) {
+    .contenti {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 551px) {
 
     .grid.graphics {
         grid-template-columns: 100%;
@@ -249,10 +256,15 @@ a:active {
     }
 
     .contenti {
-        margin-top: 100px;
-        height: 100%;
-
+        margin-top: 150px;
     }
 
 
 }
+
+@media screen and (max-width: 299px) {
+    .contenti {
+        margin-top: 230px;
+    }
+}
+

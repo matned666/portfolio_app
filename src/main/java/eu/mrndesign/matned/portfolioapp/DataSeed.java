@@ -330,12 +330,6 @@ public class DataSeed implements InitializingBean {
                 LocalDate.parse("2009-10-15", DATE_TIME_FORMATTER_ONLY_DATE),
                 20,
                 1);
-        addP("Hermes Trismegistos",
-                "/img/content/hermes trismegistos - Color XXS wglądówka.jpg",
-                "A picture from magic pictures series, size: 50x120cm, simple description TODO",
-                LocalDate.parse("2014-05-01", DATE_TIME_FORMATTER_ONLY_DATE),
-                7,
-                2);
         addP("Hermit's den",
                 "/img/content/hermit_den.jpg",
                 "A picture from human states series, size: 70x60cm, simple description TODO",
@@ -396,12 +390,7 @@ public class DataSeed implements InitializingBean {
                 LocalDate.parse("2011-04-01", DATE_TIME_FORMATTER_ONLY_DATE),
                 7,
                 4);
-        addP("Temptation of Adam and Eve",
-                "/img/content/temptation_of_adam_and_eve.jpg",
-                "A picture from human states series, size: 100x100, simple description TODO",
-                LocalDate.parse("2011-04-01", DATE_TIME_FORMATTER_ONLY_DATE),
-                7,
-                5);
+
         addP("The tower of Babel",
                 "/img/content/tower_of_babel.jpg",
                 "A picture from human states series, size: 50x120, simple description TODO",

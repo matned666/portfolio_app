@@ -1,5 +1,6 @@
 package eu.mrndesign.matned.portfolioapp.controller;
 
+import eu.mrndesign.matned.portfolioapp.captcha_google.ReCaptchaService;
 import eu.mrndesign.matned.portfolioapp.dto.GraphicDTO;
 import eu.mrndesign.matned.portfolioapp.dto.GraphicSetDTO;
 import eu.mrndesign.matned.portfolioapp.dto.SearchDTO;
@@ -17,23 +18,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.security.Principal;
 import java.util.List;
 
 @Controller
 public class GraphicsController {
 
     private final GraphicService graphicService;
+    private final ReCaptchaService reCaptchaService;
 
     @Value("spring.servlet.multipart.location")
     private String filePath;
 
-    public GraphicsController(GraphicService graphicService) {
+    public GraphicsController(GraphicService graphicService,
+                              ReCaptchaService reCaptchaService) {
         this.graphicService = graphicService;
+        this.reCaptchaService = reCaptchaService;
     }
 
     @GetMapping("/graphics")
@@ -74,32 +73,39 @@ public class GraphicsController {
     }
 
     @PostMapping("/add-graphic")
-    public String postNewGraphic(@Validated GraphicDTO graphicDTO,
-                                 GraphicSetDTO chosenSeries,
-                                 @RequestParam("file") MultipartFile file,
+    public String postNewGraphic(@RequestParam("serie") String chosenSeries,
+                                 @Validated GraphicDTO graphicDTO,
                                  BindingResult bindingResult,
+                                 @RequestParam("file") MultipartFile file,
                                  Model model,
-                                 HttpServletRequest request) {
+                                 HttpServletRequest request,
+                                 @RequestParam(name = "g-recaptcha-response") String captchaResponse) {
 
         boolean wasFileUploaded = false;
         if (request.isUserInRole(UserRole.Role.ADMIN.roleName())) {
-            if (file != null) {
-                wasFileUploaded = graphicService.fileUpload(file);
-                if (wasFileUploaded)
-                    graphicService.setGraphicUrl(graphicDTO, file);
-                else
-                    model.addAttribute("fileUploadError", 1);
+            boolean validatedNotRobot = reCaptchaService.isResponseValid(captchaResponse);
+            if (!validatedNotRobot) model.addAttribute("wrong_recaptcha", 1);
+            if (!file.isEmpty()) {
+                if (validatedNotRobot) {
+                    String fileName = System.currentTimeMillis() + file.getOriginalFilename();
+                    wasFileUploaded = graphicService.fileUpload(file, fileName);
+                    if (wasFileUploaded)
+                        graphicService.setGraphicUrl(graphicDTO, fileName);
+                    else
+                        model.addAttribute("fileUploadError", 1);
+                }
             } else {
                 model.addAttribute("noFile", 1);
             }
 
-            if (bindingResult.hasErrors() || file == null || !wasFileUploaded) {
+            if (bindingResult.hasErrors() || file.isEmpty() || !wasFileUploaded || !validatedNotRobot) {
                 model.addAttribute("error", 1);
                 model.addAttribute("binding", bindingResult);
                 model.addAttribute("newGraphic", graphicDTO);
+                model.addAttribute("series", graphicService.getAllSeriesMade());
                 return "new-picture-add";
             }
-            graphicService.add(graphicDTO, chosenSeries);
+            graphicService.add(graphicDTO, new GraphicSetDTO(chosenSeries));
             return "redirect:/graphics";
         } else {
             return "accessDenied";
@@ -110,11 +116,11 @@ public class GraphicsController {
 
     @GetMapping("/graphics/delete/{id}")
     public String deletePicture(@PathVariable Long id,
-                                HttpServletRequest request){
-        if (request.isUserInRole(UserRole.Role.ADMIN.roleName())){
+                                HttpServletRequest request) {
+        if (request.isUserInRole(UserRole.Role.ADMIN.roleName())) {
             graphicService.delete(id);
             return "redirect:/graphics";
-        }else {
+        } else {
             return "accessDenied";
         }
     }

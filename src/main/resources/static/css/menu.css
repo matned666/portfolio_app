@@ -1,6 +1,7 @@
-.header {
+.headerV {
     overflow: hidden;
     position: fixed;
+    height: fit-content;
     margin-right: 40px;
     width: 100%;
     background-color: black;
@@ -12,7 +13,7 @@
     color: #aaaaaa;
 }
 
-.header a {
+.headerV a {
     float: left;
     color: #aaaaaa;
     text-align: center;
