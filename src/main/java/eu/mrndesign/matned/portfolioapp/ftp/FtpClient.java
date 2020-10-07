@@ -74,4 +74,6 @@ public class FtpClient {
     public boolean deleteFile(String path) throws IOException {
         return ftp.deleteFile(path);
     }
+
+
 }

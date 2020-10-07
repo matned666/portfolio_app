@@ -82,13 +82,7 @@ public class GraphicService {
             FtpClient ftp = new FtpClient(ftpHost, ftpPort, ftpUser, ftpPassword);
             ftp.open();
             if (!ftp.fileExistByName("http://"+ftpHost + ftpPath + "/" ,fileName)) {
-                String tmpdir;
-                if (tempDir.equals("java.io.tmpdir")){
-                tmpdir = System.getProperty("java.io.tmpdir");
-                } else {
-                tmpdir = tempDir;
-                }
-                File physicalFile = new File(tmpdir + fileName);
+                File physicalFile = File.createTempFile(System.currentTimeMillis()+"tmp", null);
                 file.transferTo(physicalFile);
                 ftp.putFileToPath(physicalFile, fileName);
             }
