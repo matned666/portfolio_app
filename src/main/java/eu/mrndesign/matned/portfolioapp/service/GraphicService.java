@@ -7,17 +7,12 @@ import eu.mrndesign.matned.portfolioapp.model.Graphic;
 import eu.mrndesign.matned.portfolioapp.model.GraphicSet;
 import eu.mrndesign.matned.portfolioapp.repository.GraphicRepository;
 import eu.mrndesign.matned.portfolioapp.repository.GraphicSetRepository;
-import org.apache.commons.net.ntp.TimeStamp;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,8 +21,6 @@ import java.util.stream.Collectors;
 public class GraphicService {
 
 
-    @Value("${files.path}")
-    private String filesPath;
 
     @Value("${ftp.server.host}")
     private String ftpHost;
@@ -80,13 +73,14 @@ public class GraphicService {
                 .map(GraphicSetDTO::apply)
                 .collect(Collectors.toList());
     }
-
+//    #{RAILS_ROOT}/tmp/
     public boolean fileUpload(MultipartFile file, String fileName) {
         try {
             FtpClient ftp = new FtpClient(ftpHost, ftpPort, ftpUser, ftpPassword);
             ftp.open();
             if (!ftp.fileExistByName("http://"+ftpHost + ftpPath + "/" ,fileName)) {
-                String tmpdir = System.getProperty("java.io.tmpdir");
+//                String tmpdir = System.getProperty("java.io.tmpdir");
+                String tmpdir = "#{RAILS_ROOT}/tmp/";
                 File physicalFile = new File(tmpdir + fileName);
                 file.transferTo(physicalFile);
                 ftp.putFileToPath(physicalFile, fileName);
@@ -100,7 +94,6 @@ public class GraphicService {
     }
 
     public void setGraphicUrl(GraphicDTO graphicDTO, String fileName) {
-        TimeStamp stamp = TimeStamp.getCurrentTime();
         graphicDTO.setImageUrl("http://"+ftpHost + ftpPath + "/" +fileName);
     }
 
@@ -119,8 +112,6 @@ public class GraphicService {
         deleteFileByPath(id);
         graphicRepository.deleteById(id);
     }
-
-
 
     private void deleteFileByPath(Long id) {
         String path = getFileNameFromPath(
