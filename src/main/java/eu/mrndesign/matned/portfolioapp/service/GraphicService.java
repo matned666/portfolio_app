@@ -21,10 +21,6 @@ import java.util.stream.Collectors;
 public class GraphicService {
 
 
-
-    @Value("${tmp.files.path}")
-    private String tempDir;
-
     @Value("${ftp.server.host}")
     private String ftpHost;
 
