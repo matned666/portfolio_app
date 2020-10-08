@@ -81,7 +81,7 @@ public class GraphicService {
             File physicalFile = File.createTempFile(System.currentTimeMillis() + "tmp", "jpg");
 //            file.transferTo(physicalFile);
 //            ftp.putFileToPath(physicalFile, fileName);
-//            ftp.close();
+            ftp.close();
             return true;
         } catch (IOException e) {
             e.printStackTrace();
