@@ -73,15 +73,15 @@ public class GraphicService {
                 .collect(Collectors.toList());
     }
 
-    //    #{RAILS_ROOT}/tmp/
     public boolean fileUpload(MultipartFile file, String fileName) {
         try {
             FtpClient ftp = new FtpClient(ftpHost, ftpPort, ftpUser, ftpPassword);
             ftp.open();
+
             File physicalFile = File.createTempFile(System.currentTimeMillis() + "tmp", "jpg");
-            file.transferTo(physicalFile);
-            ftp.putFileToPath(physicalFile, fileName);
-            ftp.close();
+//            file.transferTo(physicalFile);
+//            ftp.putFileToPath(physicalFile, fileName);
+//            ftp.close();
             return true;
         } catch (IOException e) {
             e.printStackTrace();

@@ -2531,3 +2531,785 @@ java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
 2020-10-08 01:09:10.900 DEBUG 12456 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=7b7a0f19-4b56-457f-970c-b1df16e5c03c, user=mat.niedbal@gmail.com]
 2020-10-08 01:09:10.916 DEBUG 12456 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 206 PARTIAL_CONTENT
 2020-10-08 01:09:10.917 DEBUG 12456 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1, session=7b7a0f19-4b56-457f-970c-b1df16e5c03c, user=mat.niedbal@gmail.com]
+2020-10-08 08:38:43.557  WARN 12456 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h22s748ms459µs800ns).
+2020-10-08 10:24:54.765  WARN 12456 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h46m11s221ms184µs200ns).
+2020-10-08 12:42:42.807  INFO 15820 --- [main] e.m.matned.portfolioapp.AppStarter       : Starting AppStarter on DESKTOP-0H7O6QR with PID 15820 (C:\JetBrains\portfolio_app\target\classes started by matni in C:\JetBrains\portfolio_app)
+2020-10-08 12:42:42.810  INFO 15820 --- [main] e.m.matned.portfolioapp.AppStarter       : The following profiles are active: def
+2020-10-08 12:42:44.041  INFO 15820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-08 12:42:44.138  INFO 15820 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87ms. Found 6 JPA repository interfaces.
+2020-10-08 12:42:44.690  INFO 15820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-08 12:42:44.698  INFO 15820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-08 12:42:44.699  INFO 15820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-08 12:42:44.871  INFO 15820 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-08 12:42:44.871  INFO 15820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1999 ms
+2020-10-08 12:42:45.063  INFO 15820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-08 12:42:45.107  INFO 15820 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-08 12:42:45.127  INFO 15820 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-08 12:42:45.153  INFO 15820 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-08 12:42:45.267  INFO 15820 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-08 12:42:45.754  INFO 15820 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-08 12:42:45.774  INFO 15820 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-10-08 12:42:45.837 DEBUG 15820 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'requestLoggingFilter' configured for use
+2020-10-08 12:42:47.887  INFO 15820 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-08 12:42:47.912  INFO 15820 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-08 12:42:56.280  WARN 15820 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-08 12:42:56.503 DEBUG 15820 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-08 12:42:56.558  INFO 15820 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-08 12:42:56.579 DEBUG 15820 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-08 12:42:56.589 DEBUG 15820 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-08 12:42:56.909  INFO 15820 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14b9df65, org.springframework.security.web.context.SecurityContextPersistenceFilter@104cfb24, org.springframework.security.web.header.HeaderWriterFilter@42ef5216, org.springframework.web.filter.CorsFilter@3b046e64, org.springframework.security.web.authentication.logout.LogoutFilter@20556566, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@147059f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bc8caa7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57cff804, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@838e109, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1c43e84e, org.springframework.security.web.session.SessionManagementFilter@5d94ac8a, org.springframework.security.web.access.ExceptionTranslationFilter@55317c63, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2337bf27]
+2020-10-08 12:42:57.373  INFO 15820 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-08 12:42:57.437  INFO 15820 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-08 12:42:57.438  INFO 15820 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-08 12:42:57.475  INFO 15820 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-08 12:42:57.490  INFO 15820 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-10-08 12:42:57.501  INFO 15820 --- [main] e.m.matned.portfolioapp.AppStarter       : Started AppStarter in 15.278 seconds (JVM running for 16.788)
+2020-10-08 12:42:58.552  INFO 15820 --- [RMI TCP Connection(1)-192.168.56.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-08 12:42:58.553  INFO 15820 --- [RMI TCP Connection(1)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-08 12:42:58.553 DEBUG 15820 --- [RMI TCP Connection(1)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-10-08 12:42:58.559 DEBUG 15820 --- [RMI TCP Connection(1)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-08 12:42:58.560  INFO 15820 --- [RMI TCP Connection(1)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-10-08 12:44:28.968 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:28.974 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-10-08 12:44:28.998 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-08 12:44:29.266 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.268 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.406 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.406 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-10-08 12:44:29.409 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.426 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.426 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.456 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.456 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.456 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-10-08 12:44:29.456 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-10-08 12:44:29.456 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.456 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-10-08 12:44:29.457 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.457 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.458 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.462 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.463 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.465 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.465 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.466 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.466 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.497 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.498 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-10-08 12:44:29.499 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.502 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.503 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.544 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/mist2.jpg, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.544 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.544 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.544 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/img/mist2.jpg", parameters={}
+2020-10-08 12:44:29.544 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-10-08 12:44:29.544 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-10-08 12:44:29.545 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.545 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.545 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.551 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.551 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.551 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.551 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.554 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.554 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/mist2.jpg, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.594 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.594 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-10-08 12:44:29.596 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.602 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.603 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.627 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.627 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.627 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/sound/music1.mp3", parameters={}
+2020-10-08 12:44:29.627 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-10-08 12:44:29.627 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.627 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-10-08 12:44:29.628 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.628 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.628 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:29.633 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.634 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.639 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:29.639 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:29.860 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+2020-10-08 12:44:29.861 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:30.828 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /graphics, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:30.830 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/graphics", parameters={}
+2020-10-08 12:44:31.017 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-08 12:44:31.075 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.076 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /graphics, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.256 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/flying-object.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.256 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/css/flying-object.css", parameters={}
+2020-10-08 12:44:31.257 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.263 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.263 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/flying-object.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.345 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.345 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.345 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.346 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-10-08 12:44:31.346 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-10-08 12:44:31.346 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-10-08 12:44:31.347 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.347 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.347 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.350 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.351 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.351 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.351 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.351 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.352 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.384 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.384 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-10-08 12:44:31.386 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.391 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.391 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.433 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.434 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-10-08 12:44:31.435 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.439 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.440 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.441 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.441 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.442 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-10-08 12:44:31.442 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-10-08 12:44:31.443 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.443 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.446 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.446 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.446 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.446 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.466 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.467 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-10-08 12:44:31.467 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.470 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.470 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.505 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.505 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-10-08 12:44:31.505 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.510 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.510 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.548 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:31.548 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-10-08 12:44:31.548 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:31.560 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:31.560 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:40.856 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /login, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:40.857 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2020-10-08 12:44:40.862 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-08 12:44:40.895 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:40.895 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /login, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.007 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.008 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-10-08 12:44:41.008 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:41.011 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:41.011 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.044 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.044 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.044 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.044 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-10-08 12:44:41.044 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-10-08 12:44:41.044 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-10-08 12:44:41.045 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:41.045 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:41.046 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:41.049 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:41.049 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.049 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:41.050 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.051 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:41.051 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.089 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.089 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-10-08 12:44:41.089 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:41.092 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:41.092 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.127 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.127 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.127 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.128 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-10-08 12:44:41.128 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-10-08 12:44:41.128 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-10-08 12:44:41.128 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:41.128 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:41.128 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:41.131 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:41.131 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:41.132 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.132 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:41.132 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.132 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.171 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.172 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-10-08 12:44:41.172 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:41.175 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:41.175 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.207 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/mist.jpg, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:41.207 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/img/mist.jpg", parameters={}
+2020-10-08 12:44:41.207 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:41.222 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:41.222 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/mist.jpg, client=0:0:0:0:0:0:0:1]
+2020-10-08 12:44:43.451 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:43.452 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-10-08 12:44:43.456 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-08 12:44:43.650 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:43.651 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:43.817 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:43.817 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-10-08 12:44:43.817 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:43.826 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:43.826 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-10-08 12:44:43.827 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:43.834 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:43.834 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:43.834 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-10-08 12:44:43.834 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-10-08 12:44:43.834 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:43.834 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:43.896 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:43.897 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-10-08 12:44:43.898 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:43.907 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:43.907 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_shopping_cart.png", parameters={}
+2020-10-08 12:44:43.909 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:44.018 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.018 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.064 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.065 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.226 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.226 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.227 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.228 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.311 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.312 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.374 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.375 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.473 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/mist2.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.474 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/img/mist2.jpg", parameters={}
+2020-10-08 12:44:44.474 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:44.487 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.487 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-10-08 12:44:44.488 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:44.516 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.517 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-10-08 12:44:44.517 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:44.565 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.565 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.565 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-10-08 12:44:44.565 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-10-08 12:44:44.566 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:44.566 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:44.658 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.658 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-10-08 12:44:44.659 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:44.685 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.686 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/mist2.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.729 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.730 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.788 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.788 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.818 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.818 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.865 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.865 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:44.914 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:44.915 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:45.839 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /graphics, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:45.840 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/graphics", parameters={}
+2020-10-08 12:44:46.099 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-08 12:44:46.309 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:46.310 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /graphics, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.447 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.447 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-10-08 12:44:46.447 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.447 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-10-08 12:44:46.448 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:46.448 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:46.455 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.455 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-10-08 12:44:46.456 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:46.470 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/flying-object.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.470 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/css/flying-object.css", parameters={}
+2020-10-08 12:44:46.471 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:46.585 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.585 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-10-08 12:44:46.586 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:46.620 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.620 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-10-08 12:44:46.621 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:46.717 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:46.717 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.765 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:46.765 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.806 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:46.806 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.838 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:46.838 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/flying-object.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.919 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:46.919 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.927 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:46.928 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:46.999 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.000 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_shopping_cart.png", parameters={}
+2020-10-08 12:44:47.001 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:47.077 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.077 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.077 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-10-08 12:44:47.077 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-10-08 12:44:47.078 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:47.078 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:47.113 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.113 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-10-08 12:44:47.114 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:47.164 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.165 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-10-08 12:44:47.165 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.165 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-10-08 12:44:47.165 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:47.165 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:47.238 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:47.238 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.288 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:47.288 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.328 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:47.328 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.366 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:47.366 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.411 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:47.411 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:47.495 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:47.495 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:48.509 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /add-graphic, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:48.510 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/add-graphic", parameters={}
+2020-10-08 12:44:48.610 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-08 12:44:48.841 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:48.842 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /add-graphic, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:48.994 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:48.995 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-10-08 12:44:48.997 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.019 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.019 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-10-08 12:44:49.021 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.026 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.026 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.027 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-10-08 12:44:49.027 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-10-08 12:44:49.029 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.029 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.083 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.084 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-10-08 12:44:49.085 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.098 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /js/mainScripts.js, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.099 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/js/mainScripts.js", parameters={}
+2020-10-08 12:44:49.100 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.200 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:49.201 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.247 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:49.247 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.299 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:49.300 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.342 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:49.342 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.500 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:49.500 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.503 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:49.504 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /js/mainScripts.js, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.789 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.790 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-10-08 12:44:49.792 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.796 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.796 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-10-08 12:44:49.797 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.797 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.798 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-10-08 12:44:49.798 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.801 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_shopping_cart.png", parameters={}
+2020-10-08 12:44:49.801 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.802 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.858 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.858 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-10-08 12:44:49.858 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.877 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:49.877 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-10-08 12:44:49.878 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:44:49.969 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:49.970 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:50.023 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:50.023 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:50.068 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:50.068 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:50.121 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:50.122 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:50.158 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:50.158 DEBUG 15820 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:44:50.210 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:44:50.210 DEBUG 15820 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:39.428 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [POST /add-graphic, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:39.633 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/add-graphic", parameters={masked}
+2020-10-08 12:45:39.710 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.client.RestTemplate              : HTTP POST https://www.google.com/recaptcha/api/siteverify?secret=6Ldyc9IZAAAAAB11IuGmSaDd-BzH79fL2XQ3qykQ&response=03AGdBq26AoJVLu5stN1TdAOYcAdToBcqiSaeVwm7ZSfgXkdBjzClwZ6-OE5B78AxYDDHmUPs0TgCTMmaCs2q-HaRH9W82jmxu4pgCN73ACoSPiMxfsL555krfwf9YWM_TijQLGT7TzGsqE3cvB5qr7g0MEP8GjJBi14-fD5mB707Wd8vUiFo-ofWLBRQACYQP0in60zoprMdS8bPXI6kQQTGeTT-Dzo716beasXQAXFArRNrdIC9Hx-aBYbrJhhv2DdVSLQkVZN3AX3DBxOO2wphhweIU7ctU2FuT-xRjkjD5nkQg0ou32eKB9JR17urZKKqzHR3EBUhwxLf8GqCFYSzNgdF6FB5NJNDRU0igrb0gMLEpfHE1-ymym-E7t9P-kLzAgNBpiJtF29qXHsLRzErMKlI7pdFnDhQj0eTzZKYvBlIw2ap0Suko6WxQ36ATpD56t8C_9ar6
+2020-10-08 12:45:39.728 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2020-10-08 12:45:40.027 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.client.RestTemplate              : Response 200 OK
+2020-10-08 12:45:40.031 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.client.RestTemplate              : Reading to [eu.mrndesign.matned.portfolioapp.captcha_google.ReCaptchaResponse]
+2020-10-08 12:45:45.215 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.view.RedirectView        : View name 'redirect:', model {}
+2020-10-08 12:45:45.378 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2020-10-08 12:45:45.379 DEBUG 15820 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [POST /add-graphic, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:45.588 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /graphics, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:45.588 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/graphics", parameters={}
+2020-10-08 12:45:45.752 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-08 12:45:45.984 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:45.985 DEBUG 15820 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /graphics, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.137 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.137 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-10-08 12:45:46.138 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:46.157 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/flying-object.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.157 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/css/flying-object.css", parameters={}
+2020-10-08 12:45:46.158 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:46.164 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.164 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-10-08 12:45:46.164 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.164 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-10-08 12:45:46.165 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:46.165 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:46.219 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.219 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-10-08 12:45:46.220 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:46.234 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.234 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-10-08 12:45:46.235 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:46.330 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:46.330 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/flying-object.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.380 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:46.380 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.408 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:46.408 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.455 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:46.455 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.501 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:46.501 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.552 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:46.552 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.650 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.650 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-10-08 12:45:46.650 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.650 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_shopping_cart.png", parameters={}
+2020-10-08 12:45:46.650 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:46.651 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:46.739 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.739 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-10-08 12:45:46.740 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:46.790 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.790 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-10-08 12:45:46.790 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:46.912 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:46.912 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-10-08 12:45:46.912 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:47.080 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:47.081 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:47.160 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:47.160 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/sound/music1.mp3", parameters={}
+2020-10-08 12:45:47.161 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:47.171 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:47.171 DEBUG 15820 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:47.226 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:47.226 DEBUG 15820 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:47.354 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:47.355 DEBUG 15820 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:47.420 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:47.421 DEBUG 15820 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:47.486 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+2020-10-08 12:45:47.486 DEBUG 15820 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:47.539 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:45:47.540 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-10-08 12:45:47.540 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:45:48.044 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:45:48.045 DEBUG 15820 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:22.249  INFO 26592 --- [main] e.m.matned.portfolioapp.AppStarter       : Starting AppStarter on DESKTOP-0H7O6QR with PID 26592 (C:\JetBrains\portfolio_app\target\classes started by matni in C:\JetBrains\portfolio_app)
+2020-10-08 12:48:22.252  INFO 26592 --- [main] e.m.matned.portfolioapp.AppStarter       : The following profiles are active: def
+2020-10-08 12:48:23.182  INFO 26592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-10-08 12:48:23.289  INFO 26592 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97ms. Found 6 JPA repository interfaces.
+2020-10-08 12:48:23.808  INFO 26592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-10-08 12:48:23.816  INFO 26592 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-10-08 12:48:23.816  INFO 26592 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-10-08 12:48:23.983  INFO 26592 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-10-08 12:48:23.984  INFO 26592 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1686 ms
+2020-10-08 12:48:24.190  INFO 26592 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-08 12:48:24.235  INFO 26592 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-10-08 12:48:24.251  INFO 26592 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-10-08 12:48:24.274  INFO 26592 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-10-08 12:48:24.374  INFO 26592 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-10-08 12:48:24.828  INFO 26592 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-10-08 12:48:24.859  INFO 26592 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-10-08 12:48:25.283 DEBUG 26592 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'requestLoggingFilter' configured for use
+2020-10-08 12:48:27.110  INFO 26592 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-10-08 12:48:27.131  INFO 26592 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-10-08 12:48:35.861  WARN 26592 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-10-08 12:48:36.089 DEBUG 26592 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-10-08 12:48:36.145  INFO 26592 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-10-08 12:48:36.165 DEBUG 26592 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-10-08 12:48:36.175 DEBUG 26592 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-10-08 12:48:36.479  INFO 26592 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@512dc0e0, org.springframework.security.web.context.SecurityContextPersistenceFilter@217fd3c, org.springframework.security.web.header.HeaderWriterFilter@4203529f, org.springframework.web.filter.CorsFilter@f96654, org.springframework.security.web.authentication.logout.LogoutFilter@c2f7c63, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7ae0a26, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1736273c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@323b0632, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@7b9d1a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75063bd0, org.springframework.security.web.session.SessionManagementFilter@2aaa89c2, org.springframework.security.web.access.ExceptionTranslationFilter@6b278b17, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b9c716f]
+2020-10-08 12:48:36.985  INFO 26592 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-08 12:48:37.062  INFO 26592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-10-08 12:48:37.063  INFO 26592 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-10-08 12:48:37.096  INFO 26592 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-10-08 12:48:37.108  INFO 26592 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-10-08 12:48:37.116  INFO 26592 --- [main] e.m.matned.portfolioapp.AppStarter       : Started AppStarter in 15.355 seconds (JVM running for 16.756)
+2020-10-08 12:48:37.987  INFO 26592 --- [RMI TCP Connection(2)-192.168.56.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-08 12:48:37.987  INFO 26592 --- [RMI TCP Connection(2)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-10-08 12:48:37.988 DEBUG 26592 --- [RMI TCP Connection(2)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-10-08 12:48:37.995 DEBUG 26592 --- [RMI TCP Connection(2)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-10-08 12:48:37.995  INFO 26592 --- [RMI TCP Connection(2)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-10-08 12:48:40.042 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /graphics, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:40.045 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/graphics", parameters={}
+2020-10-08 12:48:40.308 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-08 12:48:40.840 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:40.843 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /graphics, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:40.989 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:40.989 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:40.989 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-10-08 12:48:40.989 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-10-08 12:48:40.989 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:40.990 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-10-08 12:48:40.992 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:40.992 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:40.992 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:41.029 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/flying-object.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:41.030 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/flying-object.css", parameters={}
+2020-10-08 12:48:41.031 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:41.071 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:41.072 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-10-08 12:48:41.073 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:41.079 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:41.079 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-10-08 12:48:41.080 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:41.436 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:41.436 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:41.499 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:41.499 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:41.650 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:41.652 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:41.718 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:41.719 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/flying-object.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:41.856 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:41.857 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:42.002 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:42.003 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:42.608 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:42.609 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_shopping_cart.png", parameters={}
+2020-10-08 12:48:42.610 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:42.809 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:42.809 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:42.809 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-10-08 12:48:42.810 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-10-08 12:48:42.811 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:42.811 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:43.057 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:43.057 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-10-08 12:48:43.058 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:43.254 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:43.255 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-10-08 12:48:43.256 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:43.730 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:43.730 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:43.730 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-10-08 12:48:43.730 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:43.731 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:43.974 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:43.975 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:44.210 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:44.210 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:44.948 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:44.949 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:45.446 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:45.447 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:45.819 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:45.820 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:45.968 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:45.969 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/sound/music1.mp3", parameters={}
+2020-10-08 12:48:45.969 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:46.349 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+2020-10-08 12:48:46.350 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:55.949 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /graphics/96, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:55.950 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/graphics/96", parameters={}
+2020-10-08 12:48:56.050 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-08 12:48:56.231 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:56.233 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /graphics/96, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.403 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.404 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-10-08 12:48:56.404 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:56.419 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.419 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-10-08 12:48:56.420 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:56.425 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.426 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-10-08 12:48:56.425 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.426 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-10-08 12:48:56.426 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:56.427 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:56.479 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.479 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-10-08 12:48:56.480 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:56.499 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.499 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_shopping_cart.png", parameters={}
+2020-10-08 12:48:56.500 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:56.587 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:56.588 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.626 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:56.627 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.659 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:56.659 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.706 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:56.706 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.747 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:56.748 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.789 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:56.789 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.826 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.826 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-10-08 12:48:56.827 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:56.874 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.874 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-10-08 12:48:56.875 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:56.906 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:56.906 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-10-08 12:48:56.907 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:57.024 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:57.024 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-10-08 12:48:57.025 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:57.222 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:57.222 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:57.228 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:57.229 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-10-08 12:48:57.229 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:57.230 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:57.233 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:48:57.303 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:57.303 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:57.490 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:57.490 DEBUG 26592 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:57.585 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:48:57.585 DEBUG 26592 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:59.919 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /graphics/delete/96, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:48:59.920 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/graphics/delete/96", parameters={}
+2020-10-08 12:49:00.391 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.web.servlet.view.RedirectView        : View name 'redirect:', model {}
+2020-10-08 12:49:00.549 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2020-10-08 12:49:00.549 DEBUG 26592 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /graphics/delete/96, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:00.749 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /graphics, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:00.749 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/graphics", parameters={}
+2020-10-08 12:49:00.851 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-10-08 12:49:01.060 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:01.060 DEBUG 26592 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /graphics, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.175 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.175 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-10-08 12:49:01.176 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:01.199 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.199 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-10-08 12:49:01.199 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:01.205 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.205 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-10-08 12:49:01.206 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:01.222 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/flying-object.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.222 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/flying-object.css", parameters={}
+2020-10-08 12:49:01.223 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:01.259 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.259 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-10-08 12:49:01.259 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:01.279 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.279 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-10-08 12:49:01.280 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:01.367 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:01.368 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.415 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:01.416 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.459 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:01.459 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.480 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:01.481 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/flying-object.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.548 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:01.550 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.702 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:01.703 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.741 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.741 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-10-08 12:49:01.742 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:01.879 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.879 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.879 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_shopping_cart.png", parameters={}
+2020-10-08 12:49:01.879 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-10-08 12:49:01.880 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:01.880 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:01.968 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.969 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-10-08 12:49:01.969 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:01.975 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:01.975 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-10-08 12:49:01.976 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:02.049 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:02.049 DEBUG 26592 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:02.058 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:02.058 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-10-08 12:49:02.059 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-10-08 12:49:02.227 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:02.227 DEBUG 26592 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_shopping_cart.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:02.269 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:02.270 DEBUG 26592 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:02.325 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:02.325 DEBUG 26592 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:02.349 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:02.349 DEBUG 26592 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 12:49:02.416 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-10-08 12:49:02.416 DEBUG 26592 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=517314e3-10a5-4493-881c-32dd948f1f72, user=mat.niedbal@gmail.com]
+2020-10-08 14:17:05.095  WARN 26592 --- [pool-1-thread-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@bb98ff (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2020-10-08 14:17:10.194  WARN 26592 --- [pool-1-thread-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1cc61ef8 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2020-10-08 14:17:25.200  WARN 26592 --- [pool-1-thread-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@16da4c31 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2020-10-08 14:17:40.205  WARN 26592 --- [pool-1-thread-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@15a4f478 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2020-10-08 14:17:40.229  WARN 26592 --- [pool-1-thread-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08003
+2020-10-08 14:17:40.231 ERROR 26592 --- [pool-1-thread-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : HikariPool-1 - Connection is not available, request timed out after 40214ms.
+2020-10-08 14:17:40.232 ERROR 26592 --- [pool-1-thread-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : This connection has been closed.
+2020-10-08 14:17:40.286 ERROR 26592 --- [pool-1-thread-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:448) ~[spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:400) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:373) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:137) ~[spring-tx-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.session.jdbc.JdbcIndexedSessionRepository.cleanUpExpiredSessions(JdbcIndexedSessionRepository.java:553) ~[spring-session-jdbc-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:48) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:111) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:138) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:273) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.begin(LogicalConnectionManagedImpl.java:281) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.begin(JdbcResourceLocalTransactionCoordinatorImpl.java:246) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:83) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:184) ~[spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:402) ~[spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
+	... 12 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 40214ms.
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:695) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:197) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128) ~[HikariCP-3.4.5.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:38) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:108) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
+	... 19 common frames omitted
+Caused by: org.postgresql.util.PSQLException: This connection has been closed.
+	at org.postgresql.jdbc.PgConnection.checkClosed(PgConnection.java:885) ~[postgresql-42.2.16.jar:42.2.16]
+	at org.postgresql.jdbc.PgConnection.setNetworkTimeout(PgConnection.java:1610) ~[postgresql-42.2.16.jar:42.2.16]
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:560) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186) ~[HikariCP-3.4.5.jar:na]
+	... 24 common frames omitted
+
