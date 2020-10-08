@@ -79,7 +79,7 @@ public class GraphicService {
             ftp.open();
 
             File physicalFile = File.createTempFile(System.currentTimeMillis() + "tmp", "jpg");
-//            file.transferTo(physicalFile);
+            file.transferTo(physicalFile);
 //            ftp.putFileToPath(physicalFile, fileName);
             ftp.close();
             return true;
