@@ -52,6 +52,9 @@ public class FtpClient {
         ftp.storeFile(path, new FileInputStream(file));
     }
 
+    public static File temporaryFile(){
+        return new File("artpicture.home.pl/potfolioapp_img/tmp/", System.currentTimeMillis()+"tmp.tmp");
+    }
 
     public Collection<String> listFiles(String path) throws IOException {
         FTPFile[] files = ftp.listFiles(path);

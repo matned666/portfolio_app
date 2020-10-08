@@ -72,16 +72,15 @@ public class GraphicService {
                 .map(GraphicSetDTO::apply)
                 .collect(Collectors.toList());
     }
-//    #{RAILS_ROOT}/tmp/
+
+    //    #{RAILS_ROOT}/tmp/
     public boolean fileUpload(MultipartFile file, String fileName) {
         try {
             FtpClient ftp = new FtpClient(ftpHost, ftpPort, ftpUser, ftpPassword);
             ftp.open();
-            if (!ftp.fileExistByName("http://"+ftpHost + ftpPath + "/" ,fileName)) {
-                File physicalFile = File.createTempFile(System.currentTimeMillis()+"tmp", null);
-                file.transferTo(physicalFile);
-                ftp.putFileToPath(physicalFile, fileName);
-            }
+            File physicalFile = File.createTempFile(System.currentTimeMillis() + "tmp", "jpg");
+            file.transferTo(physicalFile);
+            ftp.putFileToPath(physicalFile, fileName);
             ftp.close();
             return true;
         } catch (IOException e) {
@@ -91,7 +90,7 @@ public class GraphicService {
     }
 
     public void setGraphicUrl(GraphicDTO graphicDTO, String fileName) {
-        graphicDTO.setImageUrl("http://"+ftpHost + ftpPath + "/" +fileName);
+        graphicDTO.setImageUrl("http://" + ftpHost + ftpPath + "/" + fileName);
     }
 
     public GraphicSet addSeries(GraphicSetDTO chosenSeries) {
@@ -112,7 +111,7 @@ public class GraphicService {
 
     private void deleteFileByPath(Long id) {
         String path = getFileNameFromPath(
-                graphicRepository.findById(id).orElseThrow(()->new RuntimeException("No file found")).getImageUrl());
+                graphicRepository.findById(id).orElseThrow(() -> new RuntimeException("No file found")).getImageUrl());
         FtpClient ftp = new FtpClient(ftpHost, ftpPort, ftpUser, ftpPassword);
         try {
             ftp.open();
@@ -124,7 +123,7 @@ public class GraphicService {
         }
     }
 
-    private String getFileNameFromPath(String path){
-        return path.split("/")[path.split("/").length-1];
+    private String getFileNameFromPath(String path) {
+        return path.split("/")[path.split("/").length - 1];
     }
 }
