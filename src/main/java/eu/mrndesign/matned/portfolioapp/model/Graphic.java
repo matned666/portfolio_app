@@ -36,7 +36,7 @@ public class Graphic extends BaseEntity{
         this.creationDate = LocalDateTime.now();
     }
 
-    public static Graphic apply(GraphicDTO dto, GraphicSet set){
+    public static Graphic apply(GraphicDTO dto, GraphicSet set, boolean isEdited){
         Graphic graphic = new Graphic(dto.getImageUrl(), dto.getTitle());
         graphic.setSerie(set);
         graphic.setNumberOfCopies(dto.getNumberOfCopies());
@@ -49,8 +49,10 @@ public class Graphic extends BaseEntity{
         if (dto.getDateOfUpdate() != null)
             graphic.setUpdateDate(LocalDateTime.parse(dto.getDateOfUpdate(), DATE_TIME_FORMATTER_TASK));
         graphic.setId(dto.getId());
+        if (isEdited) graphic.setUpdateDate(LocalDateTime.now());
         return graphic;
     }
+
 
     public String getImageUrl() {
         return imageUrl;

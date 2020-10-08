@@ -46,7 +46,7 @@
 <div th:insert="fragments/nav :: header"></div>
 <div class="contenti" onchange="resizeContenti()">
     <div class="center">
-        <form id="sendForm" method="POST" th:action="@{/add-graphic}" enctype="multipart/form-data"
+        <form id="sendForm" method="POST" th:action="@{/graphics-admin/add}" enctype="multipart/form-data"
               th:object="${newGraphic}">
             <table>
 

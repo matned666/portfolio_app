@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Software development - MRN Design</title>
+    <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/buttons.css" th:href="@{/css/buttons.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/textfield.css" th:href="@{/css/textfield.css}" rel="stylesheet" type="text/css">
+    <script src="../static/js/mainScripts.js" th:src="@{/js/mainScripts.js}" rel="script"
+            type="text/javascript"></script>
+    <script>
+        function addOption() {
+            const textValue = document.getElementById("newSeries").value;
+            const select = document.getElementById("series");
+            const opt = document.createElement('option');
+            opt.appendChild(document.createTextNode(textValue));
+            opt.value = textValue;
+            select.appendChild(opt);
+        }
+
+        function resizeContenti() {
+            const divElement = document.getElementsByClassName('contenti');
+            const menuHeader = document.getElementById('header');
+            divElement.style.marginTop = menuHeader.style.height;
+        }
+    </script>
+
+    <script>
+        var dateControl = document.querySelector('input[type="date"]');
+        dateControl.value = '1983-09-01';
+        console.log(dateControl.value);
+        console.log(dateControl.valueAsNumber);
+    </script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+</head>
+<body class="background-main">
+<div th:insert="fragments/nav :: header"></div>
+<div class="contenti" onchange="resizeContenti()">
+    <div class="center">
+        <form id="sendForm" method="POST" th:action="@{/graphics-admin/edit/{id} (id = ${newGraphic.getId()})}" enctype="multipart/form-data"
+              th:object="${newGraphic}">
+            <table>
+
+                <tr>
+                    <div>
+                        <div th:if="${error != null}">
+                            <div th:each="err : ${binding.getFieldErrors('title')}">
+                                <label class="warning" th:text="${err.getDefaultMessage()}"></label>
+                                <br>
+                            </div>
+                        </div>
+                        <input form="sendForm" class="login-textfield" type="text" th:field="*{title}"
+                               placeholder="Title"><br>
+                    </div>
+                    <div>
+                        <div th:if="${error != null}">
+                            <div th:each="err : ${binding.getFieldErrors('description')}">
+                                <label class="warning" th:text="${err.getDefaultMessage()}"></label>
+                                <br>
+                            </div>
+                        </div>
+                        <textarea form="sendForm" class="login-textarea" type="text" id="description"
+                                  th:field="*{description}"
+                                  placeholder="Description"></textarea><br>
+                    </div>
+                    <div>
+                        <div th:if="${error != null}">
+                            <div th:each="err : ${binding.getFieldErrors('dateOfPublication')}">
+                                <label style="color: red; font-weight: bold"
+                                       th:text="${err.getDefaultMessage()}"></label>
+                                <br>
+                            </div>
+                        </div>
+                        <input form="sendForm" class="login-textfield" type="date" id="dateOfPublication"
+                               th:field="*{dateOfPublication}"
+                               placeholder="Publish: yyyy-MM-dd"><br>
+                    </div>
+                    <div>
+                        <div th:if="${error != null}">
+                            <div th:each="err : ${binding.getFieldErrors('numberOfCopies')}">
+                                <label style="color: red; font-weight: bold"
+                                       th:text="${err.getDefaultMessage()}"></label>
+                                <br>
+                            </div>
+                        </div>
+                        <input form="sendForm" class="login-textfield" type="number" id="numberOfCopies"
+                               th:field="*{numberOfCopies}"
+                               placeholder="Number of copies"><br>
+                    </div>
+                    <div>
+                        <div th:if="${error != null}">
+                            <div th:each="err : ${binding.getFieldErrors('copiesMade')}">
+                                <label style="color: red; font-weight: bold"
+                                       th:text="${err.getDefaultMessage()}"></label>
+                                <br>
+                            </div>
+                        </div>
+                        <input form="sendForm" class="login-textfield" type="number" id="copiesMade"
+                               th:field="*{copiesMade}"
+                               placeholder="Copies done"><br>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="series">Series:</label><br>
+                        <select form="sendForm" class="login-textfield" id="series" type="text"
+                                name="serie">
+                            <option class="login-textfield" th:each="set: ${series}"
+                                    th:text="${set.setName}">
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+
+                        <input class="login-textfield-small" type="text" id="newSeries"
+                               placeholder="Add a new set">
+
+                        <button type="button" id="addSet" onclick="addOption()" class="button round-button">Add
+                        </button>
+
+                    </div>
+                    <br>
+
+                <tr>
+                    <label th:if="${fileUploadError != null}" class="warning">There was an error uploading file- it
+                        should be smaller than 1mb</label>
+                    <br>
+                    <label th:if="${noFile != null}" class="warning">Select any graphic to upload</label>
+                    <br>
+                    <div>
+
+                        <label path="file">Select a graphic to upload</label>
+                        <br>
+                        <input class="smaller-button" type="file" name="file"/>
+                    </div>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <div class="grid list">
+                        <br>
+                        <div class="center">
+                            <div th:if="${wrong_recaptcha == 1}">
+                                <label style="color: red; font-weight: bold"
+                                       for="recaptcha">You're a robot?</label>
+                            </div>
+                            <div id="recaptcha" th:value="${captchaResponse}" class="g-recaptcha centered-margin"
+                                 data-sitekey="6Ldyc9IZAAAAAL9YPNskEHdUxIhElSJnoqjyaIfq"></div>
+                        </div>
+                    </div>
+                </tr>
+                <tr>
+                    <div>
+                        <input class="button bigger-button" type="submit" value="Submit"/>
+                    </div>
+
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<div th:insert="fragments/nav :: footer"></div>
+</body>
+</html>

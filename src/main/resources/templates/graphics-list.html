@@ -34,7 +34,7 @@
                     </form>
                 </div>
             </div>
-            <a th:if="${#request.isUserInRole('ROLE_ADMIN')}" href="/add-graphic"><button class="button smaller-button">Add new graphic</button></a>
+            <a th:if="${#request.isUserInRole('ROLE_ADMIN')}" href="/graphics-admin/add"><button class="button smaller-button">Add new graphic</button></a>
 
             <br>
             <div th:if="${noItemsFound == 1}" class="flier ">

@@ -1,20 +1,12 @@
 package eu.mrndesign.matned.portfolioapp;
 
-import eu.mrndesign.matned.portfolioapp.dto.ProjectDTO;
 import eu.mrndesign.matned.portfolioapp.dto.UserDTO;
 import eu.mrndesign.matned.portfolioapp.model.*;
-import eu.mrndesign.matned.portfolioapp.repository.GraphicRepository;
-import eu.mrndesign.matned.portfolioapp.repository.ProjectRepository;
-import eu.mrndesign.matned.portfolioapp.repository.UserRepository;
-import eu.mrndesign.matned.portfolioapp.repository.UserRoleRepository;
+import eu.mrndesign.matned.portfolioapp.repository.*;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-
-import java.time.LocalDate;
-
-import static eu.mrndesign.matned.portfolioapp.statics.Patterns.DATE_TIME_FORMATTER_ONLY_DATE;
 
 @Component
 public class DataSeed implements InitializingBean {
@@ -25,6 +17,7 @@ public class DataSeed implements InitializingBean {
     private final String defaultAdminLogin;
     private final String defaultAdminPassword;
     private final GraphicRepository graphicRepository;
+    private final GraphicSetRepository graphicSetRepository;
     private final ProjectRepository projectRepository;
 
     @Value("${default.user.username}")
@@ -33,13 +26,18 @@ public class DataSeed implements InitializingBean {
     @Value("${default.user.password}")
     private String defaultUserPassword;
 
+    @Value("${default.set.name}")
+    private String defaultSetName;
+
 
 
     public DataSeed(UserRoleRepository roleRepository,
                     UserRepository userRepository,
                     PasswordEncoder passwordEncoder,
                     String defaultAdminLogin,
-                    String defaultAdminPassword, GraphicRepository graphicRepository,
+                    String defaultAdminPassword,
+                    GraphicRepository graphicRepository,
+                    GraphicSetRepository graphicSetRepository,
                     ProjectRepository projectRepository) {
         this.roleRepository = roleRepository;
         this.userRepository = userRepository;
@@ -47,6 +45,7 @@ public class DataSeed implements InitializingBean {
         this.defaultAdminLogin = defaultAdminLogin;
         this.defaultAdminPassword = defaultAdminPassword;
         this.graphicRepository = graphicRepository;
+        this.graphicSetRepository = graphicSetRepository;
         this.projectRepository = projectRepository;
     }
 
@@ -56,8 +55,15 @@ public class DataSeed implements InitializingBean {
             createRole(role);
         }
         createDefaultUser();
+        createDefaultGraphicSeries();
 //        addDefaultPictures();  // deploys the graphics to the database
 //        addDefaultProjects();    // deploys default projects to database
+    }
+
+    private void createDefaultGraphicSeries() {
+        if (!graphicSetRepository.existsBySetName(defaultSetName)) {
+            graphicSetRepository.save(new GraphicSet(defaultSetName));
+        }
     }
 
 

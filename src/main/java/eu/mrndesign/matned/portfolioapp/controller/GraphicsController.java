@@ -63,23 +63,26 @@ public class GraphicsController {
         return "picture";
     }
 
-    @GetMapping("/add-graphic")
+    @GetMapping("/graphics-admin/add")
     public String getAddNewGraphicForm(Model model,
                                        HttpServletRequest request) {
-        model.addAttribute("newGraphic", new GraphicDTO());
-        model.addAttribute("chosenSeries", new GraphicSetDTO());
-        model.addAttribute("series", graphicService.getAllSeriesMade());
-        return "new-picture-add";
+        if (request.isUserInRole(UserRole.Role.ADMIN.roleName())) {
+            model.addAttribute("newGraphic", new GraphicDTO());
+            model.addAttribute("chosenSeries", new GraphicSetDTO());
+            model.addAttribute("series", graphicService.getAllSeriesMade());
+            return "graphic-add";
+        } else return "accessDenied";
     }
 
-    @PostMapping("/add-graphic")
+    @PostMapping("/graphics-admin/add")
     public String postNewGraphic(@RequestParam("serie") String chosenSeries,
                                  @Validated GraphicDTO graphicDTO,
                                  BindingResult bindingResult,
                                  @RequestParam("file") MultipartFile file,
                                  Model model,
                                  HttpServletRequest request,
-                                 @RequestParam(name = "g-recaptcha-response") String captchaResponse) {
+                                 @RequestParam(name = "g-recaptcha-response")
+                                             String captchaResponse) {
 
         boolean wasFileUploaded = false;
         if (request.isUserInRole(UserRole.Role.ADMIN.roleName())) {
@@ -99,11 +102,7 @@ public class GraphicsController {
             }
 
             if (bindingResult.hasErrors() || file.isEmpty() || !wasFileUploaded || !validatedNotRobot) {
-                model.addAttribute("error", 1);
-                model.addAttribute("binding", bindingResult);
-                model.addAttribute("newGraphic", graphicDTO);
-                model.addAttribute("series", graphicService.getAllSeriesMade());
-                return "new-picture-add";
+                return errorCase(graphicDTO, bindingResult, model, "graphic-add");
             }
             graphicService.add(graphicDTO, new GraphicSetDTO(chosenSeries));
             return "redirect:/graphics";
@@ -113,8 +112,53 @@ public class GraphicsController {
 
     }
 
+    @GetMapping("/graphics-admin/edit/{id}")
+    public String getEditGraphicForm(@PathVariable Long id,
+                                     Model model,
+                                     HttpServletRequest request) {
+        if (request.isUserInRole(UserRole.Role.ADMIN.roleName())) {
+            model.addAttribute("newGraphic", graphicService.findById(id));
+            model.addAttribute("chosenSeries", new GraphicSetDTO());
+            model.addAttribute("series", graphicService.getAllSeriesMade());
+            return "graphic-edit";
+        } else return "accessDenied";
+    }
 
-    @GetMapping("/graphics/delete/{id}")
+
+    @PostMapping("/graphics-admin/edit/{id}")
+    public String postEditedGraphic(@PathVariable Long id,
+                                    @RequestParam("serie") String chosenSeries,
+                                    @Validated GraphicDTO graphicDTO,
+                                    BindingResult bindingResult,
+                                    @RequestParam("file") MultipartFile file,
+                                    Model model,
+                                    HttpServletRequest request,
+                                    @RequestParam(name = "g-recaptcha-response")
+                                                String captchaResponse) {
+        if (request.isUserInRole(UserRole.Role.ADMIN.roleName())) {
+            boolean validatedNotRobot = reCaptchaService.isResponseValid(captchaResponse);
+            if (!validatedNotRobot) model.addAttribute("wrong_recaptcha", 1);
+            if (validatedNotRobot && !file.isEmpty()) {
+                String fileName = System.currentTimeMillis() + file.getOriginalFilename();
+                boolean wasFileUploaded = graphicService.fileUpload(file, fileName);
+                if (wasFileUploaded)
+                    graphicService.setGraphicUrl(graphicDTO, fileName);
+                else
+                    model.addAttribute("fileUploadError", 1);
+            }
+            if (bindingResult.hasErrors() || !validatedNotRobot) {
+                return errorCase(graphicDTO, bindingResult, model, "graphic-edit");
+            }
+            graphicService.edit(id, graphicDTO, chosenSeries);
+            return "redirect:/graphics";
+        } else {
+            return "accessDenied";
+        }
+
+    }
+
+
+    @GetMapping("/graphics-admin/delete/{id}")
     public String deletePicture(@PathVariable Long id,
                                 HttpServletRequest request) {
         if (request.isUserInRole(UserRole.Role.ADMIN.roleName())) {
@@ -123,5 +167,16 @@ public class GraphicsController {
         } else {
             return "accessDenied";
         }
+    }
+
+    private String errorCase(@Validated GraphicDTO graphicDTO,
+                             BindingResult bindingResult,
+                             Model model,
+                             String returnPage) {
+        model.addAttribute("error", 1);
+        model.addAttribute("binding", bindingResult);
+        model.addAttribute("newGraphic", graphicDTO);
+        model.addAttribute("series", graphicService.getAllSeriesMade());
+        return returnPage;
     }
 }

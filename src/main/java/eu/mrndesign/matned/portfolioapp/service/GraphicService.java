@@ -13,8 +13,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import static eu.mrndesign.matned.portfolioapp.statics.Patterns.DATE_TIME_FORMATTER_ONLY_DATE;
 
 @Service
 
@@ -64,7 +67,7 @@ public class GraphicService {
 
     public void add(GraphicDTO graphicDTO, GraphicSetDTO chosenSeries) {
         GraphicSet set = addSeries(chosenSeries);
-        graphicRepository.save(Graphic.apply(graphicDTO, set));
+        graphicRepository.save(Graphic.apply(graphicDTO, set, false));
     }
 
     public List<GraphicSetDTO> getAllSeriesMade() {
@@ -109,6 +112,35 @@ public class GraphicService {
         graphicRepository.deleteById(id);
     }
 
+    public void edit(Long id, GraphicDTO fromDTO, String series){
+        Graphic to = graphicRepository
+                .findById(id)
+                .orElseThrow(()->
+                        new RuntimeException(
+                                "Database problem with finding the graphic which actually exists there."));
+        applyEditedData(to, fromDTO, series);
+        graphicRepository.save(to);
+    }
+
+
+
+
+
+
+
+
+
+    private void applyEditedData(Graphic to, GraphicDTO fromGDTO, String series){
+        to.setTitle(fromGDTO.getTitle());
+        to.setDescription(fromGDTO.getDescription());
+        if (fromGDTO.getImageUrl()!=null) to.setImageUrl(fromGDTO.getImageUrl());
+        to.setCopiesMade(fromGDTO.getCopiesMade());
+        to.setNumberOfCopies(fromGDTO.getNumberOfCopies());
+        if (fromGDTO.getDateOfPublication() != null)
+            to.setDateOfPublication(LocalDate.parse(fromGDTO.getDateOfPublication(), DATE_TIME_FORMATTER_ONLY_DATE));
+        to.setSerie(addSeries(new GraphicSetDTO(series)));
+    }
+
     private void deleteFileByPath(Long id) {
         String path = getFileNameFromPath(
                 graphicRepository.findById(id).orElseThrow(() -> new RuntimeException("No file found")).getImageUrl());
@@ -126,4 +158,6 @@ public class GraphicService {
     private String getFileNameFromPath(String path) {
         return path.split("/")[path.split("/").length - 1];
     }
+
+
 }

@@ -62,6 +62,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 //                Restricted areas
                 .antMatchers("/actuator/**").hasRole(UserRole.Role.ADMIN.name())
+                .antMatchers("/graphics-admin","/graphics-admin/**").hasRole(UserRole.Role.ADMIN.name())
                 .antMatchers("/account").authenticated()
                 .antMatchers("/account/**").hasRole(UserRole.Role.ADMIN.name())
 
