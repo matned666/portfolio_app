@@ -268,3 +268,22 @@ a:active {
     }
 }
 
+
+.thumbnailV{
+    max-width: 70px;
+    min-width: 70px;
+    object-fit: cover;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 3px;
+    transition: 0.3s;
+}
+
+.thumbnailV:hover{
+    border-color: #343434;
+}
+
+.thumbnailV:active{
+    border-color: #888888;
+}

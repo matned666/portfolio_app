@@ -46,7 +46,8 @@
 <div th:insert="fragments/nav :: header"></div>
 <div class="contenti" onchange="resizeContenti()">
     <div class="center">
-        <form id="sendForm" method="POST" th:action="@{/graphics-admin/edit/{id} (id = ${newGraphic.getId()})}" enctype="multipart/form-data"
+        <form id="sendForm" method="POST" th:action="@{/graphics-admin/edit/{id} (id = ${newGraphic.getId()})}"
+              enctype="multipart/form-data"
               th:object="${newGraphic}">
             <table>
 
@@ -130,13 +131,16 @@
                     <br>
 
                 <tr>
-                    <label th:if="${fileUploadError != null}" class="warning">There was an error uploading file- it
-                        should be smaller than 1mb</label>
-                    <br>
-                    <label th:if="${noFile != null}" class="warning">Select any graphic to upload</label>
-                    <br>
+                    <div th:if="${fileUploadError != null}">
+                        <label class="warning">There was an error uploading file- maybe it
+                            should be smaller than 15mb</label><br>
+                    </div>
+                    <div th:if="${noFile != null}">
+                        <label  class="warning">Select any graphic to upload</label>
+                        <br>
+                    </div>
                     <div>
-
+                        <img class="thumbnailV" src="../static/img/mist2.jpg" th:src="*{imageUrl}"><br>
                         <label path="file">Select a graphic to upload</label>
                         <br>
                         <input class="smaller-button" type="file" name="file"/>
