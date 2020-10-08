@@ -49,6 +49,7 @@ public class FtpClient {
     }
 
     public void putFileToPath(File file, String path) throws IOException {
+        ftp.enterLocalPassiveMode();
         ftp.storeFile(path, new FileInputStream(file));
     }
 
