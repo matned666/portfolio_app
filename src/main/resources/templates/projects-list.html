@@ -32,27 +32,52 @@
                 </form>
             </div>
         </div>
-        <span th:if="${noItemsFound == 1}" class="warning">
+        <div th:if="${noItemsFound == 1}">
+            <span class="warning">
                              No items found
                         </span><br>
+        </div>
+
+        <div th:if="${loadingFiles != null}">
+            <span class="warning">
+                             There was an error loading files, check i out. Sorry.
+                        </span><br>
+        </div>
+
+        <a th:if="${#request.isUserInRole('ROLE_ADMIN')}" href="/projects-admin/add">
+            <button class="button smaller-button">Add new graphic</button>
+        </a>
+
+        <br>
         <div class="center">
-            <div th:each="project: ${projects}" class="frameRound" style="width: 80%; margin-left: 10%">
-                <div>
-                    <a style="color: #aaaaaa; width: fit-content; margin-left: 10%;" th:href="@{/projects/{id} (id = ${project.getId()})}">
+            <div th:each="project: ${projects}" class="frameRound" style="width: 80%; height:200px; margin-left: 10%">
+                <a th:href="@{/projects/{id} (id = ${project.getId()})}">
+                    <div class="grid grid40-60">
+                        <span>
+                            <div th:if="${project.getImage() != null}">
+                                <img class="thumbnailB" src="../static/img/mist2.jpg" th:src="${project.getImage()}"
+                                     style="height: 80%" th:alt="${project.getProjectTitle()}">
+                            </div>
+                        </span>
                         <div>
-                            <span>Project id: </span><span th:text="${project.getId()}"></span>
-                        </div>
-                        <h3 th:text="${project.getProjectTitle()}"></h3>
+                                  <span>
+                            <div>
+                                <span>Project id: </span><span th:text="${project.getId()}"></span>
+                            </div>
+                            <h3 th:text="${project.getProjectTitle()}"></h3>
                         <div>
                             <span style="font-weight: bold">Release date: </span><span
                                 th:text="${project.getProjectReleaseDate()}"></span>
                         </div>
                         <a th:href="@{${project.getProjectUrl()}}" target="_blank"><span
                                 th:text="${project.getProjectUrl()}"></span></a>
-                    </a>
-                </div>
+                        </span>
+                        </div>
 
+                    </div>
+                </a>
                 <br>
+
             </div>
         </div>
 

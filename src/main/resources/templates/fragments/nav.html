@@ -7,15 +7,15 @@
 <div id="header" class="headerV" th:fragment="header">
     <div class="header-right">
         <a href="/">Home</a>
-        <a th:if="${#request.isUserInRole('ROLE_ADMIN')}" href="/users-list">Users</a>
+        <a sec:authorize="hasRole('ADMIN')" href="/users-list">Users</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
         <a href="/projects">Projects</a>
         <a  href="/graphics">Graphics</a>
-        <a sec:authorize="isAuthenticated()"  href="/shop">Shop</a>
+        <a sec:authorize="hasRole('ADMIN')"  href="/shop">Shop</a>
     </div>
     <div class="header-left">
-        <a sec:authorize="isAuthenticated()" href="/basket">
+        <a sec:authorize="hasRole('ADMIN')" href="/basket">
             <img th:src="@{/img/ic_shopping_cart.png}" src="../static/img/ic_shopping_cart.png" width="30" height="30" alt="Shopping cart"/>
         </a>
         <a class="basket" style="color: #499fe2; vertical-align: center;" sec:authorize="isAuthenticated()" href="/account" sec:authentication="name"></a>
@@ -30,13 +30,13 @@
     <footer id="footer">
         <audio id = "player" src = "../../sound/music1.mp3" th:src="@{../sound/music1.mp3}" th:autoplay autoplay></audio>
         <a onclick = "document.getElementById('player').play()">
-            <img th:src="@{/img/ic_play_arrow.png}" src="../img/ic_play_arrow.png" width="10" height="10" alt="play music"></a>
+            <img th:src="@{/img/ic_play_arrow.png}" src="../img/ic_play_arrow.png" class="music-button" alt="play music"></a>
         <a onclick = "document.getElementById('player').pause()">
-            <img th:src="@{/img/ic_pause.png}" src="../img/ic_pause.png" width="10" height="10" alt="pause music"></a>
+            <img th:src="@{/img/ic_pause.png}" src="../img/ic_pause.png" class="music-button" alt="pause music"></a>
         <a onclick = "document.getElementById('player').volume += 0.1">
-            <img th:src="@{/img/ic_volume_up.png}" src="../img/ic_volume_up.png" width="10" height="10" alt="volume up music"></a>
+            <img th:src="@{/img/ic_volume_up.png}" src="../img/ic_volume_up.png" class="music-button" alt="volume up music"></a>
         <a onclick = "document.getElementById('player').volume -= 0.1">
-            <img th:src="@{/img/ic_volume_down.png}" src="../img/ic_volume_down.png" width="10" height="10" alt="volume down music"></a>
+            <img th:src="@{/img/ic_volume_down.png}" src="../img/ic_volume_down.png" class="music-button" alt="volume down music"></a>
 
 
         <!--        <audio style="background-color: black; color: black;" th:src = "@{/sound/music1.mp3}" controls="controls" src="../../sound/music1.mp3" autoplay>-->

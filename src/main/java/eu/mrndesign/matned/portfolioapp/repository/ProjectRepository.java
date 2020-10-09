@@ -16,4 +16,7 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
     @Query("select p from Project p where lower(p.projectDescription) like lower(?1) or lower(p.projectTitle) like lower(?1)")
     List<Project> findAll(String searched);
 
+    @Query("select p from Project p order by p.creationDate desc")
+    List<Project> findAll();
+
 }

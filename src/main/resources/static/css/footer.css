@@ -37,3 +37,17 @@
 #copyright {
     color: #aaaaaa;
 }
+
+.music-button{
+    height: 10px;
+    width: 10px;
+    transition: 0.3s;
+}
+
+.music-button:hover{
+    background-color: #636363;
+}
+
+.music-button:active{
+    background-color: #5baaa9;
+}

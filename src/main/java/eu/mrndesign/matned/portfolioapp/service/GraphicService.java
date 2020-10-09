@@ -2,17 +2,13 @@ package eu.mrndesign.matned.portfolioapp.service;
 
 import eu.mrndesign.matned.portfolioapp.dto.GraphicDTO;
 import eu.mrndesign.matned.portfolioapp.dto.GraphicSetDTO;
-import eu.mrndesign.matned.portfolioapp.ftp.FtpClient;
 import eu.mrndesign.matned.portfolioapp.model.Graphic;
 import eu.mrndesign.matned.portfolioapp.model.GraphicSet;
 import eu.mrndesign.matned.portfolioapp.repository.GraphicRepository;
 import eu.mrndesign.matned.portfolioapp.repository.GraphicSetRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,27 +19,20 @@ import static eu.mrndesign.matned.portfolioapp.statics.Patterns.DATE_TIME_FORMAT
 
 public class GraphicService {
 
-
     @Value("${ftp.server.host}")
     private String ftpHost;
-
-    @Value("${ftp.server.port}")
-    private Integer ftpPort;
-
-    @Value("${ftp.server.user}")
-    private String ftpUser;
-
-    @Value("${ftp.server.password}")
-    private String ftpPassword;
 
     @Value("${ftp.server.path}")
     private String ftpPath;
 
+    private final FilesService filesService;
     private final GraphicRepository graphicRepository;
     private final GraphicSetRepository graphicSetRepository;
 
-    public GraphicService(GraphicRepository graphicRepository,
+    public GraphicService(FilesService filesService,
+                          GraphicRepository graphicRepository,
                           GraphicSetRepository graphicSetRepository) {
+        this.filesService = filesService;
         this.graphicRepository = graphicRepository;
         this.graphicSetRepository = graphicSetRepository;
     }
@@ -74,22 +63,6 @@ public class GraphicService {
         return graphicSetRepository.findAll().stream()
                 .map(GraphicSetDTO::apply)
                 .collect(Collectors.toList());
-    }
-
-    public boolean fileUpload(MultipartFile file, String fileName) {
-        try {
-            FtpClient ftp = new FtpClient(ftpHost, ftpPort, ftpUser, ftpPassword);
-            ftp.open();
-
-            File physicalFile = File.createTempFile(System.currentTimeMillis() + "tmp", "jpg");
-            file.transferTo(physicalFile);
-            ftp.putFileToPath(physicalFile, fileName);
-            ftp.close();
-            return true;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
     }
 
     public void setGraphicUrl(GraphicDTO graphicDTO, String fileName) {
@@ -144,16 +117,9 @@ public class GraphicService {
     private void deleteFileByPath(Long id) {
         String path = getFileNameFromPath(
                 graphicRepository.findById(id).orElseThrow(() -> new RuntimeException("No file found")).getImageUrl());
-        FtpClient ftp = new FtpClient(ftpHost, ftpPort, ftpUser, ftpPassword);
-        try {
-            ftp.open();
-            ftp.deleteFile(path);
-            ftp.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new RuntimeException("FTP exception found");
-        }
+        filesService.deleteFile(path);
     }
+
 
     private String getFileNameFromPath(String path) {
         return path.split("/")[path.split("/").length - 1];

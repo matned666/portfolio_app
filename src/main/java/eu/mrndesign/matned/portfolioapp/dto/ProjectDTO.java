@@ -10,9 +10,14 @@ public class ProjectDTO {
     private String projectUrl;
     private String projectDescription;
     private String projectReleaseDate;
+    private String image;
     protected Long id;
     protected String creationDate;
     protected String updateDate;
+
+
+    public ProjectDTO() {
+    }
 
     private ProjectDTO(ProjectDTOBuilder builder){
         this.projectTitle = builder.projectTitle;
@@ -22,6 +27,7 @@ public class ProjectDTO {
         this.id = builder.id;
         this.creationDate = builder.creationDate;
         this.updateDate = builder.updateDate;
+        this.image = builder.image;
     }
 
     public static ProjectDTO apply(Project entity){
@@ -33,7 +39,16 @@ public class ProjectDTO {
                 .id(entity.getId())
                 .creationDate(entity.getCreationDate() != null ? entity.getCreationDate().format(DATE_TIME_FORMATTER_TASK): null)
                 .updateDate(entity.getUpdateDate() != null ? entity.getUpdateDate().format(DATE_TIME_FORMATTER_TASK): null)
+                .image(!entity.getImages().isEmpty() ? entity.getImages().get(0).getImageUrl() : null)
                 .build();
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getProjectTitle() {
@@ -98,6 +113,7 @@ public class ProjectDTO {
         private String projectUrl;
         private String projectDescription;
         private String projectReleaseDate;
+        private String image;
         protected Long id;
         protected String creationDate;
         protected String updateDate;
@@ -124,6 +140,11 @@ public class ProjectDTO {
 
         public ProjectDTOBuilder updateDate(String updateDate){
             this.updateDate = updateDate;
+            return this;
+        }
+
+        public ProjectDTOBuilder image(String image){
+            this.image = image;
             return this;
         }
 

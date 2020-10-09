@@ -13,7 +13,8 @@
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/buttons.css" th:href="@{/css/buttons.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/textfield.css" th:href="@{/css/textfield.css}" rel="stylesheet" type="text/css">
-
+    <link href="../static/css/enlargeImageShow.css" th:href="@{/css/enlargeImageShow.css}" rel="stylesheet"
+          type="text/css">
 </head>
 <body class="background-main">
 <div th:insert="fragments/nav :: header"></div>
@@ -24,11 +25,10 @@
         <br><br>
         <div class="grid single-graphic">
             <div>
-
-                <a th:href="@{/graphics/picture/{id} (id = ${graphic.getId()})}">
-                    <img src="../static/img/mist2.jpg" style="width: 100%" alt="picture"
+                    <img class="image-graphic size-graphic" onclick="modalImage(this.src)" src="../static/img/mist2.jpg"  alt="picture"
                          th:src="${graphic.getImageUrl()}"
-                         th:alt="${graphic.getTitle()}"></a>
+                         th:alt="${graphic.getTitle()}"><br>
+                <span class="small-subtitle">click the image to enlarge it</span>
             </div>
             <div>
                 <h3><span th:text="${graphic.getId()}"></span><span>>> Title:</span><span style="color: white"
@@ -77,5 +77,11 @@
     </div>
 </div>
 <div th:insert="fragments/nav :: footer"></div>
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+<script src="../static/js/modalImage.js" th:src="@{/js/modalImage.js}"></script>
 </body>
 </html>

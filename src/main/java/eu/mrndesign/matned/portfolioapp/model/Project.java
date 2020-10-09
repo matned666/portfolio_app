@@ -3,8 +3,11 @@ package eu.mrndesign.matned.portfolioapp.model;
 import eu.mrndesign.matned.portfolioapp.dto.ProjectDTO;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.LinkedList;
+import java.util.List;
 
 import static eu.mrndesign.matned.portfolioapp.statics.Patterns.DATE_TIME_FORMATTER_ONLY_DATE;
 
@@ -15,6 +18,9 @@ public class Project extends BaseEntity{
     private String projectUrl;
     private String projectDescription;
     private LocalDate projectReleaseDate;
+
+    @OneToMany(mappedBy = "project")
+    private List<ProjectImage> images;
 
     public Project() {
     }
@@ -27,16 +33,25 @@ public class Project extends BaseEntity{
         this.projectUrl = projectUrl;
         this.projectDescription = projectDescription;
         this.projectReleaseDate = projectReleaseDate;
-        creationDate = LocalDateTime.now();
-    }
+        this.creationDate = LocalDateTime.now();
+        this.images = new LinkedList<>();    }
 
     public static Project apply(ProjectDTO dto){
         return new Project(
                 dto.getProjectTitle(),
                 dto.getProjectUrl(),
                 dto.getProjectDescription(),
-                dto.getProjectReleaseDate() != null ?
-                        LocalDate.parse(dto.getProjectReleaseDate(), DATE_TIME_FORMATTER_ONLY_DATE): null );
+                dto.getProjectReleaseDate().equals("") ?
+                        null : LocalDate.parse(dto.getProjectReleaseDate(), DATE_TIME_FORMATTER_ONLY_DATE) );
+
+    }
+
+    public List<ProjectImage> getImages() {
+        return images;
+    }
+
+    public void setImages(List<ProjectImage> images) {
+        this.images = images;
     }
 
     public String getProjectTitle() {

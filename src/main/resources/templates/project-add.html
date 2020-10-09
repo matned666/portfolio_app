@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Software development - MRN Design</title>
+    <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/buttons.css" th:href="@{/css/buttons.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/textfield.css" th:href="@{/css/textfield.css}" rel="stylesheet" type="text/css">
+    <script src="../static/js/mainScripts.js" th:src="@{/js/mainScripts.js}" rel="script"
+            type="text/javascript"></script>
+    <script>
+        function addOption() {
+            const textValue = document.getElementById("newSeries").value;
+            const select = document.getElementById("series");
+            const opt = document.createElement('option');
+            opt.appendChild(document.createTextNode(textValue));
+            opt.value = textValue;
+            select.appendChild(opt);
+        }
+    </script>
+
+    <script>
+        var dateControl = document.querySelector('input[type="date"]');
+        dateControl.value = '1983-09-01';
+        console.log(dateControl.value);
+        console.log(dateControl.valueAsNumber);
+    </script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+</head>
+<body class="background-main">
+<div th:insert="fragments/nav :: header"></div>
+<div class="contenti" onchange="resizeContenti()">
+    <div class="center">
+        <form id="sendForm" method="POST" th:action="@{/projects-admin/add}" enctype="multipart/form-data"
+              th:object="${newProject}">
+            <table>
+
+                <tr>
+                    <div>
+                        <div th:if="${error != null}">
+                            <div th:each="err : ${binding.getFieldErrors('projectTitle')}">
+                                <label class="warning" th:text="${err.getDefaultMessage()}"></label>
+                                <br>
+                            </div>
+                        </div>
+                        <input form="sendForm" class="login-textfield" type="text" th:field="*{projectTitle}"
+                               placeholder="Title"><br>
+                    </div>
+                    <div>
+                        <div th:if="${error != null}">
+                            <div th:each="err : ${binding.getFieldErrors('projectDescription')}">
+                                <label class="warning" th:text="${err.getDefaultMessage()}"></label>
+                                <br>
+                            </div>
+                        </div>
+                        <textarea form="sendForm" class="login-textarea" type="text" id="description"
+                                  th:field="*{projectDescription}"
+                                  placeholder="Description"></textarea><br>
+                    </div>
+                    <div>
+                        <div th:if="${error != null}">
+                            <div th:each="err : ${binding.getFieldErrors('projectReleaseDate')}">
+                                <label style="color: red; font-weight: bold"
+                                       th:text="${err.getDefaultMessage()}"></label>
+                                <br>
+                            </div>
+                        </div>
+                        <input form="sendForm" class="login-textfield" type="date" id="projectReleaseDate"
+                               th:field="*{projectReleaseDate}"
+                               placeholder="Publish: yyyy-MM-dd"><br>
+                    </div>
+                    <div>
+                        <div th:if="${error != null}">
+                            <div th:each="err : ${binding.getFieldErrors('projectUrl')}">
+                                <label style="color: red; font-weight: bold"
+                                       th:text="${err.getDefaultMessage()}"></label>
+                                <br>
+                            </div>
+                        </div>
+                        <input form="sendForm" class="login-textfield" type="text" id="projectUrl"
+                               th:field="*{projectUrl}"
+                               placeholder="Project url"><br>
+                    </div>
+                <tr>
+                    <label th:if="${fileUploadError != null}" class="warning">There was an error uploading file- it
+                        should be smaller than 1mb</label>
+                    <br>
+                    <label th:if="${noFile != null}" class="warning">Select any graphic to upload</label>
+                    <br>
+                    <div id="files-container">
+
+                        <div>
+                            <label path="file">Select a graphic to upload</label>
+                            <br>
+                            <input class="smaller-button" type="file" name="files"/><br>
+                        </div>
+                    </div>
+                <br>
+                <button class="button smaller-button" onclick="addDiv()" type="button">Add another file field</button>
+
+                <script>
+                    function addDiv() {
+                        const filesContainer = document.getElementById("files-container");
+                        var div = document.createElement("DIV");
+                        div.innerHTML = "<label path=\"file\">Select a graphic to upload</label>\n" +
+                            "                        <br>\n" +
+                            "                        <input class=\"smaller-button\" type=\"file\" name=\"files\"/><br>";
+                        filesContainer.appendChild(div);
+                    }
+                </script>
+                </tr>
+                <br>
+                <br>
+                <tr>
+                    <div class="grid list">
+                        <br>
+                        <div class="center">
+                            <div th:if="${wrong_recaptcha == 1}">
+                                <label style="color: red; font-weight: bold"
+                                       for="recaptcha">You're a robot?</label>
+                            </div>
+                            <div id="recaptcha" th:value="${captchaResponse}" class="g-recaptcha centered-margin"
+                                 data-sitekey="6Ldyc9IZAAAAAL9YPNskEHdUxIhElSJnoqjyaIfq"></div>
+                        </div>
+                    </div>
+                </tr>
+                <tr>
+                    <div>
+                        <input class="button bigger-button" type="submit" value="Submit"/>
+                    </div>
+
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<div th:insert="fragments/nav :: footer"></div>
+</body>
+</html>

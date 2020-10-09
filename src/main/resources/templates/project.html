@@ -5,26 +5,51 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Software development - MRN Design</title>
     <link href="../static/css/menu.css" th:href="@{/css/menu.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/footer.css" th:href="@{/css/footer.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/buttons.css" th:href="@{/css/buttons.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/textfield.css" th:href="@{/css/textfield.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/enlargeImageShow.css" th:href="@{/css/enlargeImageShow.css}" rel="stylesheet"
+          type="text/css">
 </head>
 <body class="background-main">
 <div th:insert="fragments/nav :: header"></div>
 <div class="contenti">
+    <div>
+
+    </div>
     <div class="center" style="color: #aaaaaa">
         <h2 th:text="${project.getProjectTitle()}"></h2>
         <div><span th:text="${project.getProjectDescription()}"></span></div>
         <a th:href="@{${project.getProjectUrl()}}"><span th:text="${project.getProjectUrl()}"></span></a><br>
-        <div><span style="font-weight: bold">Release date: </span><span th:text="${project.getProjectReleaseDate()}"></span></div>
-        <div><span style="font-weight: bold">Entry date: </span><span th:text="${project.getCreationDate()}"></span></div>
-        <div><span style="font-weight: bold">Update date: </span><span th:text="${project.getUpdateDate()}"></span></div>
+        <div><span style="font-weight: bold">Release date: </span><span
+                th:text="${project.getProjectReleaseDate()}"></span></div>
+        <div><span style="font-weight: bold">Entry date: </span><span th:text="${project.getCreationDate()}"></span>
+        </div>
+        <div><span style="font-weight: bold">Update date: </span><span th:text="${project.getUpdateDate()}"></span>
+        </div>
+        <div class="grid list">
+            <div class="" th:each="image: ${images}" style="padding: 0 5%;">
+                <div class="image-graphic-graph">
+                    <img onclick="modalImage(this.src)" class="image-graphic myImg" src="../static/img/mist2.jpg"
+                         th:src="${image.getImageUrl()}"
+                         style="height: 80%" th:alt="${image.getTitle()}"><br>
+                    <span style="color: #aaaaaa; text-decoration: none;"
+                          th:text="${project.getProjectTitle()+' '+image.getTitle()}"></span><br>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div th:insert="fragments/nav :: footer"></div>
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+<script src="../static/js/modalImage.js" th:src="@{/js/modalImage.js}"></script>
 </body>
 </html>

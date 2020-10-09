@@ -5,6 +5,7 @@ import eu.mrndesign.matned.portfolioapp.dto.GraphicDTO;
 import eu.mrndesign.matned.portfolioapp.dto.GraphicSetDTO;
 import eu.mrndesign.matned.portfolioapp.dto.SearchDTO;
 import eu.mrndesign.matned.portfolioapp.model.UserRole;
+import eu.mrndesign.matned.portfolioapp.service.FilesService;
 import eu.mrndesign.matned.portfolioapp.service.GraphicService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -23,14 +24,17 @@ import java.util.List;
 @Controller
 public class GraphicsController {
 
+    private final FilesService filesService;
     private final GraphicService graphicService;
     private final ReCaptchaService reCaptchaService;
 
     @Value("spring.servlet.multipart.location")
     private String filePath;
 
-    public GraphicsController(GraphicService graphicService,
+    public GraphicsController(FilesService filesService,
+                              GraphicService graphicService,
                               ReCaptchaService reCaptchaService) {
+        this.filesService = filesService;
         this.graphicService = graphicService;
         this.reCaptchaService = reCaptchaService;
     }
@@ -91,7 +95,7 @@ public class GraphicsController {
             if (!file.isEmpty()) {
                 if (validatedNotRobot) {
                     String fileName = System.currentTimeMillis() + file.getOriginalFilename();
-                    wasFileUploaded = graphicService.fileUpload(file, fileName);
+                    wasFileUploaded = filesService.fileUpload(file, fileName);
                     if (wasFileUploaded)
                         graphicService.setGraphicUrl(graphicDTO, fileName);
                     else
@@ -140,7 +144,7 @@ public class GraphicsController {
             if (!validatedNotRobot) model.addAttribute("wrong_recaptcha", 1);
             if (validatedNotRobot && !file.isEmpty()) {
                 String fileName = System.currentTimeMillis() + file.getOriginalFilename();
-                boolean wasFileUploaded = graphicService.fileUpload(file, fileName);
+                boolean wasFileUploaded = filesService.fileUpload(file, fileName);
                 if (wasFileUploaded)
                     graphicService.setGraphicUrl(graphicDTO, fileName);
                 else

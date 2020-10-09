@@ -85,6 +85,10 @@ body {
     grid-template-columns: 50% 50%;
 }
 
+.grid40-60 {
+    grid-template-columns: 40% 60%;
+}
+
 .grid.list {
     grid-template-columns: 33% 34% 33%;
 }
@@ -99,6 +103,7 @@ body {
     border-color: #202020;
     border-width: 3px;
     width: 90%;
+    transition: 0.4s;
 }
 
 .frameRound:hover {
@@ -190,6 +195,13 @@ body {
 .image-graphic:hover {
     border-width: 6px;
     border-color: #656e66;
+}
+
+.size-graphic{
+    max-width: 70%;
+    max-height: 70%;
+    width: auto;
+    height: auto;
 }
 
 a {
@@ -287,3 +299,19 @@ a:active {
 .thumbnailV:active{
     border-color: #888888;
 }
+
+.small-subtitle{
+    font-size: 10px;
+    color: #636363;
+}
+
+.thumbnailB{
+    vertical-align: center;
+    object-fit: cover;
+    width: 100%;
+    max-height: 200px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+
