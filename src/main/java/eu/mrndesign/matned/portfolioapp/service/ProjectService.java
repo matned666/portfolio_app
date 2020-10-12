@@ -81,7 +81,7 @@ public class ProjectService {
             String originalFilename = files[i].getOriginalFilename();
             fileNames[i] = getFileName(originalFilename);
             String title = "Project image " + id;
-            String imageUrl = "http://" + ftpHost + ftpPath + "/" + originalFilename;
+            String imageUrl = "http://" + ftpHost + ftpPath + "/" + fileNames[i];
             projectImageRepository.save(
                     new ProjectImage(
                             title,

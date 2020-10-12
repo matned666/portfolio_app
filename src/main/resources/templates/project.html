@@ -42,6 +42,12 @@
                 </div>
             </div>
         </div>
+        <a style="color: #499fe2" sec:authorize="hasRole('ADMIN')" href="/projects-admin/add" target="_blank">
+            <button class="button bigger-button">Edit project</button>
+        </a>
+        <a style="color: #499fe2" sec:authorize="hasRole('ADMIN')" href="/projects-admin/add" target="_blank">
+            <button class="button bigger-button">Delete project</button>
+        </a>
     </div>
 </div>
 <div th:insert="fragments/nav :: footer"></div>
