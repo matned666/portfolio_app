@@ -39,7 +39,7 @@ public class FtpClient {
 
         ftp.login(user, password);
 
-        //      IT WAS THE PROBLEM - I didn't have it:
+        //      IT WAS THE PROBLEM - I didn't have it - The files didn't write on server properly:
         ftp.setFileType(FTP.BINARY_FILE_TYPE);
 
     }

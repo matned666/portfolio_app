@@ -2,6 +2,7 @@ package eu.mrndesign.matned.portfolioapp.model;
 
 import eu.mrndesign.matned.portfolioapp.dto.ProjectDTO;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import java.time.LocalDate;
@@ -16,6 +17,8 @@ public class Project extends BaseEntity{
 
     private String projectTitle;
     private String projectUrl;
+
+    @Column(length = 2000)
     private String projectDescription;
     private LocalDate projectReleaseDate;
 

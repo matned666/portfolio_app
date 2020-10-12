@@ -1,6 +1,7 @@
 package eu.mrndesign.matned.portfolioapp.model;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -18,6 +19,7 @@ public class BaseEntity {
     // Audit
     @CreationTimestamp
     protected LocalDateTime creationDate;
+    @UpdateTimestamp
     protected LocalDateTime updateDate;
 
     @Override

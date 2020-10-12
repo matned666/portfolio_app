@@ -1,0 +1,87 @@
+.grid{
+    display: grid;
+    alignment: center;
+}
+
+.layout-basket {
+    grid-template-columns: 20% 60% 20% ;
+}
+
+.layout-basket-item-participants {
+    grid-template-columns: 30% 40% 30% ;
+}
+
+.layout-basket-item {
+    grid-template-columns: 40% 10% 10% 20% 10% 10% ;
+}
+
+.layout-basket-control-panel {
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+}
+
+.layout-basket-item-project {
+    grid-template-columns: 20% 80%;
+}
+
+.frame ,  #basketItemHeader div, #totalBasket, #totalBasket div  {
+    border-style: solid;
+    border-color: #3f3f3f;
+    border-width: thin;
+}
+
+#basketItem div, #participants{
+    height: 100px;
+}
+
+#basketItemHeader div{
+    height: 30px;
+}
+
+.header-basket-item {
+    font-weight: bold;
+}
+
+.round-corners{
+    border-radius: 10px;
+}
+
+#basketForm input{
+    border-width: 3px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.basket-item {
+    background-color: black;
+}
+
+.rightSideBasketItem{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left-style: none;
+}
+
+.leftSideBasketItem{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right-style: none;
+}
+
+.vertical-center{
+    margin-top: 300px;
+    vertical-align: center;
+}
+
+button{
+    width: fit-content;
+    border-radius: 10px;
+}
+
+#totalBasket{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.center-basket-item-row{
+    grid-template-rows: 10px 40px;
+}

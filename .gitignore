@@ -34,3 +34,4 @@ build/
 .vscode/
 /src/main/resources/application-def.properties
 /.idea/
+/src/main/resources/static/file/

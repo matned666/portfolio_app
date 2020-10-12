@@ -13,21 +13,118 @@
     <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/buttons.css" th:href="@{/css/buttons.css}" rel="stylesheet" type="text/css">
     <link href="../static/css/textfield.css" th:href="@{/css/textfield.css}" rel="stylesheet" type="text/css">
+    <link href="../static/css/basket.css" th:href="@{/css/basket.css}" rel="stylesheet" type="text/css">
 
 </head>
 <body class="background-main">
 <div th:insert="fragments/nav :: header"></div>
 <div class="contenti">
-    <h1 class="center" style="color: green">!!! COMING SOON !!!</h1>
-    <div class="center">
-        <p style="color: red">Please contact administrator for more information.</p>
-        <a th:href="@{/contact}">
-            <button type="button" class="button bigger-button">
-                Contact me
-            </button>
-        </a>
+    <div class="grid layout-basket">
+        <div></div>
+        <form id="basketForm" class="center">
+            <h3>Projects in basket:</h3>
+            <br>
+            <div id="basketItemHeader" class="grid layout-basket-item header-basket-item">
+                <div class="leftSideBasketItem">
+                    Project details:
+                </div>
+                <div>
+                    Project time:
+                </div>
+                <div>
+                    Project price:
+                </div>
+                <div>
+                    Participants:
+                </div>
+                <div>
+                    Total price:
+                </div>
+                <div class="rightSideBasketItem">
+                    Edit:
+                </div>
+
+            </div>
+            <div th:each="basketItem : ${basketItems}">
+                <div id="basketItem" class="grid layout-basket-item">
+                    <div id="basketItemProject" class="frame leftSideBasketItem grid layout-basket-item-project">
+                        <div id="basketItemProjectdata1">
+                            <img th:src="${basketItem.project.getImageUrl()}" src="../static/img/project.png" height="80" alt="project">
+                        </div>
+                        <div id="basketItemProjectdata2" >
+                            <span style="font-weight: bold" th:text="${basketItem.project.name}">Project name</span><br>
+                            <span th:text="${basketItem.project.shortDescription()}">Project short description up to 70 signs just like in the project list. Simple shortage...</span>
+                        </div>
+
+                    </div>
+                    <div class="frame grid center-basket-item-row">
+                        <span></span>
+                        <span><span th:text="${basketItem.project.getTotalProjectTime()}"></span> minutes</span>
+                    </div>
+                    <div class="frame grid center-basket-item-row">
+                        <span></span>
+                        <span><span th:text="${basketItem.project.getProjectCost()}"></span>€</span>
+                    </div>
+                    <div id="participants" class="frame grid layout-basket-item-participants">
+                        <a th:href="@{/basket-change-item-amount/{id}(id=${basketItem.project.id})}">
+                            <button class="ui-button button-darken" id="minus"th:name="amount" th:value="-1">-</button>
+                        </a>
+                        <input style="margin-top: 10px; height: 34px; width: 100px; text-align: center;" type="text" th:name="amount" th:value="${basketItem.amount}">
+                        <a th:href="@{/basket-change-item-amount/{id}(id=${basketItem.project.id})}">
+                            <button class="ui-button button-darken" id="plus" th:name="amount" th:value="1">+</button>
+                        </a><br>
+                        <a th:href="@{/basket-deleteItem/{id}(id=${basketItem.project.id})}">
+                            <button class="ui-button button-darken" id="accept">accept</button>
+                        </a>
+                    </div>
+                    <div class="frame grid center-basket-item-row">
+                        <span></span>
+                        <span><span th:text="${basketItem.getTotalPrice()}"></span>€</span>
+                    </div>
+                    <div class="rightSideBasketItem frame">
+                        <a class="vertical-center" th:href="@{/basket-deleteItem/{id}(id=${basketItem.project.id})}">
+                            <br>
+                            <button class="ui-button button-darken" id="removeButton">Remove</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="totalBasket" class="header-basket-item round-corners ">
+                <div style="text-align: right; padding-right: 50px;">
+                    Total price:
+                </div>
+                <div>
+                    <span><span th:text="${totalAmount}"></span>€</span>
+                </div>
+            </div>
+            <br>
+            <div class="grid layout-basket-control-panel">
+                <a th:href="@{/basket-clear/}">
+                    <button class="ui-button button-darken" id="clear">Clear basket</button>
+                </a>
+                <div></div>
+                <div class="ui-button button-darken" ><input class="ui-widget-content" type="text" placeholder="Discount code"></div>
+                <div>
+                    <a th:href="@{/basket}">
+                        <button class="ui-button button-darken" type="submit" id="confirmCoupon">Confirm code</button>
+                    </a>
+                </div>
+                <div>
+                    <button class="ui-button button-darken" type="submit" id="confirm">Confirm purchase</button>
+                </div>
+            </div>
+            <br>
+            <div style="color: red; font-weight: bold;">Please note that this is just a training application and no real payments will be made.</div>
+            <div style="color: red; font-weight: bold; font-size: 20px">Also note that it's not finished yet and so it may look like a total bug :D</div>
+            <div style="color: darkgoldenrod; font-weight: bold; font-size: 10px">// TODO</div>
+        </form>
+        <div></div>
     </div>
+    <div></div>
 </div>
 <div th:insert="fragments/nav :: footer"></div>
+<script>
+    let plusButton
+</script>
 </body>
 </html>
