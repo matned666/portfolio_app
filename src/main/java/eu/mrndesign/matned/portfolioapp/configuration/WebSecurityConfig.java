@@ -50,6 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/register/**").permitAll()
 
 //                Front elements
+                .antMatchers("/cv_pdf").permitAll()
                 .antMatchers("/nav").permitAll()
                 .antMatchers("/static/**").permitAll()
                 .antMatchers("/sound/**").permitAll()

@@ -147,7 +147,6 @@ public class DataSeed implements InitializingBean {
 //
 //    }
 
-
 //          GRAPHICS DATABASE DEPLOYMENT fot tests
 //    private void addDefaultPictures() {
 //        addP("Mist 1",

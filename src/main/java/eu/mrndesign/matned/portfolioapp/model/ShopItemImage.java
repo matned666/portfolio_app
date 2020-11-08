@@ -24,11 +24,6 @@ public class ShopItemImage extends BaseImageEntity{
         this.creationDate = LocalDateTime.now();
     }
 
-    public static ShopItemImage apply(ProjectImageDTO dto, ShopItem shopItem){
-        ShopItemImage entity = new ShopItemImage(dto.getTitle(), dto.getImageUrl(), shopItem);
-        return (ShopItemImage) getImageBaseData(dto, entity);
-    }
-
     public ShopItem getProject() {
         return shopItem;
     }

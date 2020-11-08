@@ -1,4 +1,4 @@
-# Training project management kit
+# MrnDesign project
 <br>
 My first fully usable web application  <br>
 It is may personal website <br>

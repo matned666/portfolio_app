@@ -8,10 +8,10 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface ShopItemRepository extends JpaRepository<ShopItemImage, Long> {
+public interface ShopItemRepository extends JpaRepository<ShopItem, Long> {
 
     @Query("select sii from ShopItemImage sii where sii.shopItem.id = ?1")
-    List<ShopItemImage> findByProjectId(Long projectId);
+    List<ShopItem> findByProjectId(Long projectId);
 
     @Query("select case when count(sii) > 0 then true else false end from ShopItemImage sii where lower(sii.imageUrl) like lower(?1)")
     boolean existsByImageUrl(String imageUrl);

@@ -1,184 +1,359 @@
-2020-10-12 02:05:47.770  INFO 21996 --- [main] e.m.matned.portfolioapp.AppStarter       : Starting AppStarter on DESKTOP-OJ2T462 with PID 21996 (D:\DROPBOX\Dropbox\JAVA\portfolio_app2\target\classes started by Perun in D:\DROPBOX\Dropbox\JAVA\portfolio_app2)
-2020-10-12 02:05:47.781  INFO 21996 --- [main] e.m.matned.portfolioapp.AppStarter       : The following profiles are active: def
-2020-10-12 02:05:49.487  INFO 21996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-10-12 02:05:49.701  INFO 21996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 204ms. Found 9 JPA repository interfaces.
-2020-10-12 02:05:50.379  INFO 21996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-10-12 02:05:50.390  INFO 21996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-10-12 02:05:50.391  INFO 21996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2020-10-12 02:05:50.392  INFO 21996 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
-2020-10-12 02:05:50.393  INFO 21996 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-10-12 02:05:50.394  INFO 21996 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-10-12 02:05:50.397  INFO 21996 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
-2020-10-12 02:05:50.710  INFO 21996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-10-12 02:05:50.711  INFO 21996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2849 ms
-2020-10-12 02:05:50.938  INFO 21996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-12 02:05:51.029  INFO 21996 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-10-12 02:05:51.059  INFO 21996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-10-12 02:05:51.090  INFO 21996 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2020-10-12 02:05:51.285  INFO 21996 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-10-12 02:05:51.758  INFO 21996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-10-12 02:05:51.783  INFO 21996 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-10-12 02:05:51.871 DEBUG 21996 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'requestLoggingFilter' configured for use
-2020-10-12 02:05:52.023  WARN 21996 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSeed' defined in file [D:\DROPBOX\Dropbox\JAVA\portfolio_app2\target\classes\eu\mrndesign\matned\portfolioapp\DataSeed.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRoleRepository' defined in eu.mrndesign.matned.portfolioapp.repository.UserRoleRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaMappingContext' while setting bean property 'mappingContext'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaMappingContext': Invocation of init method failed; nested exception is org.hibernate.MappingException: component property not found: id
-2020-10-12 02:05:52.024  INFO 21996 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-10-12 02:05:52.024  WARN 21996 --- [main] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.MappingException: component property not found: id
-2020-10-12 02:05:52.024  INFO 21996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-12 02:05:52.025  INFO 21996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-10-12 02:05:52.047  INFO 21996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-10-12 02:05:52.050  INFO 21996 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2020-10-12 02:05:52.079  INFO 21996 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-10-12 02:05:52.088 ERROR 21996 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSeed' defined in file [D:\DROPBOX\Dropbox\JAVA\portfolio_app2\target\classes\eu\mrndesign\matned\portfolioapp\DataSeed.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRoleRepository' defined in eu.mrndesign.matned.portfolioapp.repository.UserRoleRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaMappingContext' while setting bean property 'mappingContext'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaMappingContext': Invocation of init method failed; nested exception is org.hibernate.MappingException: component property not found: id
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.4.RELEASE.jar:2.3.4.RELEASE]
-	at eu.mrndesign.matned.portfolioapp.AppStarter.main(AppStarter.java:14) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRoleRepository' defined in eu.mrndesign.matned.portfolioapp.repository.UserRoleRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaMappingContext' while setting bean property 'mappingContext'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaMappingContext': Invocation of init method failed; nested exception is org.hibernate.MappingException: component property not found: id
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1697) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1442) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.context.annotation.ContextAnnotationAutowireCandidateResolver$1.getTarget(ContextAnnotationAutowireCandidateResolver.java:95) ~[spring-context-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:192) ~[spring-aop-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at com.sun.proxy.$Proxy108.roleExists(Unknown Source) ~[na:na]
-	at eu.mrndesign.matned.portfolioapp.DataSeed.createRole(DataSeed.java:100) ~[classes/:na]
-	at eu.mrndesign.matned.portfolioapp.DataSeed.afterPropertiesSet(DataSeed.java:55) ~[classes/:na]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	... 17 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaMappingContext': Invocation of init method failed; nested exception is org.hibernate.MappingException: component property not found: id
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1794) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	... 35 common frames omitted
-Caused by: org.hibernate.MappingException: component property not found: id
-	at org.hibernate.mapping.Component.getProperty(Component.java:365) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.cfg.AnnotationBinder.fillComponent(AnnotationBinder.java:2832) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.cfg.AnnotationBinder.fillComponent(AnnotationBinder.java:2674) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.cfg.AnnotationBinder.bindComponent(AnnotationBinder.java:2622) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.cfg.AnnotationBinder.processElementAnnotations(AnnotationBinder.java:2251) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.cfg.AnnotationBinder.processIdPropertiesIfNotAlready(AnnotationBinder.java:973) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:800) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:254) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:230) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:273) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.21.Final.jar:5.4.21.Final]
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.9.RELEASE.jar:5.2.9.RELEASE]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-
-2020-10-12 02:07:17.867  INFO 14040 --- [main] e.m.matned.portfolioapp.AppStarter       : Starting AppStarter on DESKTOP-OJ2T462 with PID 14040 (D:\DROPBOX\Dropbox\JAVA\portfolio_app2\target\classes started by Perun in D:\DROPBOX\Dropbox\JAVA\portfolio_app2)
-2020-10-12 02:07:17.870  INFO 14040 --- [main] e.m.matned.portfolioapp.AppStarter       : The following profiles are active: def
-2020-10-12 02:07:19.018  INFO 14040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-10-12 02:07:19.170  INFO 14040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 144ms. Found 9 JPA repository interfaces.
-2020-10-12 02:07:19.820  INFO 14040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-10-12 02:07:19.830  INFO 14040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-10-12 02:07:19.830  INFO 14040 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2020-10-12 02:07:19.832  INFO 14040 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
-2020-10-12 02:07:19.832  INFO 14040 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-10-12 02:07:19.833  INFO 14040 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-10-12 02:07:19.837  INFO 14040 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
-2020-10-12 02:07:20.010  INFO 14040 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-10-12 02:07:20.010  INFO 14040 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2085 ms
-2020-10-12 02:07:20.221  INFO 14040 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-12 02:07:20.284  INFO 14040 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-10-12 02:07:20.300  INFO 14040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-10-12 02:07:20.337  INFO 14040 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2020-10-12 02:07:20.477  INFO 14040 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-10-12 02:07:20.591  INFO 14040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-10-12 02:07:20.612  INFO 14040 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-10-12 02:07:20.678 DEBUG 14040 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'requestLoggingFilter' configured for use
-2020-10-12 02:07:22.082  INFO 14040 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-10-12 02:07:22.088  INFO 14040 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-10-12 02:07:22.598  WARN 14040 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-10-12 02:07:22.839 DEBUG 14040 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-10-12 02:07:22.906  INFO 14040 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-10-12 02:07:22.929 DEBUG 14040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2020-10-12 02:07:22.938 DEBUG 14040 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-10-12 02:07:23.280  INFO 14040 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60b4d934, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f9ccd0c, org.springframework.security.web.header.HeaderWriterFilter@603b9d4b, org.springframework.web.filter.CorsFilter@6a3e633a, org.springframework.security.web.authentication.logout.LogoutFilter@1dadd172, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@40db6136, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@609ad016, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7acb5200, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6ee1ddcf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41abee65, org.springframework.security.web.session.SessionManagementFilter@7b2f8152, org.springframework.security.web.access.ExceptionTranslationFilter@6e8aea7e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fd63c43]
-2020-10-12 02:07:23.432  INFO 14040 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-10-12 02:07:23.480  INFO 14040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-10-12 02:07:23.481  INFO 14040 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-10-12 02:07:23.615  INFO 14040 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-10-12 02:07:23.626  INFO 14040 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
-2020-10-12 02:07:23.649  INFO 14040 --- [main] e.m.matned.portfolioapp.AppStarter       : Started AppStarter in 6.246 seconds (JVM running for 7.308)
-2020-10-12 02:07:23.925  INFO 14040 --- [RMI TCP Connection(3)-192.168.0.29] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-12 02:07:23.926  INFO 14040 --- [RMI TCP Connection(3)-192.168.0.29] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-10-12 02:07:23.926 DEBUG 14040 --- [RMI TCP Connection(3)-192.168.0.29] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2020-10-12 02:07:23.933 DEBUG 14040 --- [RMI TCP Connection(3)-192.168.0.29] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2020-10-12 02:07:23.934  INFO 14040 --- [RMI TCP Connection(3)-192.168.0.29] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2020-10-12 10:34:17.816  INFO 4304 --- [main] e.m.matned.portfolioapp.AppStarter       : Starting AppStarter on DESKTOP-OJ2T462 with PID 4304 (D:\DROPBOX\Dropbox\JAVA\portfolio_app2\target\classes started by Perun in D:\DROPBOX\Dropbox\JAVA\portfolio_app2)
-2020-10-12 10:34:17.819  INFO 4304 --- [main] e.m.matned.portfolioapp.AppStarter       : The following profiles are active: def
-2020-10-12 10:34:19.270  INFO 4304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
-2020-10-12 10:34:19.437  INFO 4304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 157ms. Found 10 JPA repository interfaces.
-2020-10-12 10:34:20.004  INFO 4304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2020-10-12 10:34:20.014  INFO 4304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-10-12 10:34:20.014  INFO 4304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
-2020-10-12 10:34:20.016  INFO 4304 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
-2020-10-12 10:34:20.016  INFO 4304 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-10-12 10:34:20.017  INFO 4304 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-10-12 10:34:20.022  INFO 4304 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
-2020-10-12 10:34:20.213  INFO 4304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-10-12 10:34:20.213  INFO 4304 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2343 ms
-2020-10-12 10:34:20.392  INFO 4304 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-12 10:34:20.459  INFO 4304 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-10-12 10:34:20.475  INFO 4304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-10-12 10:34:20.517  INFO 4304 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
-2020-10-12 10:34:20.699  INFO 4304 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-10-12 10:34:20.910  INFO 4304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-10-12 10:34:20.933  INFO 4304 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2020-10-12 10:34:21.007 DEBUG 4304 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'requestLoggingFilter' configured for use
-2020-10-12 10:34:22.288  INFO 4304 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-10-12 10:34:22.294  INFO 4304 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-10-12 10:34:22.735  WARN 4304 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-10-12 10:34:22.950 DEBUG 4304 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2020-10-12 10:34:23.009  INFO 4304 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-10-12 10:34:23.030 DEBUG 4304 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2020-10-12 10:34:23.041 DEBUG 4304 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2020-10-12 10:34:23.470  INFO 4304 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f6d7e7c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2fcffc05, org.springframework.security.web.header.HeaderWriterFilter@48aaaed9, org.springframework.web.filter.CorsFilter@20518250, org.springframework.security.web.authentication.logout.LogoutFilter@55c8fc60, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e030cc1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ea84346, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2954c429, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@14bf9fd0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7836c79, org.springframework.security.web.session.SessionManagementFilter@27bbe773, org.springframework.security.web.access.ExceptionTranslationFilter@1885dc2b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@126a9a77]
-2020-10-12 10:34:23.522  INFO 4304 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-10-12 10:34:23.811  INFO 4304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2020-10-12 10:34:23.812  INFO 4304 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
-2020-10-12 10:34:23.951  INFO 4304 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
-2020-10-12 10:34:23.962  INFO 4304 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
-2020-10-12 10:34:23.989  INFO 4304 --- [main] e.m.matned.portfolioapp.AppStarter       : Started AppStarter in 6.66 seconds (JVM running for 7.992)
-2020-10-12 10:34:24.702  INFO 4304 --- [RMI TCP Connection(1)-192.168.0.29] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-12 10:34:24.702  INFO 4304 --- [RMI TCP Connection(1)-192.168.0.29] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-10-12 10:34:24.702 DEBUG 4304 --- [RMI TCP Connection(1)-192.168.0.29] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2020-10-12 10:34:24.708 DEBUG 4304 --- [RMI TCP Connection(1)-192.168.0.29] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2020-10-12 10:34:24.709  INFO 4304 --- [RMI TCP Connection(1)-192.168.0.29] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-11-08 10:01:56.297  INFO 21668 --- [main] e.m.matned.portfolioapp.AppStarter       : Starting AppStarter on DESKTOP-OJ2T462 with PID 21668 (D:\DROPBOX\Dropbox\JAVA\portfolio_app2\target\classes started by Perun in D:\DROPBOX\Dropbox\JAVA\portfolio_app2)
+2020-11-08 10:01:56.308  INFO 21668 --- [main] e.m.matned.portfolioapp.AppStarter       : The following profiles are active: def
+2020-11-08 10:01:59.358  INFO 21668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-08 10:01:59.576  INFO 21668 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 207ms. Found 10 JPA repository interfaces.
+2020-11-08 10:02:00.444  INFO 21668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-08 10:02:00.455  INFO 21668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-08 10:02:00.455  INFO 21668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-08 10:02:00.457  INFO 21668 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-11-08 10:02:00.457  INFO 21668 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-08 10:02:00.458  INFO 21668 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-08 10:02:00.491  INFO 21668 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-11-08 10:02:00.718  INFO 21668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-08 10:02:00.718  INFO 21668 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4114 ms
+2020-11-08 10:02:00.944  INFO 21668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-08 10:02:01.017  INFO 21668 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-08 10:02:01.038  INFO 21668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-08 10:02:01.078  INFO 21668 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-11-08 10:02:01.247  INFO 21668 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-08 10:02:01.765  INFO 21668 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-08 10:02:01.787  INFO 21668 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-08 10:02:01.890 DEBUG 21668 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'requestLoggingFilter' configured for use
+2020-11-08 10:02:02.946  INFO 21668 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-08 10:02:02.952  INFO 21668 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-08 10:02:03.440  WARN 21668 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-08 10:02:03.698 DEBUG 21668 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-11-08 10:02:03.775  INFO 21668 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-08 10:02:03.794 DEBUG 21668 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-11-08 10:02:03.808 DEBUG 21668 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-11-08 10:02:04.200  INFO 21668 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a3a56de, org.springframework.security.web.context.SecurityContextPersistenceFilter@37665305, org.springframework.security.web.header.HeaderWriterFilter@ae74eef, org.springframework.web.filter.CorsFilter@2ed84be9, org.springframework.security.web.authentication.logout.LogoutFilter@4177d422, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7577589, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c224096, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@442310fd, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4cb58e8b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@400e741, org.springframework.security.web.session.SessionManagementFilter@2e91cf69, org.springframework.security.web.access.ExceptionTranslationFilter@727f36dd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1bf10539]
+2020-11-08 10:02:04.264  INFO 21668 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-08 10:02:04.331  INFO 21668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-08 10:02:04.332  INFO 21668 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-08 10:02:04.473  INFO 21668 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-08 10:02:04.489  INFO 21668 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-08 10:02:04.500  INFO 21668 --- [main] e.m.matned.portfolioapp.AppStarter       : Started AppStarter in 8.939 seconds (JVM running for 10.963)
+2020-11-08 10:02:04.734  INFO 21668 --- [RMI TCP Connection(4)-192.168.0.21] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-08 10:02:04.734  INFO 21668 --- [RMI TCP Connection(4)-192.168.0.21] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-08 10:02:04.735 DEBUG 21668 --- [RMI TCP Connection(4)-192.168.0.21] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-11-08 10:02:04.743 DEBUG 21668 --- [RMI TCP Connection(4)-192.168.0.21] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-11-08 10:02:04.743  INFO 21668 --- [RMI TCP Connection(4)-192.168.0.21] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-11-08 10:02:17.864 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:17.866 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2020-11-08 10:02:17.880 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-11-08 10:02:18.188 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.190 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.266 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.267 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-11-08 10:02:18.268 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.271 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.270 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.271 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.269 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-11-08 10:02:18.271 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-11-08 10:02:18.272 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-11-08 10:02:18.272 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.272 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.272 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.273 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-11-08 10:02:18.273 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.274 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.336 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/mist2.jpg, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.337 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/img/mist2.jpg", parameters={}
+2020-11-08 10:02:18.337 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.337 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.338 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.341 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.341 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-11-08 10:02:18.342 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.345 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.345 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.349 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.349 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-11-08 10:02:18.351 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.351 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.351 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.352 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.352 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.357 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.357 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-11-08 10:02:18.357 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.357 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-11-08 10:02:18.358 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.358 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.362 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.363 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.365 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.366 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/mist2.jpg, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.371 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.372 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.378 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.378 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/sound/music1.mp3", parameters={}
+2020-11-08 10:02:18.379 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.380 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.380 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.407 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.407 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.407 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.407 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.460 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.460 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-11-08 10:02:18.462 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:18.482 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.482 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.631 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+2020-11-08 10:02:18.632 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.659 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /login, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:18.659 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2020-11-08 10:02:18.673 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*;q=0.8' given [image/avif, image/webp, image/apng, image/*, */*;q=0.8]
+2020-11-08 10:02:18.719 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:18.720 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /login, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.255 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /about, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.255 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/about", parameters={}
+2020-11-08 10:02:21.257 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-11-08 10:02:21.285 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.285 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /about, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.307 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.307 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-11-08 10:02:21.308 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.309 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.309 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-11-08 10:02:21.309 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.309 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-11-08 10:02:21.310 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.310 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.313 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.313 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-11-08 10:02:21.313 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.313 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-11-08 10:02:21.314 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.314 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.319 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.319 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.320 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.320 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.320 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.320 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.324 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.325 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.325 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.325 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.349 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/log.jpg, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.349 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/img/log.jpg", parameters={}
+2020-11-08 10:02:21.350 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.350 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-11-08 10:02:21.350 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.350 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.351 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.351 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-11-08 10:02:21.352 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.352 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-11-08 10:02:21.353 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.352 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.353 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.353 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-11-08 10:02:21.354 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.357 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.358 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.358 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.358 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.358 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.358 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.360 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.360 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.373 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.373 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/log.jpg, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.388 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.388 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-11-08 10:02:21.389 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:21.400 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.400 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.499 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /login, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:21.499 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2020-11-08 10:02:21.501 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*;q=0.8' given [image/avif, image/webp, image/apng, image/*, */*;q=0.8]
+2020-11-08 10:02:21.505 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:21.505 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /login, client=0:0:0:0:0:0:0:1]
+2020-11-08 10:02:23.779 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /login, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.780 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2020-11-08 10:02:23.782 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-11-08 10:02:23.798 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.798 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /login, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.825 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.825 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.825 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-11-08 10:02:23.825 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-11-08 10:02:23.825 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.825 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.828 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.828 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-11-08 10:02:23.829 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.829 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.829 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-11-08 10:02:23.829 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.836 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.837 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-11-08 10:02:23.837 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.840 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.841 DEBUG 21668 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.841 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.841 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.849 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.849 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.851 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.851 DEBUG 21668 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.854 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.854 DEBUG 21668 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.882 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.882 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-11-08 10:02:23.883 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.884 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.884 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.884 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-11-08 10:02:23.884 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-11-08 10:02:23.885 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.885 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.885 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.885 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-11-08 10:02:23.886 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.894 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.895 DEBUG 21668 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.897 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.897 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.897 DEBUG 21668 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.897 DEBUG 21668 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.901 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.901 DEBUG 21668 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.925 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/mist.jpg, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.925 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/img/mist.jpg", parameters={}
+2020-11-08 10:02:23.925 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.936 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.937 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/sound/music1.mp3", parameters={}
+2020-11-08 10:02:23.937 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:02:23.953 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:23.953 DEBUG 21668 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/mist.jpg, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:23.989 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+2020-11-08 10:02:23.989 DEBUG 21668 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:24.054 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /login, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:02:24.054 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2020-11-08 10:02:24.055 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*;q=0.8' given [image/avif, image/webp, image/apng, image/*, */*;q=0.8]
+2020-11-08 10:02:24.067 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:02:24.067 DEBUG 21668 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /login, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:34.624  INFO 13228 --- [main] e.m.matned.portfolioapp.AppStarter       : Starting AppStarter on DESKTOP-OJ2T462 with PID 13228 (D:\DROPBOX\Dropbox\JAVA\portfolio_app2\target\classes started by Perun in D:\DROPBOX\Dropbox\JAVA\portfolio_app2)
+2020-11-08 10:05:34.628  INFO 13228 --- [main] e.m.matned.portfolioapp.AppStarter       : The following profiles are active: def
+2020-11-08 10:05:35.685  INFO 13228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-08 10:05:35.875  INFO 13228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 182ms. Found 10 JPA repository interfaces.
+2020-11-08 10:05:36.575  INFO 13228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-08 10:05:36.586  INFO 13228 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-08 10:05:36.587  INFO 13228 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.38]
+2020-11-08 10:05:36.588  INFO 13228 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [1.2.24] using APR version [1.7.0].
+2020-11-08 10:05:36.589  INFO 13228 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-11-08 10:05:36.590  INFO 13228 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-11-08 10:05:36.594  INFO 13228 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2020-11-08 10:05:36.825  INFO 13228 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-11-08 10:05:36.825  INFO 13228 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2138 ms
+2020-11-08 10:05:37.078  INFO 13228 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-08 10:05:37.153  INFO 13228 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-08 10:05:37.175  INFO 13228 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-08 10:05:37.208  INFO 13228 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.21.Final
+2020-11-08 10:05:37.350  INFO 13228 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-08 10:05:37.478  INFO 13228 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-08 10:05:37.496  INFO 13228 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-11-08 10:05:37.581 DEBUG 13228 --- [main] o.s.w.f.CommonsRequestLoggingFilter      : Filter 'requestLoggingFilter' configured for use
+2020-11-08 10:05:38.495  INFO 13228 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-08 10:05:38.501  INFO 13228 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-08 10:05:38.932  WARN 13228 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-08 10:05:39.182 DEBUG 13228 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-11-08 10:05:39.240  INFO 13228 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-11-08 10:05:39.266 DEBUG 13228 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-11-08 10:05:39.276 DEBUG 13228 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-11-08 10:05:39.576  INFO 13228 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fd63c43, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ba355e4, org.springframework.security.web.header.HeaderWriterFilter@75da2db, org.springframework.web.filter.CorsFilter@7d483ebe, org.springframework.security.web.authentication.logout.LogoutFilter@5111f814, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2aeb7c4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b15e68c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@603b9d4b, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@31c0c7e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cea67b1, org.springframework.security.web.session.SessionManagementFilter@3ad558bf, org.springframework.security.web.access.ExceptionTranslationFilter@5617168c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1870b9b8]
+2020-11-08 10:05:39.627  INFO 13228 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-11-08 10:05:39.681  INFO 13228 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-11-08 10:05:39.682  INFO 13228 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-08 10:05:39.819  INFO 13228 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-08 10:05:39.830  INFO 13228 --- [main] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-11-08 10:05:39.837  INFO 13228 --- [main] e.m.matned.portfolioapp.AppStarter       : Started AppStarter in 5.644 seconds (JVM running for 6.765)
+2020-11-08 10:05:40.178  INFO 13228 --- [RMI TCP Connection(1)-192.168.0.21] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-08 10:05:40.178  INFO 13228 --- [RMI TCP Connection(1)-192.168.0.21] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-08 10:05:40.179 DEBUG 13228 --- [RMI TCP Connection(1)-192.168.0.21] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2020-11-08 10:05:40.186 DEBUG 13228 --- [RMI TCP Connection(1)-192.168.0.21] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-11-08 10:05:40.187  INFO 13228 --- [RMI TCP Connection(1)-192.168.0.21] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-11-08 10:05:49.588 DEBUG 13228 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /about, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.591 DEBUG 13228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/about", parameters={}
+2020-11-08 10:05:49.614 DEBUG 13228 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+2020-11-08 10:05:49.867 DEBUG 13228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:49.869 DEBUG 13228 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /about, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.900 DEBUG 13228 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.900 DEBUG 13228 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.900 DEBUG 13228 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/css/footer.css", parameters={}
+2020-11-08 10:05:49.901 DEBUG 13228 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/css/menu.css", parameters={}
+2020-11-08 10:05:49.904 DEBUG 13228 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.904 DEBUG 13228 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/css/main.css", parameters={}
+2020-11-08 10:05:49.904 DEBUG 13228 --- [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:49.904 DEBUG 13228 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:49.905 DEBUG 13228 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:49.906 DEBUG 13228 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.907 DEBUG 13228 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/buttons.css", parameters={}
+2020-11-08 10:05:49.907 DEBUG 13228 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.908 DEBUG 13228 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/css/textfield.css", parameters={}
+2020-11-08 10:05:49.908 DEBUG 13228 --- [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:49.909 DEBUG 13228 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:49.932 DEBUG 13228 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:49.933 DEBUG 13228 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/footer.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.935 DEBUG 13228 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:49.936 DEBUG 13228 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/textfield.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.939 DEBUG 13228 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:49.941 DEBUG 13228 --- [http-nio-8080-exec-2] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/menu.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.943 DEBUG 13228 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:49.943 DEBUG 13228 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/main.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.946 DEBUG 13228 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:49.946 DEBUG 13228 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /css/buttons.css, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.986 DEBUG 13228 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/log.jpg, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.986 DEBUG 13228 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/img/log.jpg", parameters={}
+2020-11-08 10:05:49.987 DEBUG 13228 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.987 DEBUG 13228 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_play_arrow.png", parameters={}
+2020-11-08 10:05:49.988 DEBUG 13228 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:49.988 DEBUG 13228 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:49.992 DEBUG 13228 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.992 DEBUG 13228 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_pause.png", parameters={}
+2020-11-08 10:05:49.993 DEBUG 13228 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.993 DEBUG 13228 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:49.993 DEBUG 13228 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_up.png", parameters={}
+2020-11-08 10:05:49.994 DEBUG 13228 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:49.994 DEBUG 13228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/img/ic_volume_down.png", parameters={}
+2020-11-08 10:05:49.995 DEBUG 13228 --- [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:49.995 DEBUG 13228 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:50.001 DEBUG 13228 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:50.002 DEBUG 13228 --- [http-nio-8080-exec-7] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/log.jpg, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:50.002 DEBUG 13228 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:50.002 DEBUG 13228 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_play_arrow.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:50.008 DEBUG 13228 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:50.008 DEBUG 13228 --- [http-nio-8080-exec-9] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_pause.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:50.011 DEBUG 13228 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:50.011 DEBUG 13228 --- [http-nio-8080-exec-1] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_down.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:50.013 DEBUG 13228 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:50.013 DEBUG 13228 --- [http-nio-8080-exec-10] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/ic_volume_up.png, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:50.036 DEBUG 13228 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:50.037 DEBUG 13228 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/img/background.jpg", parameters={}
+2020-11-08 10:05:50.038 DEBUG 13228 --- [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:50.041 DEBUG 13228 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:50.041 DEBUG 13228 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/sound/music1.mp3", parameters={}
+2020-11-08 10:05:50.042 DEBUG 13228 --- [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-11-08 10:05:50.057 DEBUG 13228 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:50.057 DEBUG 13228 --- [http-nio-8080-exec-3] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /img/background.jpg, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:50.127 DEBUG 13228 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Nawiązane połączenie zostało przerwane przez oprogramowanie zainstalowane w komputerze-hoście
+2020-11-08 10:05:50.127 DEBUG 13228 --- [http-nio-8080-exec-6] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /sound/music1.mp3, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:50.209 DEBUG 13228 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /login, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:50.209 DEBUG 13228 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2020-11-08 10:05:50.211 DEBUG 13228 --- [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*;q=0.8' given [image/avif, image/webp, image/apng, image/*, */*;q=0.8]
+2020-11-08 10:05:50.236 DEBUG 13228 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:50.236 DEBUG 13228 --- [http-nio-8080-exec-4] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /login, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:53.180 DEBUG 13228 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /cv_pdf, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:53.180 DEBUG 13228 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/cv_pdf", parameters={}
+2020-11-08 10:05:53.795 DEBUG 13228 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : Before request [GET /login, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:53.795 DEBUG 13228 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/login", parameters={}
+2020-11-08 10:05:53.796 DEBUG 13228 --- [http-nio-8080-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*;q=0.8' given [image/avif, image/webp, image/apng, image/*, */*;q=0.8]
+2020-11-08 10:05:53.807 DEBUG 13228 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:53.807 DEBUG 13228 --- [http-nio-8080-exec-8] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /login, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]
+2020-11-08 10:05:55.996 DEBUG 13228 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2020-11-08 10:05:55.997 DEBUG 13228 --- [http-nio-8080-exec-5] o.s.w.f.CommonsRequestLoggingFilter      : After request [GET /cv_pdf, client=0:0:0:0:0:0:0:1, session=e16c8d87-854b-44a3-8eed-327003cbfe40]

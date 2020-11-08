@@ -15,6 +15,11 @@ public class ShopCategory extends BaseEntity {
     public ShopCategory() {
     }
 
+    public ShopCategory(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+
     public static ShopCategory apply(ShopCategoryDTO dto) {
         ShopCategory entity = new ShopCategory();
         entity.id = dto.getId();
