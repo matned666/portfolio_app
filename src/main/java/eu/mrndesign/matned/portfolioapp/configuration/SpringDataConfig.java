@@ -16,6 +16,10 @@ import javax.servlet.MultipartConfigElement;
 @PropertySource("classpath:application.properties")
 public class SpringDataConfig {
 
+    @Value("${secret.key.for.session.token}")
+    private String secretKey;
+
+
     @Value("${spring.mail.username}")
     private String incomingMailBox;
 
@@ -25,8 +29,6 @@ public class SpringDataConfig {
     @Value("${google.recaptcha.key.site}")
     private String captchaSiteKey;
 
-    @Value("${secret.key.for.session.token}")
-    private String secretKey;
 
     @Value("${www.domain.url}")
     private String webUrl;

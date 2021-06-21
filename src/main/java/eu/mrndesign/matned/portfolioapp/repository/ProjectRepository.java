@@ -1,11 +1,9 @@
 package eu.mrndesign.matned.portfolioapp.repository;
 
-import eu.mrndesign.matned.portfolioapp.dto.ProjectDTO;
 import eu.mrndesign.matned.portfolioapp.model.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import java.util.Arrays;
 import java.util.List;
 
 public interface ProjectRepository extends JpaRepository<Project, Long> {

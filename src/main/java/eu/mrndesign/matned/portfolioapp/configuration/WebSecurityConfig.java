@@ -12,7 +12,8 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import javax.sql.DataSource;
-import java.util.List;
+import java.util.Arrays;
+import java.util.Collections;
 
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -20,20 +21,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private final String secretKey;
     private final DataSource dataSource;
     private final PasswordEncoder passwordEncoder;
-    private final String defaultAdminLogin;
-    private final String defaultAdminPassword;
 
 
     public WebSecurityConfig(String secretKey,
                              DataSource dataSource,
-                             PasswordEncoder passwordEncoder,
-                             String defaultAdminLogin,
-                             String defaultAdminPassword) {
+                             PasswordEncoder passwordEncoder) {
         this.secretKey = secretKey;
         this.dataSource = dataSource;
         this.passwordEncoder = passwordEncoder;
-        this.defaultAdminLogin = defaultAdminLogin;
-        this.defaultAdminPassword = defaultAdminPassword;
     }
 
     @Override
@@ -117,11 +112,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         final CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("*"));
-        configuration.setAllowedMethods(List.of("HEAD",
+        configuration.setAllowedOrigins(Collections.singletonList("*"));
+        configuration.setAllowedMethods(Arrays.asList("HEAD",
                 "GET", "POST", "PUT", "DELETE", "PATCH"));
         configuration.setAllowCredentials(true);
-        configuration.setAllowedHeaders(List.of("Authorization", "Cache-Control", "Content-Type"));
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
