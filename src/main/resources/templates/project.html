@@ -24,7 +24,7 @@
     <div class="center" style="color: #aaaaaa">
         <h2 th:text="${project.getProjectTitle()}"></h2>
         <div><span th:text="${project.getProjectDescription()}"></span></div>
-        <a style="color: #499fe2" th:href="@{${project.getProjectUrl()}}" target="_blank"><span th:text="${project.getProjectUrl()}"></span></a><br>
+        <a style="color: #499fe2" th:href="${project.getProjectUrl()}" target="_blank"><span th:text="${project.getProjectUrl()}"></span></a><br>
         <div><span style="font-weight: bold">Release date: </span><span
                 th:text="${project.getProjectReleaseDate()}"></span></div>
         <div><span style="font-weight: bold">Entry date: </span><span th:text="${project.getCreationDate()}"></span>
